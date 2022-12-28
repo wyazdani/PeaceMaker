@@ -5,10 +5,16 @@ import Profile from "Pages/Profile/loadable";
 import NotFound from "Pages/NotFound/loadable";
 
 import MainLayout from "Layout/MainLayout";
+import AuthLayout from "../Layout/AuthLayout";
+import login from "../Pages/Auth/login";
 
 const routes = [
-  { path: "/", component: LandingPage },
-  { path: "/home", component: Home, layout: MainLayout },
+  //{ path: "/", component: LandingPage },
+  //{ path: "/home", component: Home, layout: MainLayout },
+  { path: "/",
+    layout: AuthLayout,
+    component: login
+  },
   {
     path: "/user",
     layout: MainLayout,

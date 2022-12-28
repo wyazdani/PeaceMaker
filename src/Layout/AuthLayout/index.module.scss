@@ -1,0 +1,43 @@
+.login{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+
+  .loginholder{
+    min-height: 100vh;
+    padding: 100px;
+    overflow: hidden;
+    position: relative;
+
+    &:before{
+      position: absolute;
+      content: "";
+      width: 1000px;
+      height: 160%;
+      border-radius: 50px;
+      box-shadow: 0 0 30px -15px rgba(0, 0, 0, 0.5);
+      top: -100px;
+      transform: rotate(-20deg);
+      right: -500px;
+    }
+
+    .rightCol{
+      width: 500px;
+      float: right;
+    }
+
+    .leftCol{
+      overflow: hidden;
+    }
+  }
+}
+
+.fromHolder{
+  border-radius: 10px;
+  padding: 50px 0 50px 150px;
+  position: relative;
+
+
+
+}
