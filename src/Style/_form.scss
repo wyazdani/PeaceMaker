@@ -14,8 +14,8 @@ textarea {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   border: 1px solid rgba(0,0,0,0.1);
-  height: 50px;
-  line-height: 48px;
+  height: 40px;
+  line-height: 38px;
   padding: 0 20px;
   border-radius: 8px !important;
   background-color: #fff;
@@ -48,7 +48,15 @@ textarea {
 }
 
 
+.form-group{
+  margin: 0 0 15px;
 
+  > label{
+    margin: 0 0 3px;
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+}
 
 textarea.form-control,
 textarea{
@@ -92,8 +100,14 @@ textarea{
     background-color: $theme-color;
 
     &:hover{
-      background-color: #117509;
+      background-color: $hover-color;
+      border-color: $hover-color;
     }
+  }
+
+  &.btn-gradient{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 96.09%), #8EB26F;
+    color: #fff;
   }
 
   &.btn-filter{

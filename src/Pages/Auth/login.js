@@ -1,6 +1,6 @@
 import {React, useState} from "react";
 import {Form, InputGroup, Button} from "react-bootstrap";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const Login = () => {
     const [validated, setValidated] = useState(false);
@@ -11,8 +11,12 @@ const Login = () => {
             event.preventDefault();
             event.stopPropagation();
         }
-
         setValidated(true);
+    };
+
+    const navigate = useNavigate();
+    const goToDashboard = () => {
+        navigate('/dashboard');
     };
 
     return(
@@ -20,41 +24,29 @@ const Login = () => {
             <>
                 <h1 className={"mb-5"}>Sign In</h1>
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                    <Form.Group className={"form-group mb-3"} controlId="loginEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <InputGroup>
-                            <InputGroup.Text id="loginEmail"><i className="fas fa-user text-muted"></i></InputGroup.Text>
-                            <Form.Control
-                                type={"email"}
-                                placeholder="Username"
-                                required
-                            />
-                        </InputGroup>
+                    <Form.Group className={"form-group"} controlId="loginEmail">
+                        <Form.Control
+                            type={"text"}
+                            placeholder="Username"
+                            required
+                        />
                     </Form.Group>
-                    <Form.Group className={"form-group mb-3"} controlId="loginpassword">
-                        <Form.Label>Password</Form.Label>
-                        <InputGroup>
-                            <InputGroup.Text id="loginpassword"><i className="fas fa-lock text-muted"></i></InputGroup.Text>
-                            <Form.Control
-                                type={"password"}
-                                placeholder="Password"
-                                required
-                            />
-
-                        </InputGroup>
-                        <Form.Control.Feedback type="invalid">
-                            Please choose a username.
-                        </Form.Control.Feedback>
+                    <Form.Group className={"form-group"} controlId="loginpassword">
+                        <Form.Control
+                            type={"password"}
+                            placeholder="Password"
+                            required
+                        />
 
                     </Form.Group>
                     <Form.Group className={"form-group mb-5"}>
                         <Link to={"/forgot-password?"}>Forgot Password?</Link>
                     </Form.Group>
                     <Form.Group className={"form-group mb-5"}>
-                        <Button type={"submit"} className={"d-block w-100"}>Login</Button>
+                        <Button type={"submit"} variant={"gradient d-block w-100"} onSubmit={goToDashboard}>Login</Button>
                     </Form.Group>
                     <Form.Group className={"form-group text-center"}>
-                        Don’t have an account? <Link to={"#"} className={"text-green"}>Conatact Support</Link>
+                        Don’t have an account? <Link to={"/SignUp"} className={"text-green"}>Create Account</Link>
                     </Form.Group>
                 </Form>
             </>

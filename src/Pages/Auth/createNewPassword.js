@@ -4,13 +4,13 @@ import {Button, Col, Form, Row} from "react-bootstrap";
 const CreateNewPassword = () => {
     return(
         <>
-            <h1 className={"mb-5"}>Create New <br />Password</h1>
+            <h1 className={"mb-5"}>Create New Password</h1>
             <p className={"mb-5 text-muted"}>Your password must be different from previous used password.</p>
             <Form>
                 <Row>
                     <Col md={12}>
                         <Form.Group col className={"form-group mb-3"} controlId="newpassword">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label>New Password</Form.Label>
                             <Form.Control
                                 type={"password"}
                                 placeholder="************"
@@ -19,7 +19,7 @@ const CreateNewPassword = () => {
                     </Col>
                     <Col md={12}>
                         <Form.Group col className={"form-group mb-5"} controlId="confirmpassword">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label>Confirm Password</Form.Label>
                             <Form.Control
                                 type={"password"}
                                 placeholder="************"

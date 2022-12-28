@@ -1,22 +1,16 @@
 import React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import AdbIcon from "@mui/icons-material/Adb";
+import classes from "./index.module.scss";
+import {Link} from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <Box>
-      <AppBar position="static">
-        <Toolbar variant="regular">
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography variant="h6" color="inherit" component="div">
-            ReactJS
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <>
+      <Header id={"header"}>
+        <ul className={classes.headerIcons}>
+          <li><Link to={"#"}>abc </Link></li>
+        </ul>
+      </Header>
+    </>
   );
 };
 
