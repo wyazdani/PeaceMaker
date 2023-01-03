@@ -1,0 +1,28 @@
+#header {
+    p {
+
+        font-size: 20px;
+        margin: 5px;
+    }
+
+    .icons {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        float: right;
+
+        li {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 24px;
+
+        }
+        li a :hover{
+            background: transparent;
+            color: #8EB26F !important;
+        }
+        
+
+    }
+
+}

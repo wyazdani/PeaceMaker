@@ -1,0 +1,34 @@
+.profile_img {
+    width: 400px;
+    margin: 20px;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 15px;
+
+    }
+}
+.setting_icon{
+    font-size: 30px;
+}
+.card_background {
+    background-color: #F4F4F4 !important;
+    border-radius: 15px !important;
+    border: transparent !important;
+    margin: 10px 0;
+    .plus_icon {
+        width: 40px;
+        display: flex;
+
+        span {
+            font-size: 30px;
+        }
+
+       
+    }
+    strong {
+        padding-top: 4px !important;
+    }
+}

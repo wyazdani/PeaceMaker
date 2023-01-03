@@ -1,0 +1,55 @@
+.top_row {
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 15px;
+   
+
+    .btn_cancel {
+        color: #335A63 !important;
+        background-color: #DADADA !important;
+        width: 50%;
+        border: transparent;
+
+
+    }
+
+    .btn_center {
+        width: 90%;
+        text-align: center;
+        display: flex;
+        padding-left: 50px;
+    }
+
+    .record {
+        padding: 20px 0px;
+        border: transparent;
+        background-color: #EFEFEF;
+        border-radius: 15px;
+       
+    }
+
+    .empty_box {
+        border: 1px solid #D2D2D2;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border-radius: 15px;
+    }
+    .btn_last{
+        width: 100%;
+        text-align: center;
+        padding: 30px;
+     
+    }
+
+}
+
+.smile_icon {
+ width: 100%;
+
+    span {
+
+        font-size: 60px;
+        color: #8EB26F;
+        margin: 20px;
+       
+    }
+}

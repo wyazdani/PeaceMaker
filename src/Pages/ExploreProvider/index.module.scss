@@ -1,0 +1,42 @@
+.main{
+    border-radius: 20px !important;
+    margin: 40px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: none !important;
+}
+
+.card_background {
+    background: #E5E5E5;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.profile_img {
+    width: 50px;
+
+    img {
+        width: 80%;
+        height: auto;
+        display: block;
+        border-radius: 30px;
+    }
+
+
+}
+
+.inner_body {
+    border-radius: 20px !important;
+    background: #FBFBFB !important;
+    border: none !important;
+    i {
+        font-size: 24px;
+        border: 1px solid;
+        padding: 5px;
+        border-radius: 20px;
+        background: #8EB26F;
+        color: white;
+    }
+    h3{
+        margin-right: 40px;
+    }
+}

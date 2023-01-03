@@ -1,0 +1,32 @@
+.big_size{
+    text-align: center;
+    h1{
+        font-size: 60px;
+    }
+    p{
+        font-size: 24px;
+    }
+   .icon_set{
+    display: flex;
+   }
+   
+}
+.clock_icon{
+    font-size: 24px;
+    width: 40px;
+    color: #8EB26F;
+
+   }
+   .form_control{
+    font-size: 24px;
+    display: flex;
+    justify-content: end;
+    
+   }
+   #custom-switch{
+    border: 1px solid #EBEBEB !important;
+}
+   input[type=checkbox]:checked, .form-check-input:checked {
+    background-color: #EBEBEB !important;
+    border-color: #FF7851;
+   }

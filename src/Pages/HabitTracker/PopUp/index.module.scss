@@ -1,0 +1,36 @@
+.boxes {
+ 
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0px !important;
+
+.mid_box {
+    border: transparent;
+    border-radius: 15px;
+    padding: 10px 0px;
+    text-align: center;
+    background: #F4F4F4;
+    margin: 5px;
+    color: #9B9B9B;
+   
+    h3{
+        color: #9B9B9B;
+    }
+    
+   
+}
+.mid_box:hover{
+    background: #8EB26F;
+    color: white;
+    h3{
+        color: white;
+    }
+    
+}
+
+}
+.btn_cancel{
+    color: black !important;
+    background-color: transparent !important;
+
+}

@@ -1,0 +1,71 @@
+.inner_styling {
+    i {
+        font-size: 30px;
+        color: #8EB26F;
+        width: 40px;
+    }
+
+    p {
+        color: #7265E3;
+        font-size: 16px;
+        margin-top: 3px;
+        text-align: center;
+    }
+}
+
+.record {
+    border-radius: 15px;
+    border: transparent;
+    background: #E5E5E5;
+    padding: 20px;
+   
+
+    span {
+        background: #8EB26F;
+        border-radius: 15px;
+        font-size: 34px;
+        color: white;
+    }
+    .text_color{
+        color: #8EB26F;
+    }
+}
+.Habit_background{
+    width: 100%;
+    background-color:#324C51;
+    border-radius: 30px;
+    margin: 10px 0;
+    .position{
+        width: 100%;
+        padding: 100px 80px;
+        h1{
+            color: white;
+          
+        }
+    }
+    img{
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 30px;
+    }
+    .challenges {
+
+      margin: 30px;
+
+        i {
+            color: #8EB26F;
+            font-size: 24px;
+            margin: 15px 0px;
+        }
+        h4{
+            color: #8EB26F;
+        }
+
+       
+        h3{
+            color: white;
+        }
+    }
+
+}

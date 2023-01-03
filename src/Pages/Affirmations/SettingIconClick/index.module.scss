@@ -1,0 +1,49 @@
+.main_tabs{
+    border: 1px solid #EBEBEB;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 15px;
+    margin: 50px;
+//    .nav_styling{
+    
+//     background-color: #8EB26F !important;
+//     text-decoration: none;
+//     color: black;
+    
+//    }
+// .icon_text{
+//     display: flex;
+//     width: 100%;
+// }
+// .clock{
+//     font-size: 20px;
+//     border: 1px solid;
+//     width: 40px;
+//     border-radius: 5px;
+//     text-align: center;
+//     i {
+//         padding: 9px;
+//     }
+//     strong{
+//         padding: 0 30px !important;
+//     }
+// }
+ }
+ .form_control{
+    font-size: 24px;
+    display: flex;
+    justify-content: end;
+    
+   }
+
+.nav-pills{
+    
+    padding: 5px !important;
+    border-radius: 15px !important;
+    color: #fff !important;
+     
+}
+  
+    .nav-pills .nav-link .nav_styling.active{
+        color:red;
+        background-color: #8EB26F !important;
+    }

@@ -1,63 +1,61 @@
-import React from  "react";
+import React from "react";
 import classes from "./index.module.scss";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Dropdown } from "react-bootstrap";
 
 const Nav = () => {
-    return(
+    return (
         <>
             <nav>
                 <ul>
                     <li>
-                        <Link to={"/dashboard"}>Dashboard</Link>
+                        <Link to={"/home"}><i class="fas fa-home-lg-alt"></i>Home</Link>
                     </li>
+
                     <li>
-                        <Link to={"/maps"}>Maps</Link>
+                        <Link to={"/explore-provider"}><i class="fas fa-search" ></i> Explore Providers</Link>
                     </li>
+
                     <li>
-                        <Link to={"/build-map"}>Build a map</Link>
+                        <Link to={"/build-map"}> <i class="fas fa-envelope"></i>Messages</Link>
                     </li>
+
                     <li>
-                        <Link to={"/users"}>Users</Link>
+                    
+                     <Dropdown>
+                     <Link to ={"/add-habit-next"}>
+                            <Dropdown.Toggle  variant="success" id="dropdown-basic">
+                                <i class="fas fa-file-chart-line "></i> Habit Tracker
+
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            </Dropdown.Menu>
+                            </Link>
+                        </Dropdown>
                     </li>
+
                     <li>
-                        <Link to={"/tools"}>Tools</Link>
+                        <Link to={"/journal"}> <i class="fas fa-book"></i> Journal</Link>
                     </li>
+
                     <li>
-                        <Link to={"/assets"}>Assets</Link>
+                        <Link to={"/affirmations"}> <i class="fas fa-heart"></i> Affirmations</Link>
                     </li>
+
                     <li>
-                        <Link to={"/prize-info"}>Prize Info</Link>
+                        <Link to={"/challenges"}> <i class="fas fa-star"></i> Challenges</Link>
                     </li>
+
+
                     <li>
-                        <Link to={"/winner"}>Winner</Link>
+                        <Link to={"/log-out"}> <i class="fas fa-arrow-alt-from-left"></i> Log out</Link>
                     </li>
-                    <li>
-                        <Link to={"/leader-board"}>Leaderboard</Link>
-                    </li>
-                    <li>
-                        <Link to={"/music"}>Music</Link>
-                    </li>
-                    <li>
-                        <Link to={"/notifications"}>Notifications</Link>
-                    </li>
-                    <li>
-                        <Link to={"/exchange"}>Exchange</Link>
-                    </li>
-                    <li>
-                        <Link to={"/tutorial"}>Tutorial</Link>
-                    </li>
-                    <li>
-                        <Link to={"/ads"}>Ads</Link>
-                    </li>
-                    <li>
-                        <Link to={"/guidelines"}>Guidelines</Link>
-                    </li>
-                    <li>
-                        <Link to={"/support"}>Support</Link>
-                    </li>
-                    <li>
-                        <Link to={"/log-out"}>Log out</Link>
-                    </li>
+
+
                 </ul>
             </nav>
         </>
