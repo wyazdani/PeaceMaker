@@ -42,7 +42,7 @@ const ClickSection = () => {
                             <Form className={classes.checkbox}>
                                 <h2>Checklist</h2>
                                 {['checkbox'].map((type) => (
-                                    <div key={type} className="mb-3">
+                                    <div key={type} className={classes.checkbox_background}>
                                         <Form.Check type={type} id={`check-api-${type}`}>
                                             <Form.Check.Input type={type} isValid />
                                             <Form.Check.Label> <h4>Read Book</h4> </Form.Check.Label>

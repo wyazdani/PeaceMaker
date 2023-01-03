@@ -1,11 +1,13 @@
 .inner_styling {
     
     justify-content: space-between;
+    display: flex;
+    margin: 20px;
 
     i {
         font-size: 30px;
         color: #8EB26F;
-        width: 60px;
+        width: 40px;
     }
 
     p {

@@ -21,20 +21,13 @@ const Nav = () => {
                     </li>
 
                     <li>
-                    
-                     <Dropdown>
-                     <Link to ={"/add-habit-next"}>
+                        <Dropdown>
                             <Dropdown.Toggle  variant="success" id="dropdown-basic">
                                 <i class="fas fa-file-chart-line "></i> Habit Tracker
-
                             </Dropdown.Toggle>
-
                             <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                <Link to={"/habit-tracker"}> Habit Tracker</Link>
                             </Dropdown.Menu>
-                            </Link>
                         </Dropdown>
                     </li>
 

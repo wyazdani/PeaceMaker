@@ -1,3 +1,5 @@
+import Counter from 'Components/Counter';
+import LevelOneCount from 'Components/Counter/LevelOneCount';
 import HeaderTop from 'Components/Header'
 import React from 'react'
 import { Card, Col, Row } from 'react-bootstrap'
@@ -30,17 +32,8 @@ const LevelOne = () => {
                         </Card.Body>
                     </Card>
             </Col>
-            <Row>
-                <Col md={4}>
-                    <Card onClick={YellowButton}>
-                        <Card.Body>
-                            <h3>Find 7 Yellow Buttons</h3>
-                            <p>Duration: <strong>1 Day</strong></p>
-                            <p>Points: <strong>1 Day Point</strong></p>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
+           
+            <Counter />
           </Row>
     </>
   )

@@ -1,31 +1,26 @@
 import classes from "./index.module.scss";
 import React from 'react'
-import { Card, Col, Row } from 'react-bootstrap'
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import CounterData from "./CounterData";
-import CounterCard from "./CounterCard";
 import LevelOneCount from "./LevelOneCount";
 
-const Counter = () => {
+const LevelOneComponent = () => {
     const [data] = useState(CounterData)
-   
-
+    
     return (
         <>
-            <div className={classes.cardList}>
+            <div  className={classes.cardList}>
 
                 {
-                    data.map((currn, ind) => {
+                    data.map((levelOne, index) => {
                         return (
-                            <CounterCard key={ind} {...currn} />
+                            <LevelOneCount key={index} {...levelOne} />
                         );
                     })
                 }
             </div>
-           
         </>
     )
 }
 
-export default Counter
+export default LevelOneComponent

@@ -96,6 +96,7 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 15px;
     padding: 40px;
+   
     p {
         color: #B0BFC2;
     }
@@ -107,6 +108,14 @@
         background-color: #8EB26F !important;
         color: white !important;
         border: transparent !important;
+    }
+    form-check-input:checked {
+        background-color: #198754 !important;
+    }
+}
+.form-check{
+    #check-api-checkbox{
+        background-color: red;
     }
 }
 @media (max-width: 992px) {

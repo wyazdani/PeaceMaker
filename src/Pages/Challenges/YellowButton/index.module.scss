@@ -1,0 +1,46 @@
+.main_body{
+    width: 100%;
+    img{
+        width: 500px;
+    }
+   
+}
+p{
+    font-size: 24;
+    color: rgba(0, 0, 0, 0.5);
+}
+.card_body_background{
+    border: none;
+    background-color: #D7D7D7;
+
+    .inner_card{
+        background-color: #F2F2F2;
+        margin: 5px;
+        p{
+            margin: 10px;
+        }
+    }
+   
+}
+.main_card{
+    
+    .card_background{
+        background-color: #D7D7D7;
+        padding: 5px;
+      
+    }
+    .btn_card{
+        color: white;
+        background-color: #253F44 !important;
+        border: transparent;
+    }
+    .text_body{
+        background-color: #F2F2F2;
+        padding: 20px;
+        p{
+            font-size: 14px;
+            color: black;
+            font-weight: 500;
+        }
+    }
+}
