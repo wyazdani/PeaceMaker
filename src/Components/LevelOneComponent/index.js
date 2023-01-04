@@ -1,20 +1,33 @@
 import classes from "./index.module.scss";
 import React from 'react'
 import { useState } from "react";
-import CounterData from "./CounterData";
 import LevelOneCount from "./LevelOneCount";
+import LevelOneData from "./LevelOneData";
+import CounterCard from "Components/Counter/CounterCard";
+import CounterData from "Components/Counter/CounterData";
 
 const LevelOneComponent = () => {
-    const [data] = useState(CounterData)
-    
+    const [data] = useState(LevelOneData)
+
     return (
         <>
-            <div  className={classes.cardList}>
+            {/* <div  className={classes.cardList}>
 
                 {
-                    data.map((levelOne, index) => {
+                    data.map((levelOne, ind) => {
                         return (
-                            <LevelOneCount key={index} {...levelOne} />
+                            <LevelOneCount key={ind} {...levelOne} />
+                        );
+                    })
+                }
+            </div> */}
+
+            <div className={classes.cardList}>
+
+                {
+                    data.map((currn, ind) => {
+                        return (
+                            <LevelOneCount key={ind} {...currn} />
                         );
                     })
                 }

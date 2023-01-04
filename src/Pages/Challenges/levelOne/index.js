@@ -1,15 +1,12 @@
 import Counter from 'Components/Counter';
-import LevelOneCount from 'Components/Counter/LevelOneCount';
 import HeaderTop from 'Components/Header'
+import LevelOneComponent from 'Components/LevelOneComponent';
 import React from 'react'
 import { Card, Col, Row } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom';
 
 const LevelOne = () => {
-    const navigate = useNavigate();
-    const YellowButton = () => {
-        navigate('/yellow-button');
-    };
+   
   return (
     <>
           <HeaderTop />
@@ -33,7 +30,7 @@ const LevelOne = () => {
                     </Card>
             </Col>
            
-            <Counter />
+            <LevelOneComponent />
           </Row>
     </>
   )

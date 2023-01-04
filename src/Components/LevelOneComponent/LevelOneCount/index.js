@@ -12,8 +12,8 @@ const LevelOneCount = (props) => {
     return (
        
            <div className={classes.col_level}>
-             <Card onClick={YellowButton} className={classes.card_level}>
-                <div className="m-2 justify-content-start">
+             <Card className={classes.card_level}>
+                <div onClick={YellowButton}  className="m-2 justify-content-start">
                     <h3>{props.level}</h3>
                     <p>{props.comp}</p>
                     <p>{props.comp_2}</p>

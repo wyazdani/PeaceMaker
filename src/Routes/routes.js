@@ -27,6 +27,8 @@ import Counter from "Components/Counter";
 import LevelOneChallenge from "Components/LevelOneChallenge";
 import LevelOne from "Pages/Challenges/levelOne";
 import YellowButton from "Pages/Challenges/YellowButton";
+import Notification from "Pages/Notification";
+import Review from "Pages/Review";
 
 const routes = [
   //{ path: "/", component: LandingPage },
@@ -120,6 +122,16 @@ const routes = [
     path: "/yellow-button",
     layout: MainLayout,
     component: YellowButton
+  },
+  {
+    path: "/notification",
+    layout: MainLayout,
+    component: Notification
+  },
+  {
+    path: "/review",
+    layout: MainLayout,
+    component: Review
   },
   {
     path: "/level-one-challenge",

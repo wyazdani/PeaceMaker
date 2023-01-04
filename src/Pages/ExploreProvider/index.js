@@ -17,7 +17,7 @@ const ExploreProvider = () => {
                 <Card.Body>
                     <Row className='text-center justify-content-center '>
                         <h2> Explore a Provider</h2>
-                        <Col md={6} className='align-items-center'>
+                        <Col md={6}  className='align-items-center'>
                             <Form>
                                 <InputGroup className="mb-3">
                                     <InputGroup.Text id="basic-addon1"><i class="fal fa-search"></i></InputGroup.Text>

@@ -1,0 +1,42 @@
+.bell_icon{
+    font-size: 24px;
+    justify-content: end;
+    display: flex;
+    margin-right: 10px;
+}
+.main_top{
+    margin: 30px;
+    border:1px solid #DBDBDB;
+    border-radius: 15px;
+    p{
+        color: #1D1D1D;
+    }
+    img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+    }
+    .btn_cancel{
+        color: white !important;
+        background-color:#FF533F !important;
+        font-weight: bold;
+        font-size: 16px;
+         margin: 3px;
+     
+      
+    
+        
+    }
+    .gradient{
+        font-size: 16px !important;
+        font-weight: bold ;
+         margin: 3px;
+      
+    }
+    .text{
+    margin: 0;
+    padding-top: 10px;
+    margin-left: 20px;
+        
+    }
+}
