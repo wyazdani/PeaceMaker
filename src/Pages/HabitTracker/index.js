@@ -1,8 +1,10 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import classes from "./index.module.scss";
-import profile from "../../Images/sign-in-left-img.png"
+import profile from "../../Images/habitimg.png"
+import habitimg2 from "../../Images/habitimg2.png"
 import { useNavigate } from 'react-router-dom';
+import HeaderTop from 'Components/Header';
 
 const HabitTracker = () => {
     const navigate = useNavigate();
@@ -11,6 +13,7 @@ const HabitTracker = () => {
     };
     return (
         <>
+        <HeaderTop/>
             <Row className='m-3'>
                 <div onClick={MapSec}  className={classes.Habit_background} >
                 <Row>
@@ -32,7 +35,7 @@ const HabitTracker = () => {
                         </div>
                     </Col>
                     <Col md={6}>
-                    <img src={profile} alt="" />
+                    <img src={habitimg2} alt="" />
                     </Col>
                     </Row>
                 </div>

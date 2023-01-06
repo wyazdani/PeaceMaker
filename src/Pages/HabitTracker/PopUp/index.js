@@ -1,7 +1,7 @@
 import React from 'react'
-import { Modal, Row, Col, Form, Button } from "react-bootstrap";
+import { Modal, Row, Col, Form, Button, Card } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
-import classes from "./index.module.scss";
+import classes from '../../HabitTracker/index.module.scss'
 const PopUp = (props) => {
     const navigate = useNavigate();
     const AddHabit = () => {
@@ -16,41 +16,28 @@ const PopUp = (props) => {
                 centered
             >
                 <Modal.Body>
-                    <Row className='m-5'>
-                        <Col>
-                            <h2>Add Habit</h2>
-                            <hr />
-                        </Col>
-
-                        <Form>
-                            <Form.Group className="mb-3" controlId="formBasicPassword">
-                                <Form.Label> <strong>Habit Name</strong> </Form.Label>
-                                <Form.Control type="text" placeholder="Habit Name" />
-                            </Form.Group>
-                        </Form>
-
-                        <Row className={classes.boxes}>
-                            <Col className={classes.mid_box}><span> M <br /></span>  </Col>
-                            <Col className={classes.mid_box}><span> T <br /></span> </Col>
-                            <Col className={classes.mid_box}><span> W <br /></span>  </Col>
-                            <Col className={classes.mid_box}><span> T <br /></span> </Col>
-                            <Col className={classes.mid_box}><span> F <br /></span> </Col>
-                            <Col className={classes.mid_box}><span> S <br /></span>  </Col>
-                            <Col className={classes.mid_box}><span> S <br /></span>  </Col>
-                        </Row>
-                        <Row>
-                            <Col>  <h2>Set Time</h2></Col>
-                        </Row>
-                        <div className="text-center  m-2">
-
-                            <div>
-                                <Button onClick={AddHabit} className='btn btn-gradient px-5 '>Save</Button>
-                            </div>
-                            <div >
-                                <Button className={classes.btn_cancel} onClick={props.onHide}> <strong>Cancel</strong> </Button>
-                            </div>
-                        </div>
+                    <h3 className={classes.habit_border_bottom} > Add Habit</h3>
+                    <Form className='mb-4'>
+                        <Form.Group controlId="formBasicPassword">
+                            <Form.Label> <strong>Habit Name</strong> </Form.Label>
+                            <Form.Control type="text" placeholder="Habit Name" />
+                        </Form.Group>
+                    </Form>
+                    <Row className={classes.boxes}>
+                    <h5>Repeat</h5>
+                        <Col className={classes.mid_box}><span> M </span>  </Col>
+                        <Col className={classes.mid_box}><span> T</span> </Col>
+                        <Col className={classes.mid_box}><span> W </span>  </Col>
+                        <Col className={classes.mid_box}><span> T </span> </Col>
+                        <Col className={classes.mid_box}><span> F </span> </Col>
+                        <Col className={classes.mid_box}><span> S </span>  </Col>
+                        <Col className={classes.mid_box}><span> S</span>  </Col>
                     </Row>
+                    <h5>Set Time</h5>
+                   <div className='text-center'>
+                    <Button onClick={AddHabit} className='btn btn-gradient'>Save</Button>
+                    <Button className={classes.btn_cancel} onClick={props.onHide}> <strong>Cancel</strong> </Button>
+                    </div>
                 </Modal.Body>
             </Modal>
         </>

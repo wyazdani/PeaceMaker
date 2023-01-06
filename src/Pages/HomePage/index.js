@@ -1,9 +1,11 @@
 import HeaderTop from 'Components/Header'
 import profile from "../../Images/background.jpg"
-import loginImg from "../../Images/sign-in-left-img.png"
+import daily from "../../Images/dailyimg.png"
+import loginImg from "../../Images/login.png"
 import React from 'react'
 import { Card, Col, Row } from 'react-bootstrap'
 import classes from "./index.module.scss";
+import { Link } from 'react-router-dom'
 
 const HomePage = (props) => {
   return (
@@ -13,155 +15,142 @@ const HomePage = (props) => {
         <Col lg={4}>
           <div className={classes.profile_img}>
             <img src={profile} alt="" />
+            <div className={classes.img_text}>
+              <p>Daily Affirmation</p>
+              <h3>“I am God’s workmanship, created in Christ.”</h3>
+              <a className='d-flex justify-content-end' href="#"><i class="fas fa-play"></i></a>
+            </div>
           </div>
         </Col>
-        <Col lg={8}>
-          <Row>
-            <Col xl={4} md={6} className=' mb-xl-0 mb-3'>
-              <Card className={classes.inner_card}>
-                <i class="fas fa-pennant"></i>
-                <Card.Body className='flex-unset'>
-                  <Card.Title> <h1>20</h1> </Card.Title>
-                  <Card.Text>
-                    Challenge Points
-                  </Card.Text>
+        <Col lg={8} className='mb-3'>
+          <Row className='g-4'>
+            <Col md={6} lg={4} xl={4} xxl={4}>
+              <Card className={classes.card_inner}>
+                <div className={classes.icon_box}><i class="far fa-smile"></i></div>
+                <Card.Body>
+                  <h1>20</h1>
+                  <p>challenges <br /> point</p>
                 </Card.Body>
               </Card>
             </Col>
-            <Col xl={4} md={6} className=' mb-xl-0 mb-3'>
-              <Card className={classes.inner_card}>
-                <i class="far fa-smile"></i>
+            <Col md={6} lg={4} xl={4} xxl={4}>
+              <Card className={classes.card_inner}>
+                <div className={classes.icon_box}> <i class="far fa-smile"></i></div>
                 <Card.Body>
-                  <Card.Title> <h1>60%</h1> </Card.Title>
-                  <Card.Text>
-                    Challenge Points
-                  </Card.Text>
+                  <h1>60%</h1>
+                  <p>average <br /> Happiness</p>
                 </Card.Body>
               </Card>
             </Col>
-            <Col xl={4} >
-              <Card className={classes.inner_card}>
-                <i class="fas fa-bullseye-arrow"></i>
+            <Col md={6} lg={4} xl={4} xxl={4}>
+              <Card className={classes.card_inner}>
+                <div className={classes.icon_box}> <i class="far fa-smile"></i></div>
                 <Card.Body>
-                  <Card.Title> <h1>30%</h1> </Card.Title>
-                  <Card.Text>
-                    Challenge Points
-                  </Card.Text>
+                  <h1>30%</h1>
+                  <p>average <br /> Target</p>
                 </Card.Body>
               </Card>
             </Col>
           </Row>
         </Col>
 
-        <Row>
+        <Row >
           <Col lg={4}>
-            <div className={classes.left_bottom}>
-              <Row>
-                <Col lg={6} >
-                  <strong> <h4>Daily State</h4></strong>
-                </Col>
-                <Col lg={6} className='text-end'>
-                  <span><i class="far fa-exclamation-circle"></i></span>
-                </Col>
-                <hr />
-              </Row>
-            </div>
-            <Col>
-              <Row className='m-2'>
-              <Card className={classes.challenges_section}>
-                <h2>Challenges</h2>
-                <hr />
-                <Row>
-                <Col lg={6}>
+            <Card>
+              <Card.Header className={classes.header_bg}>
+                <Card.Title>User Activity</Card.Title>
+                <Link to={"#"} className='text-green text-decoration-none'><span class="icon-alert1"></span></Link>
+              </Card.Header>
+              <Card.Body>
+                <div className={classes.img_box}>
+                  <img src={daily} alt="" />
+                </div>
+              </Card.Body>
+            </Card>
+
+          
+              <Card className={classes.main_card}>
+                <Card.Header className={classes.header_bg}>
+                  <h2>Challenges</h2>
+                </Card.Header>
+                <Card.Body className='d-flex justify-content-center'>
                   <div className={classes.challenges}>
                     <i class="fas fa-pennant"></i>
                     <p>Total Points: <strong>2</strong></p>
-                    <span> 1 / 70</span>
+                    <strong className='text-green'> 1 / 70</strong>
                   </div>
-                </Col>
-                <Col lg={6}>
                   <div className={classes.login_img}>
                     <img src={loginImg} alt="" />
                   </div>
-                </Col>
-                </Row>
-                </Card>
-                <Row >
-                </Row>
-              </Row>
-            </Col>
+                </Card.Body>
+              </Card>
+
+          
           </Col>
-          <Col lg={8} className='text-center' >
+          <Col md={8} lg={8}>
+            <Card className={classes.main_card}>
+              <Card.Header className={classes.header_bg}>
+                <Card.Title>User Activity</Card.Title>
+                <Link to={"#"} className='text-green text-decoration-none'>View Records</Link>
+              </Card.Header>
+              <Card.Body>
+                <ul className={'activity_list col2'}>
+                  <li>
+                    <Link to={"#"} className={'box'}>
+                      <i className={'fas fa-plus'}></i>
+                      Habit Tracker
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"#"} className={'box'}>
+                      <i className={'fas fa-plus'}></i>
+                      Habit Tracker
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"#"} className={'box'}>
+                      <i className={'fas fa-plus'}></i>
+                      Habit Tracker
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"#"} className={'box'}>
+                      <i className={'fas fa-plus'}></i>
+                      Habit Tracker
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"#"} className={'box'}>
+                      <i className={'fas fa-plus'}></i>
+                      Habit Tracker
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"#"} className={'box'}>
+                      <i className={'fas fa-plus'}></i>
+                      Habit Tracker
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"#"} className={'box'}>
+                      <i className={'fas fa-plus'}></i>
+                      Habit Tracker
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"#"} className={'box'}>
+                      <i className={'fas fa-plus'}></i>
+                      Habit Tracker
+                    </Link>
+                  </li>
+                </ul>
 
-            <Card className={classes.right_bottom}>
-              <Row>
-                <Col lg={6}>
-                  <h2>User Activity</h2>
-                </Col>
-                <Col lg={6}>
-                  <p>View Records</p>
-                </Col>
+              </Card.Body>
 
-                <hr />
-                <Row >
-                  <Col lg={6} >
-                    <Card className={classes.card_background}>
-                      <Card.Body>
-                        <span><i class="fal fa-plus-square"></i></span><strong>Habit Tracker</strong>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                  <Col lg={6} >
-                    <Card className={classes.card_background}>
-                      <Card.Body>
-                        <span><i class="fal fa-plus-square"></i></span><strong>Habit Tracker</strong>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                  <Col lg={6} >
-                    <Card className={classes.card_background}>
-                      <Card.Body>
-                        <span><i class="fal fa-plus-square"></i></span><strong>Habit Tracker</strong>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                  <Col lg={6} >
-                    <Card className={classes.card_background}>
-                      <Card.Body>
-                        <span><i class="fal fa-plus-square"></i></span><strong>Habit Tracker</strong>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                  <Col lg={6} >
-                    <Card className={classes.card_background}>
-                      <Card.Body>
-                        <span><i class="fal fa-plus-square"></i></span><strong>Habit Tracker</strong>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                  <Col lg={6} >
-                    <Card className={classes.card_background}>
-                      <Card.Body>
-                        <span><i class="fal fa-plus-square"></i></span><strong>Habit Tracker</strong>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                  <Col lg={6} >
-                    <Card className={classes.card_background}>
-                      <Card.Body>
-                        <span><i class="fal fa-plus-square"></i></span><strong>Habit Tracker</strong>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                </Row>
-              </Row>
+
             </Card>
-
           </Col>
-
-
         </Row>
-
       </Row>
     </>
   )

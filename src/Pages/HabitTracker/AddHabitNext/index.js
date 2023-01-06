@@ -1,7 +1,7 @@
 import HeaderTop from 'Components/Header'
 import React from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
-import classes from "./index.module.scss";
+import classes from "../../HabitTracker/index.module.scss"
 
 const AddHabitNext = () => {
     return (
