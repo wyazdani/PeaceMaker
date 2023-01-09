@@ -88,6 +88,34 @@ const ExploreProvider = () => {
                             <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
+                        <Card className={`${classes.inner_body}`}>
+                            <div className={classes.profile_img}  onClick={MapSec}>
+                                <img src={profile_2} alt="" />
+                            </div>
+                            <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
+                            <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
+                        </Card>
+                        <Card className={`${classes.inner_body}`}>
+                            <div className={classes.profile_img}  onClick={MapSec}>
+                                <img src={profile_2} alt="" />
+                            </div>
+                            <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
+                            <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
+                        </Card>
+                        <Card className={`${classes.inner_body}`}>
+                            <div className={classes.profile_img}  onClick={MapSec}>
+                                <img src={profile_2} alt="" />
+                            </div>
+                            <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
+                            <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
+                        </Card>
+                        <Card className={`${classes.inner_body}`}>
+                            <div className={classes.profile_img}  onClick={MapSec}>
+                                <img src={profile_2} alt="" />
+                            </div>
+                            <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
+                            <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
+                        </Card>
                     </div>
 
                 </Card.Body>

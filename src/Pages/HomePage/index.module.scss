@@ -107,9 +107,19 @@
 }
 
 .challenges {
+    
     i {
-        color: #8EB26F;
-        font-size: 24px;
+       
+
+         font-size: 24px !important;
+         color: #8EB26F;
+       
+         width: 40px;
+         height: 40px;
+         text-align: center;
+      
+         display: inline-block;
+         line-height: 40px;
     }
 
     p {

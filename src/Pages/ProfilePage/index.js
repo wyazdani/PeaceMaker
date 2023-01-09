@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, Col, Dropdown, Form, InputGroup, Row } from 'react-bootstrap'
-import classes from "../../Pages/Review/index.module.scss";
+import classes from "./index.module.scss";
 import Profile from "../../Images/s2.jpg"
 import DataTable from 'react-data-table-component';
 
@@ -11,7 +11,8 @@ const ProfilePage = () => {
                 <>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                    </div><span>Select all</span>
+                        <p>Select all</p>
+                    </div>
                 </>,
             selector: row => row.name_subAdmin,
             cell: row => (
@@ -31,12 +32,18 @@ const ProfilePage = () => {
 
         },
         {
-            name: <span>Patient Name</span>,
+            name: <p>Name</p>,
             selector: row => row.email_address,
             sortable: true,
         },
 
-
+        {
+            name: <p>Phone</p>,
+            selector: row => row.phone,
+            cell : row=>(
+                <p>+1 (127) 2123 212</p>
+            )
+        },
 
 
 
@@ -49,7 +56,7 @@ const ProfilePage = () => {
                 <strong>Jacob John</strong>
                 <p>jacobjohn@gmail.com</p>
             </>,
-            phone: 'Sept. 12, 2022',
+            // phone: '+1 (127) 2123 212',
 
         },
         {
@@ -58,7 +65,7 @@ const ProfilePage = () => {
                 <strong>Jacob John</strong>
                 <p>jacobjohn@gmail.com</p>
             </>,
-            phone: 'Sept. 12, 2022',
+            // phone: '+1 (127) 2123 212',
 
         },
         {
@@ -67,7 +74,7 @@ const ProfilePage = () => {
                 <strong>Jacob John</strong>
                 <p>jacobjohn@gmail.com</p>
             </>,
-            phone: 'Sept. 12, 2022',
+            // phone: '+1 (127) 2123 212',
 
         },
         {
@@ -76,36 +83,10 @@ const ProfilePage = () => {
                 <strong>Jacob John</strong>
                 <p>jacobjohn@gmail.com</p>
             </>,
-            phone: 'Sept. 12, 2022',
+            // phone: '+1 (127) 2123 212',
 
         },
-        {
-            name_subAdmin: "Map ABC",
-            email_address: <>
-                <strong>Jacob John</strong>
-                <p>jacobjohn@gmail.com</p>
-            </>,
-            phone: 'Sept. 12, 2022',
-
-        },
-        {
-            name_subAdmin: "Map ABC",
-            email_address: <>
-                <strong>Jacob John</strong>
-                <p>jacobjohn@gmail.com</p>
-            </>,
-            phone: 'Sept. 12, 2022',
-
-        },
-        {
-            name_subAdmin: "Map ABC",
-            email_address: <>
-                <strong>Jacob John</strong>
-                <p>jacobjohn@gmail.com</p>
-            </>,
-            phone: 'Sept. 12, 2022',
-
-        },
+       
 
     ]
     return (
@@ -194,7 +175,7 @@ const ProfilePage = () => {
                     </Col>
                     <Col md={8}>
 
-                        <Card className="">
+                        <Card className=" p-3">
                             <Row  >
                                 <Col md={6}>
                                     <h1>Reviews</h1>
@@ -209,7 +190,7 @@ const ProfilePage = () => {
                             <DataTable
                                 columns={columns}
                                 data={data}
-                                striped
+                                
                             />
                         </Card>
                     </Col>

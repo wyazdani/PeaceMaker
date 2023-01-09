@@ -13,17 +13,17 @@ const Nav = () => {
                     </li>
 
                     <li>
-                        <Link to={"/explore-provider"}><i class="fas fa-search" ></i> Explore Providers</Link>
+                        <Link to={"/explore-provider"}><i class="icon-Search" ></i> Explore Providers</Link>
                     </li>
 
                     <li>
-                        <Link to={"/build-map"}> <i class="fas fa-envelope"></i>Messages</Link>
+                        <Link to={"/build-map"}> <i class="icon-envelop"></i>Messages</Link>
                     </li>
 
                     <li>
                         <Dropdown>
                             <Dropdown.Toggle  variant="success" id="dropdown-basic">
-                                <i class="fas fa-file-chart-line "></i> Habit Tracker
+                                <i class="icon-Chart "></i> Habit Tracker
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
                                 <Link to={"/habit-tracker"}> Habit Tracker</Link>
@@ -32,7 +32,7 @@ const Nav = () => {
                     </li>
 
                     <li>
-                        <Link to={"/journal"}> <i class="fas fa-book"></i> Journal</Link>
+                        <Link to={"/journal"}> <i class="icon-Calender"></i> Journal</Link>
                     </li>
 
                     <li>
@@ -40,12 +40,12 @@ const Nav = () => {
                     </li>
 
                     <li>
-                        <Link to={"/challenges"}> <i class="fas fa-star"></i> Challenges</Link>
+                        <Link to={"/challenges"}> <i class="icon-Star"></i> Challenges</Link>
                     </li>
 
 
                     <li>
-                        <Link to={"/log-out"}> <i class="fas fa-arrow-alt-from-left"></i> Log out</Link>
+                        <Link to={"/log-out"}> <i class="icon-Login"></i> Log out</Link>
                     </li>
 
 
