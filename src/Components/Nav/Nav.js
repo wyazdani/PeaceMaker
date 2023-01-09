@@ -9,7 +9,7 @@ const Nav = () => {
             <nav>
                 <ul>
                     <li>
-                        <Link to={"/home"}><i class="fas fa-home-lg-alt"></i>Home</Link>
+                        <Link to={"/home"}><i class="icon-Home"></i>Home</Link>
                     </li>
 
                     <li>
@@ -36,7 +36,7 @@ const Nav = () => {
                     </li>
 
                     <li>
-                        <Link to={"/affirmations"}> <i class="fas fa-heart"></i> Affirmations</Link>
+                        <Link to={"/affirmations"}> <i class="icon-Heart"></i> Affirmations</Link>
                     </li>
 
                     <li>

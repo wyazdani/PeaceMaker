@@ -29,6 +29,8 @@ import LevelOne from "Pages/Challenges/levelOne";
 import YellowButton from "Pages/Challenges/YellowButton";
 import Notification from "Pages/Notification";
 import Review from "Pages/Review";
+import ProfilePage from "Pages/ProfilePage";
+import List from "Components/AccordianList";
 
 const routes = [
   //{ path: "/", component: LandingPage },
@@ -92,6 +94,16 @@ const routes = [
     path: "/click-section",
     layout: MainLayout,
     component: ClickSection
+  },
+  {
+    path: "/profile",
+    layout: MainLayout,
+    component: ProfilePage
+  },
+  {
+    path: "/list",
+    layout: MainLayout,
+    component: List
   },
   {
     path: "/popup",

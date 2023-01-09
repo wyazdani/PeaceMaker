@@ -1,13 +1,11 @@
 import classes from "./index.module.scss";
-import { Button, Col, Row } from "react-bootstrap";
+import { Card, Col, Dropdown, Form, InputGroup, Row } from "react-bootstrap";
 import DataTable from "react-data-table-component";
 import Profile from "../../Images/s2.jpg"
-// import { useNavigate } from "react-router-dom";
+import filterImg from "../../Images/Filter-icon.png";
+
 const Review = () => {
-    //     const navigate = useNavigate();
-    // const back = () => {
-    //     navigate('/dashboard');
-    // };
+
     const columns = [
         {
             name:
@@ -56,7 +54,7 @@ const Review = () => {
             selector: row => row.temporary_password,
             sortable: true,
         },
-        
+
 
 
 
@@ -64,43 +62,64 @@ const Review = () => {
     const data = [
         {
             name_subAdmin: "",
-            email_address: 'Free Map',
+            email_address: <>
+                <strong>Jacob John</strong>
+                <p>jacobjohn@gmail.com</p>
+            </>,
             phone: 'Sept. 12, 2022',
             temporary_password: '“Mr. Thomas is such a professional to talk to, he gave me advices about how I can conquer the aspect of my life that I find difficult.” ',
         },
         {
             name_subAdmin: "Map ABC",
-            email_address: 'Free Map',
+            email_address: <>
+                <strong>Jacob John</strong>
+                <p>jacobjohn@gmail.com</p>
+            </>,
             phone: 'Sept. 12, 2022',
             temporary_password: '“Highly recommended!” ',
         },
         {
             name_subAdmin: "Map ABC",
-            email_address: 'Free Map',
+            email_address: <>
+                <strong>Jacob John</strong>
+                <p>jacobjohn@gmail.com</p>
+            </>,
             phone: 'Sept. 12, 2022',
             temporary_password: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id neque blandit pharetra ut vitae tristique leo.',
         },
         {
             name_subAdmin: "Map ABC",
-            email_address: 'Free Map',
+            email_address: <>
+                <strong>Jacob John</strong>
+                <p>jacobjohn@gmail.com</p>
+            </>,
             phone: 'Sept. 12, 2022',
             temporary_password: '“Mr. Thomas is such a professional to talk to, he gave me advices about how I can conquer the aspect of my life that I find difficult.” ',
         },
         {
             name_subAdmin: "Map ABC",
-            email_address: 'Free Map',
+            email_address: <>
+                <strong>Jacob John</strong>
+                <p>jacobjohn@gmail.com</p>
+            </>,
             phone: 'Sept. 12, 2022',
             temporary_password: '“Highly recommended!” ',
         },
         {
             name_subAdmin: "Map ABC",
-            email_address: 'Free Map',
+            email_address: <>
+                <strong>Jacob John</strong>
+                <p>jacobjohn@gmail.com</p>
+            </>,
             phone: 'Sept. 12, 2022',
             temporary_password: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id neque blandit pharetra ut vitae tristique leo.',
         },
         {
             name_subAdmin: "Map ABC",
-            email_address: 'Free Map',
+            email_address: <>
+                <strong>Jacob John</strong>
+                <p>jacobjohn@gmail.com</p>
+            </>,
             phone: 'Sept. 12, 2022',
             temporary_password: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id neque blandit pharetra ut vitae tristique leo.',
         },
@@ -108,32 +127,68 @@ const Review = () => {
     ]
 
     return (
-        <div className={classes.top_header}>
-            <div className='p-5'>
-                <Row >
+        
+            <div className={classes.top_header}>
+            <div >
+                <Row className="px-5" >
                     <Col md={6}>
                         <h1>Reviews</h1>
                     </Col>
                     <Col md={6}>
-                        <div>
+                        <div className="d-flex justify-content-end">
                             <span><i class="far fa-bell"></i></span>
                         </div>
                     </Col>
 
                 </Row>
-                <Row>
-                    <DataTable
-                        columns={columns}
-                        data={data}
-                        pagination
-                        striped
-                    // subHeader
-                    // subHeaderComponent={subHeaderComponentMemo}
-                    />
+                </div>
+                    <Card className="m-3">
+                        <Row className="m-3">
+                            <Col md={6}>
+                                <Row className="mb-3 align-items-center">
 
-                </Row>
+                                    <Col md={4}>
+                                        <Dropdown>
+                                            <Dropdown.Toggle
+                                                id="filterDropDown"
+                                                variant="outline-light"
+                                                className="drop-btn w-100"
+                                            >
+                                                Filter <img src={filterImg} alt="img" />
+                                            </Dropdown.Toggle>
+
+                                            <Dropdown.Menu>
+                                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                            </Dropdown.Menu>
+                                        </Dropdown>
+                                    </Col>
+                                    <Col md={8}>
+                                        <Form>
+                                            <InputGroup className="">
+                                                <InputGroup.Text id="basic-addon1"><i class="fal fa-search"></i></InputGroup.Text>
+                                                <Form.Control
+                                                    placeholder="Search.."
+                                                    aria-label="Username"
+                                                    aria-describedby="basic-addon1"
+                                                />
+                                            </InputGroup>
+
+                                        </Form>
+                                    </Col>
+                                </Row>
+                            </Col>
+                        </Row>
+                        <DataTable
+                            columns={columns}
+                            data={data}
+                            striped
+                        />
+                    </Card>
+              
             </div>
-        </div>
+    
     )
 }
 

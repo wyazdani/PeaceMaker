@@ -1,125 +1,125 @@
-.Habit_background {
-    width: 100%;
-    background-color: #324C51;
-    border-radius: 30px;
-    margin: 10px;
+// .Habit_background {
+//     width: 100%;
+//     background-color: #324C51;
+//     border-radius: 30px;
+//     margin: 10px;
 
-    .position {
+//     .position {
 
-        margin: 20px;
+//         margin: 20px;
 
-        h2 {
+//         h2 {
 
-            font-size: 24px;
-            color: white;
+//             font-size: 24px;
+//             color: white;
 
-        }
+//         }
 
-        h1 {
-            font-size: 24px;
-            color: white;
-        }
+//         h1 {
+//             font-size: 24px;
+//             color: white;
+//         }
 
-        p {
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.5);
-        }
-    }
-}
-.profile_img {
-    width: 200px;
-    margin: auto;
-    img{
-        width: 100%;
-        height: auto;
-        display: block;
+//         p {
+//             font-size: 16px;
+//             color: rgba(255, 255, 255, 0.5);
+//         }
+//     }
+// }
+// .profile_img {
+//     width: 200px;
+//     margin: auto;
+//     img{
+//         width: 100%;
+//         height: auto;
+//         display: block;
         
-    }     
-}
-.record {
-    border-radius: 15px;
-    border: transparent;
-    background: #E5E5E5;
-    padding: 10px;
-    opacity: 0.5;
+//     }     
+// }
+// .record {
+//     border-radius: 15px;
+//     border: transparent;
+//     background: #E5E5E5;
+//     padding: 10px;
+//     opacity: 0.5;
 
 
-    p {
-        color: #B0BFC2;
-    }
+//     p {
+//         color: #B0BFC2;
+//     }
 
-    span {
-        color: #58A0FD;
-        padding: 5px;
-    }
+//     span {
+//         color: #58A0FD;
+//         padding: 5px;
+//     }
 
-    a {
-        color: #FF7C6D;
-        padding: 5px;
-    }
-}
+//     a {
+//         color: #FF7C6D;
+//         padding: 5px;
+//     }
+// }
 
-.boxes {
+// .boxes {
  
-    width: 100%;
-    justify-content: space-between;
-    margin-left: 0px !important;
+//     width: 100%;
+//     justify-content: space-between;
+//     margin-left: 0px !important;
     
 
-    .mid_box {
-        border: transparent;
-        border-radius: 15px;
-        padding: 10px 0px;
-        text-align: center;
-        background: #F4F4F4;
-        margin: 5px;
-        color: #9B9B9B;
+//     .mid_box {
+//         border: transparent;
+//         border-radius: 15px;
+//         padding: 10px 0px;
+//         text-align: center;
+//         background: #F4F4F4;
+//         margin: 5px;
+//         color: #9B9B9B;
        
-        h3{
-            color: #9B9B9B;
-        }
+//         h3{
+//             color: #9B9B9B;
+//         }
         
        
-    }
-    .mid_box:hover{
-        background: #8EB26F;
-        color: white;
-        h3{
-            color: white;
-        }
+//     }
+//     .mid_box:hover{
+//         background: #8EB26F;
+//         color: white;
+//         h3{
+//             color: white;
+//         }
         
-    }
+//     }
     
-}
-.checkbox{
-    border: none ;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border-radius: 15px;
-    padding: 40px;
+// }
+// .checkbox{
+//     border: none ;
+//     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+//     border-radius: 15px;
+//     padding: 40px;
    
-    p {
-        color: #B0BFC2;
-    }
-    input[type=checkbox]{
-        border: transparent !important; 
-        background-color: #E1E1E1; 
-    }
-     .form-check-input:checked {
-        background-color: #8EB26F !important;
-        color: white !important;
-        border: transparent !important;
-    }
-    form-check-input:checked {
-        background-color: #198754 !important;
-    }
-}
-.form-check{
-    #check-api-checkbox{
-        background-color: red;
-    }
-}
-@media (max-width: 992px) {
-    .position{
-        text-align: center;
-    }
- }
+//     p {
+//         color: #B0BFC2;
+//     }
+//     input[type=checkbox]{
+//         border: transparent !important; 
+//         background-color: #E1E1E1; 
+//     }
+//      .form-check-input:checked {
+//         background-color: #8EB26F !important;
+//         color: white !important;
+//         border: transparent !important;
+//     }
+//     form-check-input:checked {
+//         background-color: #198754 !important;
+//     }
+// }
+// .form-check{
+//     #check-api-checkbox{
+//         background-color: red;
+//     }
+// }
+// @media (max-width: 992px) {
+//     .position{
+//         text-align: center;
+//     }
+//  }
