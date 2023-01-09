@@ -69,3 +69,10 @@
     }
 
 }
+.boxes_rounded{
+    .form-check-input[type=checkbox] {
+        border-radius: 10.25em;
+        width: 30px;
+        height: 30px;
+    }
+}

@@ -17,7 +17,7 @@ const Time = () => {
                 <Row>
                     <h2>Alarm Every</h2>
                     <Col md={6} className='d-flex'>
-                        <span className={classes.clock_icon}><i class="far fa-alarm-clock"></i></span>
+                        <span className={classes.clock_icon}><i class="icon-Clock"></i></span>
                         <p><strong>08:00 AM</strong> <br /> Mon, Fri</p>
                     </Col>
                     <Col md={6} className={classes.form_control}>
@@ -31,7 +31,7 @@ const Time = () => {
                         </Form>
                     </Col>
                     <Col md={6} className='d-flex'>
-                        <span className={classes.clock_icon}><i class="far fa-alarm-clock"></i></span>
+                        <span className={classes.clock_icon}><i class="icon-Clock"></i></span>
                         <p><strong>08:00 AM</strong> <br /> Mon, Fri</p>
                     </Col>
                     <Col md={6} className={classes.form_control}>
@@ -45,7 +45,7 @@ const Time = () => {
                         </Form>
                     </Col>
                     <Col md={6} className='d-flex'>
-                        <span className={classes.clock_icon}><i class="far fa-alarm-clock"></i></span>
+                        <span className={classes.clock_icon}><i class="icon-Clock"></i></span>
                         <p><strong>08:00 AM</strong> <br /> Mon, Fri</p>
                     </Col>
                     <Col md={6} className={classes.form_control}>

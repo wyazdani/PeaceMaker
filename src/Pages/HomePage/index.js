@@ -44,7 +44,7 @@ const HomePage = (props) => {
             </Col>
             <Col md={6} lg={4} xl={4} xxl={4}>
               <Card className={classes.card_inner}>
-                <div className={classes.icon_box}> <i class="far fa-smile"></i></div>
+                <div className={classes.icon_box}> <i class="icon-target-black"></i></div>
                 <Card.Body>
                   <h1>30%</h1>
                   <p>average <br /> Target</p>
@@ -75,7 +75,7 @@ const HomePage = (props) => {
                 </Card.Header>
                 <Card.Body className='d-flex justify-content-center'>
                   <div className={classes.challenges}>
-                    <i class="fas fa-pennant"></i>
+                  <a href="/"><i class="icon-Unfil-challenge"></i></a>
                     <p>Total Points: <strong>2</strong></p>
                     <strong className='text-green'> 1 / 70</strong>
                   </div>

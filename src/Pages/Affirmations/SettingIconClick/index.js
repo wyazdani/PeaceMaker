@@ -7,6 +7,7 @@ import Tab from 'react-bootstrap/Tab';
 import Time from "./Time";
 import BloodPressure from "./BloodPressure";
 import BodyTemperature from "./BodyTemperature";
+import { Button, Card } from "react-bootstrap";
 
 // import Sonnet from '../../components/Sonnet';
 
@@ -23,25 +24,38 @@ function LeftTabsExample() {
                             <Nav variant="pills" className="flex-column">
                                 <Nav.Item className={classes.tabs}>
                                     <Nav.Link className={classes.nav_styling} eventKey="first">
-                                        <div className="d-flex justify-content-between">
+                                        <div className="d-flex">
                                             <div className={classes.icon_text}>
-                                                <span className={classes.clock}><i class="fal fa-clock"></i></span>
+                                                <span className={classes.clock}><i class="icon-time"></i></span>
                                             </div>
-                                            <strong> <p>Time</p></strong>
+                                            <strong>Time</strong>
                                             <span><i class="far fa-chevron-right"></i></span>
                                         </div>
                                     </Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link className={classes.nav_styling} eventKey="second">Blood Pressure</Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link className={classes.nav_styling} eventKey="third">Body Temperature</Nav.Link>
-                                </Nav.Item>
+                                  </Nav.Item>
+                                 <Nav.Item>
+                                    <Nav.Link className={classes.nav_styling} eventKey="second">
+                                        <div className="d-flex justify-content-between">
+                                            <div className={classes.icon_text}>
+                                                <span className={classes.clock}><i class="icon-HeartPressure1"></i></span>
+                                            </div>
+                                            <strong> Blood Pressure</strong>
+                                            <span><i class="far fa-chevron-right"></i></span>
+                                        </div>
+                                    </Nav.Link>
+                               </Nav.Item>
+                             <Nav.Item>
+                                    <Nav.Link className={classes.nav_styling} eventKey="third">
+                                        <div className="d-flex justify-content-between">
+                                            <div className={classes.icon_text}>
+                                                <span className={classes.clock}><i class="icon-Thermometer1"></i></span>
+                                            </div>
+                                            <strong>Body Temperature</strong>
+                                            <span><i class="far fa-chevron-right"></i></span>
+                                        </div>
+                                    </Nav.Link>
+                           </Nav.Item>
                             </Nav>
-                            {/* <div class="d-flex" style="height: 200px;">
-                            <div class="vr"></div>
-                        </div> */}
                         </Col>
 
                         <Col sm={9}>
@@ -50,10 +64,10 @@ function LeftTabsExample() {
                                     <Time />
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
-                                     <BloodPressure/>
+                                    <BloodPressure />
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="third">
-                                     <BodyTemperature/>
+                                    <BodyTemperature />
                                 </Tab.Pane>
                             </Tab.Content>
                         </Col>

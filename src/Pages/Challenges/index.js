@@ -1,8 +1,8 @@
 import HeaderTop from 'Components/Header'
 import classes from "./index.module.scss";
 import React from 'react'
-import { Card, Col, Row } from 'react-bootstrap'
-import profile from "../../Images/sign-in-left-img.png"
+import { Card, Col, Form, Row } from 'react-bootstrap'
+import profile from "../../Images/login.png"
 import { useNavigate } from 'react-router-dom';
 
 const Challenges = () => {
@@ -32,7 +32,7 @@ const Challenges = () => {
                         <Row>
                             <Col md={6} >
                                 <div className={classes.challenges}>
-                                    <i class="fas fa-pennant"></i>
+                                    <i class="icon-Unfil-challenge"></i>
                                    <h3>Challenges</h3>
                                     <h4> 1 / 70</h4>
                                 </div>
@@ -59,14 +59,14 @@ const Challenges = () => {
 
                                 </Col>
                                 <Col md={4}>
-                                    <div className='d-flex justify-content-end'>
-                                        <span ><i class="fal fa-check-circle"></i></span>
-
+                                {['checkbox'].map((type) => (
+                                    <div key={type} className='d-flex justify-content-end'>
+                                    <Form.Check type={type} className='mb-3' id={`check-api-${type}`}>
+                                            <Form.Check.Input type={type} />
+                                        </Form.Check>
                                     </div>
+                                    ))}
                                 </Col>
-
-
-
                             </Row>
                         </div>
                     </div>
