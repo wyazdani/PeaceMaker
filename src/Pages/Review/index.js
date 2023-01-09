@@ -1,7 +1,10 @@
 import classes from "./index.module.scss";
 import { Card, Col, Dropdown, Form, InputGroup, Row } from "react-bootstrap";
 import DataTable from "react-data-table-component";
-import Profile from "../../Images/s2.jpg"
+import unsplash from "../../Images/unsplash.png"
+import unsplash2 from "../../Images/unsplash2.png"
+import unsplash3 from "../../Images/unsplash3.png"
+import unsplash4 from "../../Images/unsplash4.png"
 import filterImg from "../../Images/Filter-icon.png";
 
 const Review = () => {
@@ -12,32 +15,22 @@ const Review = () => {
                 <>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                    </div><span>Select all</span>
-                </>,
-            selector: row => row.name_subAdmin,
-            cell: row => (
-                <ul className={classes.table_image}>
-                    <li>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                        </div>
-                        <div className={classes.img_box}>
-                            <img src={Profile} alt="" />
-                        </div>
-                    </li>
-                </ul>
-            )
+                        <p className=''>Select all</p>
+                    </div>
 
+                </>,
+            selector: row => row.select,
+            sortable: true,
 
 
         },
         {
-            name: <span>Patient Name</span>,
+            name: <p>Patient Name</p>,
             selector: row => row.email_address,
             sortable: true,
         },
         {
-            name: <span>Rating</span>,
+            name: <p>Rating</p>,
             selector: row => row.phone,
             cell: row => (
                 <ul className={classes.table_stars}>
@@ -50,18 +43,22 @@ const Review = () => {
             )
         },
         {
-            name: <span>Reviews</span>,
+            name: <p>Reviews</p>,
             selector: row => row.temporary_password,
             sortable: true,
         },
 
-
-
-
     ];
     const data = [
         {
-            name_subAdmin: "",
+            select: <div className={classes.table_image}>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </div>
+                <div className={classes.img_box}>
+                    <img src={unsplash} alt="" />
+                </div>
+            </div>,
             email_address: <>
                 <strong>Jacob John</strong>
                 <p>jacobjohn@gmail.com</p>
@@ -70,7 +67,14 @@ const Review = () => {
             temporary_password: '“Mr. Thomas is such a professional to talk to, he gave me advices about how I can conquer the aspect of my life that I find difficult.” ',
         },
         {
-            name_subAdmin: "Map ABC",
+            select: <div className={classes.table_image}>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </div>
+                <div className={classes.img_box}>
+                    <img src={unsplash2} alt="" />
+                </div>
+            </div>,
             email_address: <>
                 <strong>Jacob John</strong>
                 <p>jacobjohn@gmail.com</p>
@@ -79,7 +83,14 @@ const Review = () => {
             temporary_password: '“Highly recommended!” ',
         },
         {
-            name_subAdmin: "Map ABC",
+            select: <div className={classes.table_image}>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </div>
+                <div className={classes.img_box}>
+                    <img src={unsplash3} alt="" />
+                </div>
+            </div>,
             email_address: <>
                 <strong>Jacob John</strong>
                 <p>jacobjohn@gmail.com</p>
@@ -88,7 +99,14 @@ const Review = () => {
             temporary_password: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id neque blandit pharetra ut vitae tristique leo.',
         },
         {
-            name_subAdmin: "Map ABC",
+            select: <div className={classes.table_image}>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </div>
+                <div className={classes.img_box}>
+                    <img src={unsplash4} alt="" />
+                </div>
+            </div>,
             email_address: <>
                 <strong>Jacob John</strong>
                 <p>jacobjohn@gmail.com</p>
@@ -97,7 +115,14 @@ const Review = () => {
             temporary_password: '“Mr. Thomas is such a professional to talk to, he gave me advices about how I can conquer the aspect of my life that I find difficult.” ',
         },
         {
-            name_subAdmin: "Map ABC",
+            select: <div className={classes.table_image}>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </div>
+                <div className={classes.img_box}>
+                    <img src={unsplash2} alt="" />
+                </div>
+            </div>,
             email_address: <>
                 <strong>Jacob John</strong>
                 <p>jacobjohn@gmail.com</p>
@@ -106,7 +131,14 @@ const Review = () => {
             temporary_password: '“Highly recommended!” ',
         },
         {
-            name_subAdmin: "Map ABC",
+            select: <div className={classes.table_image}>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </div>
+                <div className={classes.img_box}>
+                    <img src={unsplash3} alt="" />
+                </div>
+            </div>,
             email_address: <>
                 <strong>Jacob John</strong>
                 <p>jacobjohn@gmail.com</p>
@@ -115,7 +147,14 @@ const Review = () => {
             temporary_password: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id neque blandit pharetra ut vitae tristique leo.',
         },
         {
-            name_subAdmin: "Map ABC",
+            select: <div className={classes.table_image}>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </div>
+                <div className={classes.img_box}>
+                    <img src={unsplash} alt="" />
+                </div>
+            </div>,
             email_address: <>
                 <strong>Jacob John</strong>
                 <p>jacobjohn@gmail.com</p>
@@ -127,8 +166,8 @@ const Review = () => {
     ]
 
     return (
-        
-            <div className={classes.top_header}>
+
+        <div className={classes.top_header}>
             <div >
                 <Row className="px-5" >
                     <Col md={6}>
@@ -141,54 +180,54 @@ const Review = () => {
                     </Col>
 
                 </Row>
-                </div>
-                    <Card className="m-3">
-                        <Row className="m-3">
-                            <Col md={6}>
-                                <Row className="mb-3 align-items-center">
+            </div>
+            <Card className="m-3">
+                <Row className="m-3">
+                    <Col md={6}>
+                        <Row className="mb-3 align-items-center">
 
-                                    <Col md={4}>
-                                        <Dropdown>
-                                            <Dropdown.Toggle
-                                                id="filterDropDown"
-                                                variant="outline-light"
-                                                className="drop-btn w-100"
-                                            >
-                                                Filter <img src={filterImg} alt="img" />
-                                            </Dropdown.Toggle>
+                            <Col md={4}>
+                                <Dropdown>
+                                    <Dropdown.Toggle
+                                        id="filterDropDown"
+                                        variant="outline-light"
+                                        className="drop-btn w-100"
+                                    >
+                                        Filter <img src={filterImg} alt="img" />
+                                    </Dropdown.Toggle>
 
-                                            <Dropdown.Menu>
-                                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                                            </Dropdown.Menu>
-                                        </Dropdown>
-                                    </Col>
-                                    <Col md={8}>
-                                        <Form>
-                                            <InputGroup className="">
-                                                <InputGroup.Text id="basic-addon1"><i class="fal fa-search"></i></InputGroup.Text>
-                                                <Form.Control
-                                                    placeholder="Search.."
-                                                    aria-label="Username"
-                                                    aria-describedby="basic-addon1"
-                                                />
-                                            </InputGroup>
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </Col>
+                            <Col md={8}>
+                                <Form>
+                                    <InputGroup className="">
+                                        <InputGroup.Text id="basic-addon1"><i class="fal fa-search"></i></InputGroup.Text>
+                                        <Form.Control
+                                            placeholder="Search.."
+                                            aria-label="Username"
+                                            aria-describedby="basic-addon1"
+                                        />
+                                    </InputGroup>
 
-                                        </Form>
-                                    </Col>
-                                </Row>
+                                </Form>
                             </Col>
                         </Row>
-                        <DataTable
-                            columns={columns}
-                            data={data}
-                            striped
-                        />
-                    </Card>
-              
-            </div>
-    
+                    </Col>
+                </Row>
+                <DataTable
+                    columns={columns}
+                    data={data}
+                    striped
+                />
+            </Card>
+
+        </div>
+
     )
 }
 

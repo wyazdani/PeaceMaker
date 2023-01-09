@@ -2,6 +2,9 @@ import React from 'react'
 import { Button, Col, Row } from 'react-bootstrap';
 import classes from "./index.module.scss";
 import profile from "../../Images/s2.jpg"
+import unsplash from "../../Images/unsplash.png"
+import unsplash2 from "../../Images/unsplash2.png"
+import unsplash3 from "../../Images/unsplash3.png"
 
 
 const Notification = () => {
@@ -52,7 +55,7 @@ const Notification = () => {
                     <Col lg={6} className='mb-2'>
                         <div className='d-flex'>
                             <img
-                                src='https://mdbcdn.b-cdn.net/img/new/avatars/2.webp'
+                                src={unsplash}
                                 alt='John Doe'
                                 className='me-3 rounded-circle'
                                 style={{ width: '60px', height: '60px' }}
@@ -82,7 +85,7 @@ const Notification = () => {
                     <Col lg={6} className='mb-2'>
                         <div className='d-flex'>
                             <img
-                                src='https://mdbcdn.b-cdn.net/img/new/avatars/2.webp'
+                               src={unsplash2}
                                 alt='John Doe'
                                 className='me-3 rounded-circle'
                                 style={{ width: '60px', height: '60px' }}
@@ -112,7 +115,7 @@ const Notification = () => {
                     <Col lg={6} className='mb-2'>
                         <div className='d-flex'>
                             <img
-                                src='https://mdbcdn.b-cdn.net/img/new/avatars/2.webp'
+                               src={unsplash3}
                                 alt='John Doe'
                                 className='me-3 rounded-circle'
                                 style={{ width: '60px', height: '60px' }}
@@ -142,7 +145,7 @@ const Notification = () => {
                     <Col lg={6} className='mb-2'>
                         <div className='d-flex'>
                             <img
-                                src='https://mdbcdn.b-cdn.net/img/new/avatars/2.webp'
+                                src={unsplash}
                                 alt='John Doe'
                                 className='me-3 rounded-circle'
                                 style={{ width: '60px', height: '60px' }}
