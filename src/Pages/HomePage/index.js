@@ -13,7 +13,7 @@ const HomePage = (props) => {
   return (
     <>
       <HeaderTop />
-      <Row className='p-4'>
+      <Row className='m-3'>
         <Col lg={4}>
           <div className={classes.profile_img}>
             <img src={profile} alt="" />
@@ -25,7 +25,7 @@ const HomePage = (props) => {
           </div>
         </Col>
         <Col lg={8} className='mb-3'>
-          <Row className='g-4'>
+          <Row className={classes.average_happiness}>
             <Col md={6} lg={4} xl={4} xxl={4}>
               <Card className={classes.card_inner}>
                 <a href='#' className={classes.icon_box}>
@@ -57,98 +57,98 @@ const HomePage = (props) => {
             </Col>
           </Row>
         </Col>
-
-        <Row >
-          <Col lg={4}>
-            <Card>
-              <Card.Header className={classes.header_bg}>
-                <Card.Title>User Activity</Card.Title>
-                <Link to={"#"} className='text-green text-decoration-none'><span class="icon-alert1"></span></Link>
-              </Card.Header>
-              <Card.Body>
-                <div className={classes.img_box}>
-                  <img src={daily} alt="" />
-                </div>
-              </Card.Body>
-            </Card>
-              <Card className={classes.main_card}>
-                <Card.Header className={classes.header_bg}>
-                  <h2>Challenges</h2>
-                </Card.Header>
-                <Card.Body className='d-flex justify-content-center'>
-                  <div className={classes.challenges}>
-                  <a href="#"> <img src={challenges} alt="" /> </a>
-                    <p>Total Points: <strong>2</strong></p>
-                    <strong className='text-green'> 1 / 70</strong>
-                  </div>
-                  <div className={classes.login_img}>
-                    <img src={loginImg} alt="" />
-                  </div>
-                </Card.Body>
-              </Card>
-          </Col>
-          <Col md={8} lg={8}>
-            <Card className={classes.main_card}>
-              <Card.Header className={classes.header_bg}>
-                <Card.Title>User Activity</Card.Title>
-                <Link to={"#"} className='text-green text-decoration-none'>View Records</Link>
-              </Card.Header>
-              <Card.Body>
-                <ul className={'activity_list col2'}>
-                  <li>
-                    <Link to={"#"} className={'box'}>
-                      <i className={'fas fa-plus'}></i>
-                      Habit Tracker
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={"#"} className={'box'}>
-                      <i className={'fas fa-plus'}></i>
-                      Habit Tracker
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={"#"} className={'box'}>
-                      <i className={'fas fa-plus'}></i>
-                      Habit Tracker
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={"#"} className={'box'}>
-                      <i className={'fas fa-plus'}></i>
-                      Habit Tracker
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={"#"} className={'box'}>
-                      <i className={'fas fa-plus'}></i>
-                      Habit Tracker
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={"#"} className={'box'}>
-                      <i className={'fas fa-plus'}></i>
-                      Habit Tracker
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={"#"} className={'box'}>
-                      <i className={'fas fa-plus'}></i>
-                      Habit Tracker
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={"#"} className={'box'}>
-                      <i className={'fas fa-plus'}></i>
-                      Habit Tracker
-                    </Link>
-                  </li>
-                </ul>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
       </Row>
+      <Row className='m-3' >
+        <Col lg={4}>
+          <Card>
+            <Card.Header className={classes.header_bg}>
+              <Card.Title>User Activity</Card.Title>
+              <Link to={"#"} className='text-decoration-none'><span class="icon-alert1"></span></Link>
+            </Card.Header>
+            <Card.Body>
+              <div className={classes.img_box}>
+                <img src={daily} alt="" />
+              </div>
+            </Card.Body>
+          </Card>
+          <Card className={classes.main_card}>
+            <Card.Header className={classes.header_bg}>
+              <h2>Challenges</h2>
+            </Card.Header>
+            <Card.Body className={classes.card_body}>
+              <div className={classes.challenges}>
+                <a href="#"><img src={challenges} alt="" /> </a>
+                <p>Total Points:2</p>
+                <strong className='text-green'> 1 / 70</strong>
+              </div>
+              <div className={classes.login_img}>
+                <img src={loginImg} alt="" />
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={8} lg={8}>
+          <Card>
+            <Card.Header className={classes.header_bg}>
+              <Card.Title>User Activity</Card.Title>
+              <Link to={"#"} className='text-green text-decoration-none'>View Records</Link>
+            </Card.Header>
+            <Card.Body>
+              <ul className={'activity_list col2'}>
+                <li>
+                  <Link to={"#"} className={'box'}>
+                    <i className={'fas fa-plus'}></i>
+                    Habit Tracker
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"#"} className={'box'}>
+                    <i className={'fas fa-plus'}></i>
+                    Habit Tracker
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"#"} className={'box'}>
+                    <i className={'fas fa-plus'}></i>
+                    Habit Tracker
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"#"} className={'box'}>
+                    <i className={'fas fa-plus'}></i>
+                    Habit Tracker
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"#"} className={'box'}>
+                    <i className={'fas fa-plus'}></i>
+                    Habit Tracker
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"#"} className={'box'}>
+                    <i className={'fas fa-plus'}></i>
+                    Habit Tracker
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"#"} className={'box'}>
+                    <i className={'fas fa-plus'}></i>
+                    Habit Tracker
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"#"} className={'box'}>
+                    <i className={'fas fa-plus'}></i>
+                    Habit Tracker
+                  </Link>
+                </li>
+              </ul>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+
     </>
   )
 }

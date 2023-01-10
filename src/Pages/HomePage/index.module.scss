@@ -5,15 +5,16 @@
     img {
         width: 100%;
         display: block;
-        min-height: 240px;
+        min-height: 216px;
     }
 
     .img_text {
         position: absolute;
-        top: 50px;
-        left: 10px;
+        top: 29px;
+        left: 22px;
         bottom: 0;
         right: 30px;
+
 
         p {
             color: white;
@@ -21,6 +22,7 @@
 
         h3 {
             color: white;
+            font-style: italic;
         }
 
         a {
@@ -43,6 +45,7 @@
     }
 
 }
+
 .img_box {
     height: auto;
     display: block;
@@ -51,12 +54,14 @@
         width: 100%;
     }
 }
+
 .inner_card {
     justify-content: center;
     text-align: center;
     width: 100%;
     min-height: 220px;
     border-radius: 30px !important;
+
     i {
         font-size: 34px;
         color: #8EB26F;
@@ -79,10 +84,12 @@
         background-color: transparent;
         display: flex;
     }
+
     span {
         padding: 15px;
         font-size: 20px;
     }
+
     .card_background {
         background: #E5E5E5;
         margin: 10px;
@@ -90,68 +97,75 @@
     }
 }
 
-.login_img {
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-}
 
-.challenges {
-    
-    i {
-       
 
-         font-size: 24px !important;
-         color: #8EB26F;
-       
-         width: 40px;
-         height: 40px;
-         text-align: center;
-      
-         display: inline-block;
-         line-height: 40px;
-    }
+.average_happiness {
 
-    p {
-        color: #8A8A8A;
+    .card_inner {
+        // border-color: rgba(0, 0, 0, 0.02) !important;
+        // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        // background-color: transparent;
+        text-align: center;
+        padding: 0;
+        border-radius: 25px;
 
-    }
-}
-
-.card_inner {
-    border-color: rgba(0, 0, 0, 0.02) !important;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    background-color: transparent;
-    text-align: center;
-
-    .icon_box {
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 40px;
-        margin: 20px auto 10px;
-        color: #8EB26F;
-        text-decoration: none;
-    }
-
-    .header_card {
-        background-color: transparent !important;
-        border: none;
-
-        i {
-            font-size: 34px;
+        .icon_box {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin: 13px auto 0;
             color: #8EB26F;
+            text-decoration: none;
+        }
+
+        .header_card {
+            background-color: transparent !important;
+            border: none;
+
+            i {
+                font-size: 34px;
+                color: #8EB26F;
+            }
+        }
+
+        p {
+            color: #7265E3;
+            font-weight: 500;
         }
     }
-
-    p {
-        color: #7265E3;
-    }
-
 }
 
 
+
+
+.main_card {
+    padding: 0 !important;
+    margin: 0 !important;
+
+    .card_body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+
+        .challenges {
+            padding: 10px;
+
+            p {
+                color: #8A8A8A;
+
+            }
+        }
+
+        .login_img {
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+    }
+}

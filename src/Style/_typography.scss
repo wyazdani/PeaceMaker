@@ -43,7 +43,7 @@ p {
 
 a {
   color: $color-black;
-  text-decoration: underline;
+  text-decoration: none;
   &:hover,
   &:focus {
     text-decoration: none;

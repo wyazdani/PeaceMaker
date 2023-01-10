@@ -31,6 +31,8 @@ import Notification from "Pages/Notification";
 import Review from "Pages/Review";
 import ProfilePage from "Pages/ProfilePage";
 import List from "Components/AccordianList";
+import SecondHeader from "Components/Header/SecondHeader";
+import Messages from "Pages/Messages";
 
 const routes = [
   //{ path: "/", component: LandingPage },
@@ -104,6 +106,16 @@ const routes = [
     path: "/list",
     layout: MainLayout,
     component: List
+  },
+  {
+    path: "/second-header",
+    layout: MainLayout,
+    component: SecondHeader
+  },
+  {
+    path: "/messages",
+    layout: MainLayout,
+    component: Messages
   },
   {
     path: "/popup",

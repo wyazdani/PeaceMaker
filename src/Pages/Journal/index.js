@@ -1,7 +1,7 @@
 import classes from "./index.module.scss";
 import HeaderTop from 'Components/Header'
 import React from 'react'
-import { Col, Form, InputGroup, Row } from 'react-bootstrap'
+import { Card, Col, Form, InputGroup, Row } from 'react-bootstrap'
 import { useNavigate } from "react-router-dom";
 
 const Journal = () => {
@@ -11,9 +11,10 @@ const Journal = () => {
     };
     return (
         <>
+           
+           
             <HeaderTop />
-            <div className='main_top'>
-                <Row className='m-4'>
+            <Card className="p-5 m-5">
                 <Row className="mb-3">
                     <Col md={4}>
                         <h2>Journal Entries</h2>
@@ -28,64 +29,55 @@ const Journal = () => {
                                     aria-describedby="basic-addon1"
                                 />
                             </InputGroup>
-                            <button  onClick={ButtonEnter} className='btn btn-gradient d-block w-40 me-2'>Add Entry</button>
+                            <button onClick={ButtonEnter} className='btn btn-gradient d-block w-40 me-2'>Add Entry</button>
                         </Form>
-
                     </Col>
-                    </Row>
-                        <div className={classes.boxes_rounded}>
-                            <Row className="m-3">
-                                <Col md={6}>
-                                    <p>Blood Pressure</p>
-                                    <h4>Fight with my Ex</h4>
-                                </Col>
-                                <Col md={6} className=' d-flex justify-content-end '>
-                                    <p>February 21, 2022</p>
-                                </Col>
-                            </Row>
-                            
-                        </div>
-
-                        <div className={classes.boxes_rounded}>
-                            <Row className="m-3">
-                                <Col md={6}>
-                                    <p>Blood Pressure</p>
-                                    <h4>Journal Entry 001</h4>
-                                </Col>
-                                <Col md={6} className=' d-flex justify-content-end '>
-                                    <p>February 21, 2022</p>
-                                </Col>
-                            </Row>
-                            
-                        </div>
-                        <div className={classes.boxes_rounded}>
-                            <Row className="m-3">
-                                <Col md={6}>
-                                    <p>Blood Pressure</p>
-                                    <h4>Journal Entry 002</h4>
-                                </Col>
-                                <Col md={6} className=' d-flex justify-content-end '>
-                                    <p>February 21, 2022</p>
-                                </Col>
-                            </Row>
-                            
-                        </div>
-                        <div className={classes.boxes_rounded}>
-                            <Row className="m-3">
-                                <Col md={6}>
-                                    <p>Blood Pressure</p>
-                                    <h4>Journal Entry 003</h4>
-                                </Col>
-                                <Col md={6} className=' d-flex justify-content-end '>
-                                    <p>February 21, 2022</p>
-                                </Col>
-                            </Row>
-                            
-                        </div>
-                      
-                   
                 </Row>
-            </div>
+                <div className={classes.boxes_rounded}>
+                    <Row className="m-3">
+                        <Col md={6}>
+                            <p>Blood Pressure</p>
+                            <h4>Fight with my Ex</h4>
+                        </Col>
+                        <Col md={6} className=' d-flex justify-content-end '>
+                            <p>February 21, 2022</p>
+                        </Col>
+                    </Row>
+                </div>
+                <div className={classes.boxes_rounded}>
+                    <Row className="m-3">
+                        <Col md={6}>
+                            <p>Blood Pressure</p>
+                            <h4>Journal Entry 001</h4>
+                        </Col>
+                        <Col md={6} className=' d-flex justify-content-end '>
+                            <p>February 21, 2022</p>
+                        </Col>
+                    </Row>
+                </div>
+                <div className={classes.boxes_rounded}>
+                    <Row className="m-3">
+                        <Col md={6}>
+                            <p>Blood Pressure</p>
+                            <h4>Journal Entry 002</h4>
+                        </Col>
+                        <Col md={6} className=' d-flex justify-content-end '>
+                            <p>February 21, 2022</p>
+                        </Col>
+                    </Row>
+                </div>
+                <div className={classes.boxes_rounded}>
+                    <Row className="m-3">
+                        <Col md={6}>
+                            <p>Blood Pressure</p>
+                            <h4>Journal Entry 003</h4>
+                        </Col>
+                        <Col md={6} className=' d-flex justify-content-end '>
+                            <p>February 21, 2022</p>
+                        </Col>
+                    </Row>
+                </div>
+                </Card>
         </>
     )
 }

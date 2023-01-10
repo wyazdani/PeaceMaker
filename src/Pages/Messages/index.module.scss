@@ -1,0 +1,59 @@
+.main_tabs {
+    border: 1px solid #EBEBEB;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 15px;
+    margin: 50px;
+    height: 800px;
+
+    .icon_text {
+        display: flex;
+
+        i {
+            padding: 0 10px;
+        }
+
+    }
+
+    .border_line {
+        border-right: 1px solid #cacaca;
+        height: 780px;
+        position: relative;
+    }
+    .btn_bottom{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        bottom: 60px;
+    }
+}
+
+
+.vertical-tabs {
+    .nav-item {
+      padding:0 !important;
+  
+      i {
+        font-size: 16px;
+        color: #8EB26F;
+      }
+  
+      .nav-link {
+        background-color: #F5F5F5;
+        color: black;
+        padding: 15px;
+  
+        &.active {
+          background-color: #8EB26F;
+          color: white;
+          padding: 15px;
+  
+          i {
+            font-size: 16px;
+            color: white !important;
+  
+          }
+        }
+      }
+    }
+  }

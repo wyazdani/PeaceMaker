@@ -1,23 +1,32 @@
 .inner_styling {
-    i {
-        font-size: 30px;
-        color: #8EB26F;
-        width: 40px;
-    }
-
+    
+    justify-content: space-between;
+    display: flex;
     p {
         color: #7265E3;
         font-size: 16px;
-        margin-top: 3px;
-        text-align: center;
+        margin-top: 10px;
+        padding-right: 80px;
+    }
+    h3{
+        padding-top: 10px;
     }
 }
-
+.img_box{
+      
+    height: auto;
+    display: block;
+    img{
+      width: 50px;
+      height: 50px;
+    }
+}
 .record {
     border-radius: 15px;
     border: transparent;
     background: #E5E5E5;
     padding: 20px;
+    margin: 20px;
    
 
     span {
@@ -35,6 +44,14 @@
     background-color:#324C51;
     border-radius: 30px;
     margin: 10px 0;
+    .img_box{
+        height: auto;
+        display: block;
+        img{
+          width: 50px;
+          height: 50px;
+        }
+    }
     .position{
         width: 100%;
         padding: 100px 80px;
@@ -70,6 +87,9 @@
 
 }
 .boxes_rounded{
+   &a{
+        text-decoration: none !important;
+    }
     .form-check-input[type=checkbox] {
         border-radius: 10.25em;
         width: 30px;

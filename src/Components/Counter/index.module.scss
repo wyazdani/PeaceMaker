@@ -27,6 +27,8 @@
 
     .col{
         padding: 8px;
+        break-inside: avoid;
+        page-break-inside: avoid;
     }
     // .col_level{
     //     padding: 10px;

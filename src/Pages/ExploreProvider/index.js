@@ -1,4 +1,3 @@
-import HeaderTop from 'Components/Header'
 import React from 'react'
 import { Button, Card, Col, Container, Form, InputGroup, Row } from 'react-bootstrap'
 import classes from "./index.module.scss";
@@ -9,6 +8,7 @@ import unsplash5 from "../../Images/unsplash4.png"
 import unsplash6 from "../../Images/unsplash5.png"
 import unsplash2 from "../../Images/unsplash6.png"
 import { Link, useNavigate } from 'react-router-dom';
+import SecondHeader from 'Components/Header/SecondHeader';
 
 const ExploreProvider = () => {
     const navigate = useNavigate();
@@ -17,7 +17,7 @@ const ExploreProvider = () => {
     };
     return (
         <>
-            <HeaderTop />
+            <SecondHeader />
             <Card className={classes.main}>
                 <Card.Body>
                     <Row className='text-center justify-content-center '>

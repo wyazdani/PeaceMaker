@@ -184,7 +184,7 @@ nav {
   border-radius: 15px;
   background-color: #FBFBFB;
   margin-bottom: 20px;
-  height: 500px;
+  height: 700px;
 
   .form-check-input[type=checkbox] {
     border-radius: 10.25em;
@@ -278,9 +278,12 @@ nav {
         background-color: #FAFAFA;
         display: block;
         text-align: center;
+        cursor: pointer;
 
         .list-group-item {
           background-color: #FAFAFA;
+          color: black;
+          font-weight: 500;
 
           &:hover {
             background-color: #8EB26F;
@@ -288,19 +291,17 @@ nav {
         }
       }
     }
-    // 
-    // display: block;
-    // border-radius: 10px;
-    // padding: 10px 0px;
-    // background: rgba(0, 0, 0, 0.05) !important;
-    // position: relative;
-    // color: #000;
-    // text-decoration: none;
-    // font-size: 16px;
-    // line-height: 22px;
-    // font-weight: 700;
   }
-
+  .boxes_rounded{
+    a{
+       text-decoration: none;
+    }
+    .form-check-input[type=checkbox] {
+        border-radius: 10.25em;
+        width: 30px;
+        height: 30px;
+    }
+}
   i {
     display: flex;
     align-items: center;

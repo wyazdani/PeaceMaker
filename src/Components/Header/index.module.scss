@@ -3,6 +3,8 @@
 
         font-size: 20px;
         margin: 5px;
+        color: #000000;
+      
     }
 
     .icons {
@@ -15,12 +17,23 @@
             display: inline-block;
             padding: 5px 10px;
             font-size: 24px;
-
+         
         }
         li a :hover{
             background: transparent;
             color: #8EB26F !important;
         }
+        img{
+            width: 27px;
+            height: 27px;
+            margin-bottom: 6px;
+           a &:hover{
+                background: transparent;
+                color: #8EB26F !important;
+              } 
+         }
+        
+
         
 
     }

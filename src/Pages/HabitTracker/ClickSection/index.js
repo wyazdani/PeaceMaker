@@ -10,10 +10,9 @@ const ClickSection = () => {
     return (
         <>
             <HeaderTop />
-            <Row className='m-2'>
+            <Row className='p-5'>
                 <Col lg={6} >
-                    <div className={classes.Habit_background} >
-                        <Row className=''>
+                        <div className={classes.Habit_background_2}>
                             <Col xl={6} lg={12} md={6}>
                                 <div className={classes.position_2}>
                                     <h1>50%</h1>
@@ -21,14 +20,12 @@ const ClickSection = () => {
                                     <p>Ain’t no mountain high enough to accomplish success</p>
                                 </div>
                             </Col>
-                            <Col xl={6} lg={12} md={6}>
+                            <Col xl={6} lg={12} md={6} className='m-0 p-0'>
                                 <div className={classes.profile_img}>
                                     <img src={profile} alt="" />
                                 </div>
                             </Col>
-                        </Row>
-
-                    </div>
+                        </div>
                     <Row className={classes.boxes}>
                         <Col className={classes.mid_box}><span> THU <br /></span> <h3>05</h3> </Col>
                         <Col className={classes.mid_box}><span> FRI <br /></span> <h3>06</h3> </Col>
@@ -36,8 +33,7 @@ const ClickSection = () => {
                         <Col className={classes.mid_box}><span> THU <br /></span> <h3>08</h3> </Col>
                         <Col className={classes.mid_box}><span> SAT <br /></span> <h3>09</h3> </Col>
                     </Row>
-                    <Row className='m-2'>
-                        <Col>
+                    <div className=''>
                             <Card>
                                 <Card.Title>Checklist</Card.Title>
                                 {['checkbox'].map((type) => (
@@ -69,8 +65,8 @@ const ClickSection = () => {
                                 </div>
                             </Card>
                           
-                        </Col>
-                    </Row>
+                      
+                    </div>
                 </Col>
                 <Col lg={6}>
                     <div className={classes.record}>

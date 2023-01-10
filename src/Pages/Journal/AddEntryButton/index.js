@@ -9,11 +9,9 @@ const AddEntryButton = () => {
     const TurnBack = () => {
         navigate('/journal');
     };
-
     return (
         <>
             <HeaderTop />
-            <div className='main_top'>
                 <Row className='m-5'>
                     <Col md={6} className='d-flex justify-content-start mb-3'>
                         <span onClick={TurnBack} className={classes.arrow_style}><i class="far fa-arrow-left"></i></span> <h3>Add Journal</h3>
@@ -69,9 +67,8 @@ const AddEntryButton = () => {
                         </div>
                     </Row>
                 </Row>
-            </div>
-        </>
-    )
-}
+            </>
+        )
+    }
 
 export default AddEntryButton
