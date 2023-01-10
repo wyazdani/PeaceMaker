@@ -1,25 +1,24 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import classes from "./index.module.scss";
+import {Link} from "react-router-dom";
 
 const HeaderTop = (props) => {
   return (
     <>
-      <div id={classes.header}>
-        <Row className='m-3'>
-          <Col md={6} >
-            <p>Hello Jacob ,</p>
-            <strong><h2>Welcome Back!</h2></strong>
-          </Col>
-          <Col md={6}>
-            <ul className={classes.icons}>
-              <li> <a href="/"><i class="far fa-share-alt"></i></a> </li>
-              <li> <a href="/"><i class="far fa-calendar-alt"></i></a> </li>
-              <li> <a href="/"><i class="far fa-bell"></i></a></li>
+      <header id={classes.header}>
+          <div className={classes.headerRight}>
+            <ul className={classes.headerIcons}>
+              <li> <Link to="/"><i class="fal fa-share-alt"></i></Link> </li>
+              <li> <Link to="/"><i class="fal fa-calendar-alt"></i></Link> </li>
+              <li> <Link to="/"><i class="fal fa-bell"></i></Link></li>
             </ul>
-          </Col>
-        </Row>
-      </div>
+          </div>
+          <div className={classes.headerRight}>
+            <div className={classes.title}>Hello Jacob ,</div>
+            <h2>Welcome Back!</h2>
+          </div>
+      </header>
     </>
   );
 };
