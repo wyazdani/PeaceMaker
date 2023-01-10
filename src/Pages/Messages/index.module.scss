@@ -27,3 +27,33 @@
         bottom: 60px;
     }
 }
+
+
+.vertical-tabs {
+    .nav-item {
+      padding:0 !important;
+  
+      i {
+        font-size: 16px;
+        color: #8EB26F;
+      }
+  
+      .nav-link {
+        background-color: #F5F5F5;
+        color: black;
+        padding: 15px;
+  
+        &.active {
+          background-color: #8EB26F;
+          color: white;
+          padding: 15px;
+  
+          i {
+            font-size: 16px;
+            color: white !important;
+  
+          }
+        }
+      }
+    }
+  }

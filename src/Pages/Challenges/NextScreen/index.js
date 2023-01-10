@@ -1,31 +1,31 @@
 import HeaderTop from 'Components/Header'
-import classes from "./index.module.scss";
+import classes from "../../Challenges/index.module.scss";
 import React from 'react'
 import { Card, Col, Row } from 'react-bootstrap'
 import Counter from 'Components/Counter';
+import img from "../../../Images/flag.png"
 
 const NextScreen = () => {
 
     return (
         <>
             <HeaderTop />
-            <Row className='m-3'>
+            
+            <Row className='m-4'>
                 <Col md={4}>
-                    <Card>
-                        <div className={classes.inner_styling}>
-                            <Col md={8} className='d-flex '>
-                                <i class="fas fa-pennant"></i>
-                                <p><strong>Challenge Points</strong></p>
-                            </Col>
-                            <Col md={4} className='d-flex justify-content-end'>
+                    <Card className='p-0'>
+                        <Card.Body>
+                            <div className={classes.inner_styling}>
+                                <div className={classes.img_box}><img src={img} alt="" /></div>
+                                <p>Challenge Points</p>
                                 <h3>20</h3>
-                            </Col>
-                        </div>
+                            </div>
+                        </Card.Body>
                     </Card>
                 </Col>
             </Row>
             <Counter />
-        
+
 
         </>
     )

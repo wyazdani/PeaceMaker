@@ -1,4 +1,4 @@
-import HeaderTop from 'Components/Header'
+import SecondHeader from 'Components/Header/SecondHeader'
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import map from "../../../Images/map.png"
@@ -8,7 +8,7 @@ const MapShow = (props) => {
   const [modalShow, setModalShow] = React.useState(false);
   return (
     <>
-          <HeaderTop />
+          <SecondHeader />
           <Row>
             <Col><img onClick={() => setModalShow(true)}  src={map} alt="" /></Col>
           </Row>

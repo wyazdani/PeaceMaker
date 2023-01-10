@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap';
-import profile from "../../Images/s3.jpg"
+import profile from "../../Images/unsplash1.png"
 import classes from "./index.module.scss";
 const Profile = () => {
   return (

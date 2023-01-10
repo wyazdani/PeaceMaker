@@ -17,7 +17,7 @@ const Nav = () => {
                     </li>
 
                     <li>
-                        <Link to={"/build-map"}> <i class="icon-envelop"></i>Messages</Link>
+                        <Link to={"/messages"}> <i class="icon-envelop"></i>Messages</Link>
                     </li>
 
                     <li>

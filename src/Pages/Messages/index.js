@@ -1,35 +1,37 @@
 import classes from "./index.module.scss";
-import HeaderTop from 'Components/Header';
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
-import Time from "./Time";
-import BloodPressure from "./BloodPressure";
-import BodyTemperature from "./BodyTemperature";
 import { Button, Card } from "react-bootstrap";
+import SecondHeader from "Components/Header/SecondHeader";
+import Time from "Pages/Affirmations/SettingIconClick/Time";
+import BloodPressure from "Pages/Affirmations/SettingIconClick/BloodPressure";
+import BodyTemperature from "Pages/Affirmations/SettingIconClick/BodyTemperature";
+import profile from '../../Images/unsplash.png'
 
 // import Sonnet from '../../components/Sonnet';
 
 function LeftTabsExample() {
     return (
         <>
-            <HeaderTop />
+            <SecondHeader />
             <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                 <div className={classes.main_tabs}>
-                    <Row className="m-3">
-
+                    <Row>
                         <Col sm={4} className={classes.border_line} >
 
-                            <h2>Settings</h2>
+                            <h2>Messages</h2>
                             <Nav variant="pills" className="flex-column vertical-tabs">
                                 <Nav.Item>
                                     <Nav.Link className={classes.nav_styling} eventKey="first">
                                         <div className="d-flex justify-content-between align-items-center">
                                             <div className={classes.icon_text}>
-                                                <i class="icon-time"></i>
-                                                <strong>Time</strong>
-                                            </div>
+                                                <img src={profile} alt="" />
+                                                   <strong>Thomas Edison</strong> 
+                                                   </div>
+                                                   <p> Thanks! I’ll get back to you...</p>
+                                           
                                             <div>
                                                 <i class="far fa-chevron-right"></i>
                                             </div>

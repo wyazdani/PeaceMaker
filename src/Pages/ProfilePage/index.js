@@ -1,7 +1,12 @@
 import React from 'react'
 import { Card, Col, Dropdown, Form, InputGroup, Row } from 'react-bootstrap'
 import classes from "./index.module.scss";
-import Profile from "../../Images/s2.jpg"
+import unsplash from "../../Images/unsplash.png"
+import unsplash2 from "../../Images/unsplash2.png"
+import unsplash3 from "../../Images/unsplash3.png"
+import unsplash4 from "../../Images/unsplash4.png"
+import rectangleImg from "../../Images/RectangleImg.png"
+import imagTable from "../../Images/ImageTable.png"
 import DataTable from 'react-data-table-component';
 
 const ProfilePage = () => {
@@ -11,25 +16,12 @@ const ProfilePage = () => {
                 <>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                        <p>Select all</p>
+                        <p className=''>Select all</p>
                     </div>
+                    
                 </>,
-            selector: row => row.name_subAdmin,
-            cell: row => (
-                <ul className={classes.table_image}>
-                    <li>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                        </div>
-                        <div className={classes.img_box}>
-                            <img src={Profile} alt="" />
-                        </div>
-                    </li>
-                </ul>
-            )
-
-
-
+                  selector: row => row.select,
+                  sortable: true,
         },
         {
             name: <p>Name</p>,
@@ -40,8 +32,15 @@ const ProfilePage = () => {
         {
             name: <p>Phone</p>,
             selector: row => row.phone,
-            cell : row=>(
+            cell: row => (
                 <p>+1 (127) 2123 212</p>
+            )
+        },
+        {
+            name: <p>Phone</p>,
+            selector: row => row.phone,
+            cell: row => (
+                <a className={classes.ellipses} href="/"><i class="fal fa-ellipsis-v"></i></a>
             )
         },
 
@@ -51,7 +50,16 @@ const ProfilePage = () => {
     ];
     const data = [
         {
-            name_subAdmin: "",
+            select: <div className={classes.table_image}>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </div>
+                <div className={classes.img_box}>
+                    <img src={unsplash} alt="" />
+                </div>
+
+            </div>,
             email_address: <>
                 <strong>Jacob John</strong>
                 <p>jacobjohn@gmail.com</p>
@@ -60,7 +68,16 @@ const ProfilePage = () => {
 
         },
         {
-            name_subAdmin: "Map ABC",
+            select: <div className={classes.table_image}>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </div>
+                <div className={classes.img_box}>
+                    <img src={unsplash2} alt="" />
+                </div>
+
+            </div>,
             email_address: <>
                 <strong>Jacob John</strong>
                 <p>jacobjohn@gmail.com</p>
@@ -69,7 +86,16 @@ const ProfilePage = () => {
 
         },
         {
-            name_subAdmin: "Map ABC",
+            select: <div className={classes.table_image}>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                </div>
+                <div className={classes.img_box}>
+                    <img src={unsplash3} alt="" />
+                </div>
+
+            </div>,
             email_address: <>
                 <strong>Jacob John</strong>
                 <p>jacobjohn@gmail.com</p>
@@ -78,7 +104,16 @@ const ProfilePage = () => {
 
         },
         {
-            name_subAdmin: "Map ABC",
+            select: <div className={classes.table_image}>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+            </div>
+            <div className={classes.img_box}>
+                <img src={unsplash4} alt="" />
+            </div>
+
+        </div>,
             email_address: <>
                 <strong>Jacob John</strong>
                 <p>jacobjohn@gmail.com</p>
@@ -86,7 +121,7 @@ const ProfilePage = () => {
             // phone: '+1 (127) 2123 212',
 
         },
-       
+
 
     ]
     return (
@@ -98,8 +133,6 @@ const ProfilePage = () => {
                 </Col>
                 <Col md={6}>
                     <Row className="mb-3 align-items-center">
-
-
                         <Col md={6}>
                             <Form>
                                 <InputGroup className="">
@@ -121,11 +154,11 @@ const ProfilePage = () => {
                     </Row>
                 </Col>
                 <Row>
-                    <Col md={4} className=''>
+                    <Col md={4}>
                         <Card className={classes.left_card}>
                             <Card.Header>
                                 <div className={classes.img_box}>
-                                    <img src={Profile} alt="" />
+                                    <img src={imagTable} alt="" />
                                     <h3>Thomas Edison</h3>
                                 </div>
 
@@ -162,12 +195,12 @@ const ProfilePage = () => {
                                 </ul>
                             </Card.Body>
                             <Card.Footer>
-                                <Row className={classes.card_body_left}>
+                                <Row className={classes.card_footer_left}>
                                     <Col md={6} className={classes.img_box2}>
-                                        <img src={Profile} alt="" />
+                                        <img src={rectangleImg} alt="" />
                                     </Col>
-                                    <Col md={6} className={classes.img_box3}>
-                                        <img src={Profile} alt="" />
+                                    <Col md={6} className={classes.img_box2}>
+                                        <img src={rectangleImg} alt="" />
                                     </Col>
                                 </Row>
                             </Card.Footer>
@@ -175,7 +208,7 @@ const ProfilePage = () => {
                     </Col>
                     <Col md={8}>
 
-                        <Card className=" p-3">
+                        <Card className={classes.right_card}>
                             <Row  >
                                 <Col md={6}>
                                     <h1>Reviews</h1>
@@ -190,7 +223,7 @@ const ProfilePage = () => {
                             <DataTable
                                 columns={columns}
                                 data={data}
-                                
+
                             />
                         </Card>
                     </Col>

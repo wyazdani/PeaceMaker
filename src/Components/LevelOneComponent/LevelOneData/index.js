@@ -1,29 +1,106 @@
 const LevelOneData = [
     {
-        num: '1',
-        level: 'Level One',
-        comp: '0 / 7 Completed'
+        
+        level: 'Find 7 Yellow Buttons',
+        comp:
+         <>
+            <p >Duration:1 Day </p>
+         </>
+        ,
+        comp_2:'Points: 1 Day Point'
     },
     {
-        num: '1',
-        level: 'Level One',
-        comp: '0 / 7 Completed'
+        
+        level: 'Find 7 Yellow Buttons',
+        comp:
+         <>
+            <p >Duration:1 Day </p>
+         </>
+        ,
+        comp_2:'Points: 1 Day Point'
     },
     {
-        num: '1',
-        level: 'Level One',
-        comp: '0 / 7 Completed'
+        
+        level: 'Find 7 Yellow Buttons',
+        comp:
+         <>
+            <p >Duration:1 Day </p>
+         </>
+        ,
+        comp_2:'Points: 1 Day Point'
     },
     {
-        num: '1',
-        level: 'Level One',
-        comp: '0 / 7 Completed'
+        
+        level: 'Find 7 Yellow Buttons',
+        comp:
+         <>
+            <p >Duration:1 Day </p>
+         </>
+        ,
+        comp_2:'Points: 1 Day Point'
     },
     {
-        num: '1',
-        level: 'Level One',
-        comp: '0 / 7 Completed'
+        
+        level: 'Find 7 Yellow Buttons',
+        comp:
+         <>
+            <p >Duration:1 Day </p>
+         </>
+        ,
+        comp_2:'Points: 1 Day Point'
     },
+    {
+        
+        level: 'Find 7 Yellow Buttons',
+        comp:
+         <>
+            <p >Duration:1 Day </p>
+         </>
+        ,
+        comp_2:'Points: 1 Day Point'
+    },
+    {
+        
+        level: 'Find 7 Yellow Buttons',
+        comp:
+         <>
+            <p >Duration:1 Day </p>
+         </>
+        ,
+        comp_2:'Points: 1 Day Point'
+    },
+    {
+        
+        level: 'Find 7 Yellow Buttons',
+        comp:
+         <>
+            <p >Duration:1 Day </p>
+         </>
+        ,
+        comp_2:'Points: 1 Day Point'
+    },
+    
+    {
+        
+        level: 'Find 7 Yellow Buttons',
+        comp:
+         <>
+            <p >Duration:1 Day </p>
+         </>
+        ,
+        comp_2:'Points: 1 Day Point'
+    },
+    {
+        
+        level: 'Find 7 Yellow Buttons',
+        comp:
+         <>
+            <p >Duration:1 Day </p>
+         </>
+        ,
+        comp_2:'Points: 1 Day Point'
+    },
+    
 ]
 
 export default LevelOneData; 

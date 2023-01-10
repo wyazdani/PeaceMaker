@@ -12,35 +12,33 @@ const HabitTracker = () => {
         navigate('/click-section');
     };
     return (
-        <>
-        <HeaderTop/>
-            <Row className='m-3'>
-                <div onClick={MapSec}  className={classes.Habit_background} >
-                <Row>
+        
+            <div className='p-5'>
+                <HeaderTop />
+                <Row onClick={MapSec} className={classes.Habit_background}>
                     <Col md={6} >
                         <div className={classes.position}>
-                          <h1>Habits I Want to Develop</h1>
+                            <h1>Habits I Want to Develop</h1>
                         </div>
                     </Col>
-                    <Col md={6}>
-                     <img src={profile} alt="" />
+                    <Col md={6} className='m-0 p-0'>
+                        <img src={profile} alt="" />
                     </Col>
+                </Row>
+                
+                    <Row className={classes.Habit_background}>
+                        <Col md={6} >
+                            <div className={classes.position}>
+                                <h1>Habits I Want to Get Rid Of</h1>
+                            </div>
+                        </Col>
+                        <Col md={6} className='m-0 p-0'>
+                            <img src={habitimg2} alt="" />
+                        </Col>
                     </Row>
-                </div>
-                <div className={classes.Habit_background} >
-                <Row>
-                    <Col md={6} >
-                    <div className={classes.position}>
-                          <h1>Habits I Want to Get Rid Of</h1>
-                        </div>
-                    </Col>
-                    <Col md={6}>
-                    <img src={habitimg2} alt="" />
-                    </Col>
-                    </Row>
-                </div>
-            </Row>
-        </>
+               
+            </div>
+        
     )
 }
 
