@@ -20,7 +20,7 @@ const Affirmations = () => {
                         <div className={classes.img_text}>
                             <div className='d-flex justify-content-between p-3'>
                                 <p> Daily Affirmation</p>
-                                <a href="#"><i class="fas fa-play"></i></a>
+                                <Link to="#"><i class="fas fa-play"></i></Link>
                             </div>
                             <h1>“I am God’s workmanship, created in Christ.”</h1>
 

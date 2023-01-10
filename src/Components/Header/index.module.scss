@@ -1,41 +1,58 @@
 #header {
-    p {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
 
-        font-size: 20px;
-        margin: 5px;
-        color: #000000;
-      
-    }
-
-    .icons {
+    .headerIcons {
         margin: 0;
         padding: 0;
         list-style: none;
-        float: right;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+
 
         li {
-            display: inline-block;
-            padding: 5px 10px;
-            font-size: 24px;
-         
+            padding: 6px;
         }
-        li a :hover{
-            background: transparent;
-            color: #8EB26F !important;
-        }
-        img{
-            width: 27px;
-            height: 27px;
-            margin-bottom: 6px;
-           a &:hover{
-                background: transparent;
-                color: #8EB26F !important;
-              } 
-         }
-        
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-decoration: none;
+            position: relative;
 
-        
+            &:hover{
+                background: #8EB26F;
+                color: #fff !important;
+            }
+        }
+
 
     }
+
+    .headerLeft{
+        position: relative;
+    }
+
+    .headerRight{
+        position: relative;
+    }
+
+    .title{
+
+    }
+
+}
+
+.header{
+
+
 
 }
