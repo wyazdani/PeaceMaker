@@ -15,7 +15,7 @@ const HeaderTop = (props) => {
             <ul className={classes.icons}>
               <li> <a href="/"><i class="far fa-share-alt"></i></a> </li>
               <li> <a href="/"><i class="far fa-calendar-alt"></i></a> </li>
-              <li> <a href="/"><i class="far fa-bell"></i></a></li>
+              <li> <a href="/"><i class="icon-Union1"></i></a></li>
             </ul>
           </Col>
         </Row>

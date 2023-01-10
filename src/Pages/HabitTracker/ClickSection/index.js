@@ -75,39 +75,39 @@ const ClickSection = () => {
                 <Col lg={6}>
                     <div className={classes.record}>
                             <h1>Habit Tracker Records</h1>
-                       <div className={classes.border_bottom}>
+                       <div className={classes.habit_tracker_records}>
                             <Col md={6}>
                                 <strong> <h4>Read Book</h4></strong>
                                 <p>January 05, 2021 <br /> 7:30 AM</p>
                             </Col>
                             <Col md={6}>
                                 <div className='d-flex justify-content-end'>
-                                    <span ><i class="far fa-pen"></i></span>
-                                    <a href="/"> <i class="far fa-trash-alt"></i> </a>
+                                    <a className={classes.edit} href='#' ><i class="far fa-pen"></i></a>
+                                    <a className={classes.delete} href='#'> <i class="far fa-trash-alt"></i> </a>
                                 </div>
                             </Col>
                         </div>
-                        <div className={classes.border_bottom}>
+                        <div className={classes.habit_tracker_records}>
                             <Col md={6}>
                                 <strong> <h4>Read Book</h4></strong>
                                 <p>January 05, 2021 <br /> 7:30 AM</p>
                             </Col>
                             <Col md={6}>
                                 <div className='d-flex justify-content-end'>
-                                    <span ><i class="far fa-pen"></i></span>
-                                    <a href="/"> <i class="far fa-trash-alt"></i> </a>
+                                    <a className={classes.edit} href='#' ><i class="far fa-pen"></i></a>
+                                    <a className={classes.delete} href='#'> <i class="far fa-trash-alt"></i> </a>
                                 </div>
                             </Col>
                         </div>
-                        <div className={classes.border_bottom}>
+                        <div className={classes.habit_tracker_records}>
                             <Col md={6}>
                                 <strong> <h4>Read Book</h4></strong>
                                 <p>January 05, 2021 <br /> 7:30 AM</p>
                             </Col>
                             <Col md={6}>
                                 <div className='d-flex justify-content-end'>
-                                    <span ><i class="far fa-pen"></i></span>
-                                    <a href="/"> <i class="far fa-trash-alt"></i> </a>
+                                    <a className={classes.edit} href='#' ><i class="far fa-pen"></i></a>
+                                    <a className={classes.delete} href='#'> <i class="far fa-trash-alt"></i> </a>
                                 </div>
                             </Col>
                         </div>

@@ -2,6 +2,8 @@ import HeaderTop from 'Components/Header'
 import profile from "../../Images/background.jpg"
 import daily from "../../Images/dailyimg.png"
 import loginImg from "../../Images/login.png"
+import flag from "../../Images/flag.png"
+import challenges from "../../Images/challangeImg.png"
 import React from 'react'
 import { Card, Col, Row } from 'react-bootstrap'
 import classes from "./index.module.scss";
@@ -26,7 +28,9 @@ const HomePage = (props) => {
           <Row className='g-4'>
             <Col md={6} lg={4} xl={4} xxl={4}>
               <Card className={classes.card_inner}>
-                <div className={classes.icon_box}><i class="far fa-smile"></i></div>
+                <a href='#' className={classes.icon_box}>
+                  <img src={flag} alt="" />
+                </a>
                 <Card.Body>
                   <h1>20</h1>
                   <p>challenges <br /> point</p>
@@ -35,7 +39,7 @@ const HomePage = (props) => {
             </Col>
             <Col md={6} lg={4} xl={4} xxl={4}>
               <Card className={classes.card_inner}>
-                <div className={classes.icon_box}> <i class="far fa-smile"></i></div>
+                <a href='#' className={classes.icon_box}> <i class="far fa-smile"></i></a>
                 <Card.Body>
                   <h1>60%</h1>
                   <p>average <br /> Happiness</p>
@@ -44,7 +48,7 @@ const HomePage = (props) => {
             </Col>
             <Col md={6} lg={4} xl={4} xxl={4}>
               <Card className={classes.card_inner}>
-                <div className={classes.icon_box}> <i class="icon-target-black"></i></div>
+                <a href='#' className={classes.icon_box}> <i class="icon-target-black"></i></a>
                 <Card.Body>
                   <h1>30%</h1>
                   <p>average <br /> Target</p>
@@ -67,15 +71,13 @@ const HomePage = (props) => {
                 </div>
               </Card.Body>
             </Card>
-
-          
               <Card className={classes.main_card}>
                 <Card.Header className={classes.header_bg}>
                   <h2>Challenges</h2>
                 </Card.Header>
                 <Card.Body className='d-flex justify-content-center'>
                   <div className={classes.challenges}>
-                  <a href="/"><i class="icon-Unfil-challenge"></i></a>
+                  <a href="#"> <img src={challenges} alt="" /> </a>
                     <p>Total Points: <strong>2</strong></p>
                     <strong className='text-green'> 1 / 70</strong>
                   </div>
@@ -84,8 +86,6 @@ const HomePage = (props) => {
                   </div>
                 </Card.Body>
               </Card>
-
-          
           </Col>
           <Col md={8} lg={8}>
             <Card className={classes.main_card}>
@@ -144,10 +144,7 @@ const HomePage = (props) => {
                     </Link>
                   </li>
                 </ul>
-
               </Card.Body>
-
-
             </Card>
           </Col>
         </Row>

@@ -43,10 +43,6 @@
     }
 
 }
-
-
-
-
 .img_box {
     height: auto;
     display: block;
@@ -55,14 +51,12 @@
         width: 100%;
     }
 }
-
 .inner_card {
     justify-content: center;
     text-align: center;
     width: 100%;
     min-height: 220px;
     border-radius: 30px !important;
-
     i {
         font-size: 34px;
         color: #8EB26F;
@@ -85,12 +79,10 @@
         background-color: transparent;
         display: flex;
     }
-
     span {
         padding: 15px;
         font-size: 20px;
     }
-
     .card_background {
         background: #E5E5E5;
         margin: 10px;
@@ -143,6 +135,7 @@
         font-size: 40px;
         margin: 20px auto 10px;
         color: #8EB26F;
+        text-decoration: none;
     }
 
     .header_card {

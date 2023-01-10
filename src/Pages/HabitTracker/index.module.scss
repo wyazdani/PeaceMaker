@@ -132,33 +132,22 @@
     padding: 30px;
     height: 780px;
    
-.border_bottom{
+.habit_tracker_records{
     border-bottom: 1px solid #cccc;
     display: flex;
     padding: 10px;
-   
-
 }
-
-   
-
-    span {
+    .edit{
         color: #58A0FD;
         padding: 5px;
     }
-
-    a {
+    .delete{
         color: #FF7C6D;
         padding: 5px;
     }
 }
 
 .boxes {
- 
-    // width: 100%;
-    // justify-content: space-between;
-  
-
     .mid_box {
         border: transparent;
         border-radius: 5px;
@@ -170,19 +159,15 @@
        
         h3{
             color: #9B9B9B;
-        }
-        
-       
+        }     
     }
     .mid_box:hover{
         background: #8EB26F;
         color: white;
         h3{
             color: white;
-        }
-        
-    }
-    
+        }   
+    }   
 }
 .checkbox{
     border: none ;
@@ -193,11 +178,7 @@
     p {
         color: #B0BFC2;
     }
-   
-  
 }
-
-
 @media (max-width: 992px) {
     .position{
         text-align: center;

@@ -29,65 +29,6 @@ const Affirmations = () => {
                 </Col>
                 <Col md={6}>
                     <Row>
-                        {/* <Row >
-                            <Col >
-                                <Card className={classes.card_background}>
-                                    <Card.Body className='d-flex'>
-                                        <div className={classes.plus_icon}>
-                                            <span><i class="fal fa-plus-square"></i></span>
-
-                                        </div>
-                                        <strong> <h4>Identity</h4></strong>
-                                    </Card.Body>
-                                </Card>
-                                <Card className={classes.card_background}>
-                                    <Card.Body className='d-flex '>
-                                        <div className={classes.plus_icon}>
-                                            <span><i class="fal fa-plus-square"></i></span>
-
-                                        </div>
-                                        <strong> <h4>Attributes</h4></strong>
-                                    </Card.Body>
-                                </Card>
-                                <Card className={classes.card_background}>
-                                    <Card.Body className='d-flex'>
-                                        <div className={classes.plus_icon}>
-                                            <span><i class="fal fa-plus-square"></i></span>
-
-                                        </div>
-                                        <strong> <h4>Purpose</h4></strong>
-                                    </Card.Body>
-                                </Card>
-                                <Card className={classes.card_background}>
-                                    <Card.Body className='d-flex'>
-                                        <div className={classes.plus_icon}>
-                                            <span><i class="fal fa-plus-square"></i></span>
-
-                                        </div>
-                                        <strong> <h4>Relationship</h4></strong>
-                                    </Card.Body>
-                                </Card>
-                                <Card className={classes.card_background}>
-                                    <Card.Body className='d-flex'>
-                                        <div className={classes.plus_icon}>
-                                            <span><i class="fal fa-plus-square"></i></span>
-
-                                        </div>
-                                        <strong> <h4>Blessings</h4></strong>
-                                    </Card.Body>
-                                </Card>
-                                <Card className={classes.card_background}>
-                                    <Card.Body className='d-flex'>
-                                        <div className={classes.plus_icon}>
-                                            <span><i class="fal fa-plus-square"></i></span>
-
-                                        </div>
-                                        <strong> <h4>Promises</h4></strong>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                            
-                        </Row> */}
                         <Row>
                             <Col md={8}>
                                 <strong><h2>Daily Affirmation</h2></strong>
@@ -102,22 +43,17 @@ const Affirmations = () => {
                         <Card.Body>
                             <ul className={'activity_list col1'}>
                                 <li>
-                                        <Accordion className={'box'}>
-
-                                            <Accordion.Header><i className={'fas fa-plus'}></i> Habit Tracker</Accordion.Header>
-                                            <Accordion.Body>
-                                                <ListGroup>
-                                                    <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                                                    <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                                                    <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-                                                    <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-                                                    <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-                                                </ListGroup>
-                                            </Accordion.Body>
-
-
-                                        </Accordion>
-                                  
+                                    <Accordion className={'box_accordian'}>
+                                        <Accordion.Header><i className={'fas fa-plus'}></i> Habit Tracker</Accordion.Header>
+                                        <Accordion.Body>
+                                            <ListGroup variant="flush">
+                                                <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                                                <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                                                <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+                                                <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+                                            </ListGroup>
+                                        </Accordion.Body>
+                                    </Accordion>
                                 </li>
                                 <li>
                                     <Link to={"#"} className={'box'}>

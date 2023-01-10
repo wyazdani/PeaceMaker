@@ -17,48 +17,54 @@ function LeftTabsExample() {
             <HeaderTop />
             <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                 <div className={classes.main_tabs}>
-                    <Row className="m-5">
+                    <Row className="m-3">
 
-                        <Col sm={3} >
+                        <Col sm={4} className={classes.border_line} >
+
                             <h2>Settings</h2>
-                            <Nav variant="pills" className="flex-column">
-                                <Nav.Item className={classes.tabs}>
+                            <Nav variant="pills" className="flex-column vertical-tabs">
+                                <Nav.Item>
                                     <Nav.Link className={classes.nav_styling} eventKey="first">
-                                        <div className="d-flex">
+                                        <div className="d-flex justify-content-between align-items-center">
                                             <div className={classes.icon_text}>
-                                                <span className={classes.clock}><i class="icon-time"></i></span>
+                                                <i class="icon-time"></i>
+                                                <strong>Time</strong>
                                             </div>
-                                            <strong>Time</strong>
-                                            <span><i class="far fa-chevron-right"></i></span>
+                                            <div>
+                                                <i class="far fa-chevron-right"></i>
+                                            </div>
                                         </div>
                                     </Nav.Link>
-                                  </Nav.Item>
-                                 <Nav.Item>
+                                </Nav.Item>
+                                <Nav.Item>
                                     <Nav.Link className={classes.nav_styling} eventKey="second">
                                         <div className="d-flex justify-content-between">
                                             <div className={classes.icon_text}>
-                                                <span className={classes.clock}><i class="icon-HeartPressure1"></i></span>
+                                                <i class="icon-HeartPressure1"></i>
+                                                <strong> Blood Pressure</strong>
                                             </div>
-                                            <strong> Blood Pressure</strong>
                                             <span><i class="far fa-chevron-right"></i></span>
                                         </div>
                                     </Nav.Link>
-                               </Nav.Item>
-                             <Nav.Item>
+                                </Nav.Item>
+                                <Nav.Item>
                                     <Nav.Link className={classes.nav_styling} eventKey="third">
                                         <div className="d-flex justify-content-between">
                                             <div className={classes.icon_text}>
-                                                <span className={classes.clock}><i class="icon-Thermometer1"></i></span>
+                                                <i class="icon-Thermometer1"></i>
+                                                <strong>Body Temperature</strong>
                                             </div>
-                                            <strong>Body Temperature</strong>
                                             <span><i class="far fa-chevron-right"></i></span>
                                         </div>
                                     </Nav.Link>
-                           </Nav.Item>
+                                </Nav.Item>
                             </Nav>
+                            <div className={classes.btn_bottom}>
+                                <button className='btn btn-gradient d-block w-50'>Add Habit</button>
+                            </div>
                         </Col>
 
-                        <Col sm={9}>
+                        <Col sm={8} className='position-relative'>
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
                                     <Time />
@@ -70,6 +76,7 @@ function LeftTabsExample() {
                                     <BodyTemperature />
                                 </Tab.Pane>
                             </Tab.Content>
+
                         </Col>
 
                     </Row>

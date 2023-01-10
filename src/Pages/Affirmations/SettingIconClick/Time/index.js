@@ -7,17 +7,17 @@ const Time = () => {
 
         <div className={classes.main_top}>
             <Row className='justify-content-center'>
-                <Col className='m-3'>
-                    <Col className={classes.big_size}>
+                <Col className={classes.big_font}>
+                    <Col>
                         <h1> 12:34</h1>
                         <p>Friday, 22 December</p>
-                        <hr />
+
                     </Col>
                 </Col>
                 <Row>
                     <h2>Alarm Every</h2>
                     <Col md={6} className='d-flex'>
-                        <span className={classes.clock_icon}><i class="icon-Clock"></i></span>
+                        <a href='#' className={classes.clock_icon}><i class="icon-Clock"></i></a>
                         <p><strong>08:00 AM</strong> <br /> Mon, Fri</p>
                     </Col>
                     <Col md={6} className={classes.form_control}>
@@ -58,11 +58,12 @@ const Time = () => {
 
                         </Form>
                     </Col>
-                    <div className="d-flex justify-content-center">
-                        <button className='btn btn-gradient d-block w-50'>Add Habit</button>
-                    </div>
+
                 </Row>
             </Row>
+            <div className={classes.btn_bottom}>
+                <button className='btn btn-gradient d-block w-50'>Add Alarm</button>
+            </div>
         </div>
 
     )
