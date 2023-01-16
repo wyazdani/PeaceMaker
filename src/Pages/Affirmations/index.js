@@ -56,34 +56,69 @@ const Affirmations = () => {
                                     </Accordion>
                                 </li>
                                 <li>
-                                    <Link to={"#"} className={'box'}>
-                                        <i className={'fas fa-plus'}></i>
-                                        Habit Tracker
-                                    </Link>
+                                    <Accordion className={'box_accordian'}>
+                                        <Accordion.Header><i className={'fas fa-plus'}></i> Habit Tracker</Accordion.Header>
+                                        <Accordion.Body>
+                                            <ListGroup variant="flush">
+                                                <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                                                <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                                                <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+                                                <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+                                            </ListGroup>
+                                        </Accordion.Body>
+                                    </Accordion>
                                 </li>
                                 <li>
-                                    <Link to={"#"} className={'box'}>
-                                        <i className={'fas fa-plus'}></i>
-                                        Habit Tracker
-                                    </Link>
+                                    <Accordion className={'box_accordian'}>
+                                        <Accordion.Header><i className={'fas fa-plus'}></i> Habit Tracker</Accordion.Header>
+                                        <Accordion.Body>
+                                            <ListGroup variant="flush">
+                                                <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                                                <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                                                <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+                                                <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+                                            </ListGroup>
+                                        </Accordion.Body>
+                                    </Accordion>
                                 </li>
                                 <li>
-                                    <Link to={"#"} className={'box'}>
-                                        <i className={'fas fa-plus'}></i>
-                                        Habit Tracker
-                                    </Link>
+                                    <Accordion className={'box_accordian'}>
+                                        <Accordion.Header><i className={'fas fa-plus'}></i> Habit Tracker</Accordion.Header>
+                                        <Accordion.Body>
+                                            <ListGroup variant="flush">
+                                                <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                                                <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                                                <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+                                                <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+                                            </ListGroup>
+                                        </Accordion.Body>
+                                    </Accordion>
                                 </li>
                                 <li>
-                                    <Link to={"#"} className={'box'}>
-                                        <i className={'fas fa-plus'}></i>
-                                        Habit Tracker
-                                    </Link>
+                                    <Accordion className={'box_accordian'}>
+                                        <Accordion.Header><i className={'fas fa-plus'}></i> Habit Tracker</Accordion.Header>
+                                        <Accordion.Body>
+                                            <ListGroup variant="flush">
+                                                <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                                                <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                                                <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+                                                <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+                                            </ListGroup>
+                                        </Accordion.Body>
+                                    </Accordion>
                                 </li>
                                 <li>
-                                    <Link to={"#"} className={'box'}>
-                                        <i className={'fas fa-plus'}></i>
-                                        Habit Tracker
-                                    </Link>
+                                    <Accordion className={'box_accordian'}>
+                                        <Accordion.Header><i className={'fas fa-plus'}></i> Habit Tracker</Accordion.Header>
+                                        <Accordion.Body>
+                                            <ListGroup variant="flush">
+                                                <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                                                <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                                                <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+                                                <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+                                            </ListGroup>
+                                        </Accordion.Body>
+                                    </Accordion>
                                 </li>
                             </ul>
                         </Card.Body>

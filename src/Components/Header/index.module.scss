@@ -6,6 +6,11 @@
     justify-content: space-between;
     padding: 15px;
 
+    .icon {
+        display: flex;
+        justify-content: end;
+    }
+
     .headerIcons {
         margin: 0;
         padding: 0;
@@ -18,7 +23,8 @@
         li {
             padding: 6px;
         }
-        a{
+
+        a {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -28,7 +34,7 @@
             text-decoration: none;
             position: relative;
 
-            &:hover{
+            &:hover {
                 background: #8EB26F;
                 color: #fff !important;
             }
@@ -37,22 +43,16 @@
 
     }
 
-    .headerLeft{
+    .headerLeft {
         position: relative;
     }
 
-    .headerRight{
+    .headerRight {
         position: relative;
     }
 
-    .title{
-
-    }
+    .title {}
 
 }
 
-.header{
-
-
-
-}
+.header {}

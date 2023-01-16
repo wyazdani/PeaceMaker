@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./index.module.scss";
+import profile from '../../Images/unsplash.png'
 import HeaderTop from "../../Components/Header";
 import {
     Chart as ChartJS,
@@ -13,7 +14,7 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import faker from 'faker';
-import {Card, CardImg} from "react-bootstrap";
+import { Card, CardImg, Col, Tab, Tabs } from "react-bootstrap";
 
 
 ChartJS.register(
@@ -128,19 +129,26 @@ const data = {
 };
 
 const User = () => {
-  return (
-      <>
-          <HeaderTop />
-          <section className={'section'}>
-              <Card>
-                  <Card.Title>User’s Record</Card.Title>
-                  <Card.Body>
-                      <Line options={options} data={data} />
-                  </Card.Body>
-              </Card>
-          </section>
-      </>
-  );
+    return (
+        <>
+
+
+            <div className={classes.border_box}>
+                <Line options={options} data={data} />
+            </div>
+
+            <div className={classes.border_box}>
+                <Line options={options} data={data} />
+            </div>
+
+            <div className={classes.border_box}>
+                <Line options={options} data={data} />
+            </div>
+
+
+
+        </>
+    );
 };
 
 export default User;

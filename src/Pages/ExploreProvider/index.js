@@ -37,7 +37,7 @@ const ExploreProvider = () => {
                         </Col>
                     </Row>
                     <div className={classes.providerRow}>
-                        <Card className={`${classes.inner_body}`}>
+                        <Card className={`${classes.inner_body}`} md={6}>
                             <div className={classes.profile_img}  onClick={MapSec}>
                                 <img src={unsplash3} alt="" />
                             </div>

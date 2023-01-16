@@ -33,6 +33,9 @@ import ProfilePage from "Pages/ProfilePage";
 import List from "Components/AccordianList";
 import SecondHeader from "Components/Header/SecondHeader";
 import Messages from "Pages/Messages";
+import { PieChart } from "Pages/PieChart";
+import { BarChart } from "Components/Chart/BarChart";
+import UserProfile from "Pages/User/UserProfile";
 
 const routes = [
   //{ path: "/", component: LandingPage },
@@ -78,6 +81,11 @@ const routes = [
     component: HomePage
   },
   {
+    path: "/user-profile",
+    layout: MainLayout,
+    component: UserProfile,
+  },
+  {
     path: "/explore-provider",
     layout: MainLayout,
     component: ExploreProvider
@@ -87,6 +95,7 @@ const routes = [
     layout: MainLayout,
     component: MapShow
   },
+  
   {
     path: "/habit-tracker",
     layout: MainLayout,
@@ -116,6 +125,16 @@ const routes = [
     path: "/messages",
     layout: MainLayout,
     component: Messages
+  },
+  {
+    path: "/piechart",
+    layout: MainLayout,
+    component: PieChart
+  },
+  {
+    path: "/barchart",
+    layout: MainLayout,
+    component: BarChart
   },
   {
     path: "/popup",
@@ -199,6 +218,7 @@ const routes = [
         path: "/profile",
         component: Profile,
       },
+     
     ],
   },
   { path: "*", component: NotFound, layout: MainLayout },

@@ -59,7 +59,7 @@ const HomePage = (props) => {
         </Col>
       </Row>
       <Row className='m-3' >
-        <Col lg={4}>
+        <Col lg={4} className='mb-3'>
           <Card>
             <Card.Header className={classes.header_bg}>
               <Card.Title>User Activity</Card.Title>
@@ -87,7 +87,7 @@ const HomePage = (props) => {
             </Card.Body>
           </Card>
         </Col>
-        <Col md={8} lg={8}>
+        <Col lg={8} className='mb-3'>
           <Card>
             <Card.Header className={classes.header_bg}>
               <Card.Title>User Activity</Card.Title>

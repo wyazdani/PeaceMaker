@@ -2,22 +2,23 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import classes from '../../Header/index.module.scss'
 import bellicon from '../../../Images/bellicon.png'
+import { Link } from "react-router-dom";
 
 const SecondHeader = (props) => {
   return (
     <>
       <div id={classes.header}>
-        <Row className='m-3'>
-          <Col md={6} >
-            <p>Hello Jacob ,</p>
-            <strong><h2>Welcome Back!</h2></strong>
-          </Col>
-          <Col md={6}>
-            <div className={classes.icons}>
-                 <img src={bellicon} alt="" />
-            </div>
-          </Col>
-        </Row>
+      <div className={classes.headerRight}>
+            <ul className={classes.headerIcons}>
+              {/* <li> <Link to="/"><i class="fal fa-share-alt"></i></Link> </li>
+              <li> <Link to="/"><i class="fal fa-calendar-alt"></i></Link> </li> */}
+              <li> <Link to="/"><i class="fal fa-bell"></i></Link></li>
+            </ul>
+          </div>
+          <div className={classes.headerRight}>
+            <div className={classes.title}>Hello Jacob ,</div>
+            <h2>Welcome Back!</h2>
+          </div>
       </div>
     </>
   );
