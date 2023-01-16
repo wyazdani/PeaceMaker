@@ -62,5 +62,10 @@ export const data = {
 };
 
 export function BarChart() {
-  return <Bar options={options} data={data} />;
+  return (
+   <div className='bar-chart'>
+      <Bar options={options} data={data} />;
+   </div>
+  )
+
 }

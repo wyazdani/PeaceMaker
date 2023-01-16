@@ -13,10 +13,13 @@ const HomePage = (props) => {
   return (
     <>
       <HeaderTop />
-      <Row className='m-3'>
+      <section>
+      <Row>
         <Col lg={4}>
           <div className={classes.profile_img}>
-            <img src={profile} alt="" />
+           <div className={classes.img_box}>
+           <img src={profile} alt="" />
+           </div> 
             <div className={classes.img_text}>
               <p>Daily Affirmation</p>
               <h3>“I am God’s workmanship, created in Christ.”</h3>
@@ -58,10 +61,10 @@ const HomePage = (props) => {
           </Row>
         </Col>
       </Row>
-      <Row className='m-3' >
+      <Row >
         <Col lg={4} className='mb-3'>
           <Card>
-            <Card.Header className={classes.header_bg}>
+            <Card.Header >
               <Card.Title>User Activity</Card.Title>
               <Link to={"#"} className='text-decoration-none'><span class="icon-alert1"></span></Link>
             </Card.Header>
@@ -72,7 +75,7 @@ const HomePage = (props) => {
             </Card.Body>
           </Card>
           <Card className={classes.main_card}>
-            <Card.Header className={classes.header_bg}>
+            <Card.Header >
               <h2>Challenges</h2>
             </Card.Header>
             <Card.Body className={classes.card_body}>
@@ -89,7 +92,7 @@ const HomePage = (props) => {
         </Col>
         <Col lg={8} className='mb-3'>
           <Card>
-            <Card.Header className={classes.header_bg}>
+            <Card.Header>
               <Card.Title>User Activity</Card.Title>
               <Link to={"#"} className='text-green text-decoration-none'>View Records</Link>
             </Card.Header>
@@ -148,7 +151,7 @@ const HomePage = (props) => {
           </Card>
         </Col>
       </Row>
-
+      </section>
     </>
   )
 }

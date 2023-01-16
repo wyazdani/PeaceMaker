@@ -3,11 +3,13 @@
     & span{
         color: rgba(0, 0, 0, 0.5);;
     }
-    img{
+    .img_box{
         width: 100%;
         height: auto;
         display: block;
         border-radius: 30px;
-    }
-      
+        img{
+            width: 60px;
+        }
+    }   
 }

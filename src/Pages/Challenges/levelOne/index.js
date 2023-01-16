@@ -10,7 +10,8 @@ const LevelOne = () => {
   return (
     <>
       <HeaderTop />
-      <Row className='m-3'>
+      <section>
+      <Row>
         <Col md={8}>
           <h2>Level One Challenges</h2>
         </Col>
@@ -27,6 +28,7 @@ const LevelOne = () => {
         </Col>
         <LevelOneComponent />
       </Row>
+      </section>
     </>
   )
 }

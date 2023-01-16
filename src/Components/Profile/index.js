@@ -7,17 +7,15 @@ const Profile = () => {
     <>
         <Row className={classes .profile_img}>
            <Col md={4}>
-           <img src={profile} alt="" />
+        <div className={classes.img_box}>
+        <img src={profile} alt="" />
+        </div>  
            </Col>
           
            <Col md={8}>
                  <h3>Jacob John</h3>
                  <span>View Profile</span>
            </Col>
-             
-            
-               
-       
         </Row>
        
     </>

@@ -1,4 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
+@import "~react-datepicker/dist/react-datepicker.css";
+
 @import "Style/base";
 
 body {
@@ -405,5 +407,42 @@ nav {
   .tab-content{
     margin: 20px;
   
+  }
+  .bar-chart{
+    border: 1px solid #cacaca;
+    width: 800px;
+    margin: auto;
+    
+  }
+
+  .date-set{
+    width: 200px;
+    display: flex;
+    padding: 13px;
+    margin: 10px;
+  
+    .picker-bg{
+      background-color: #EAF4F0 !important;
+      border: transparent;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .csv{
+    display: flex;
+    border: 1px solid #cacaca;
+    width: 175px;
+    padding: 13px;
+    margin: 10px;
+    border-radius: 15px;
+    h4{
+      padding-left: 10px;
+    }
+    .csv-img{
+      img{
+        width: 100%;
+      }
+    }
   }
  

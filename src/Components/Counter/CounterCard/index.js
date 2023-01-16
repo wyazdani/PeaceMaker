@@ -12,10 +12,10 @@ const CounterCard = (props) => {
        
            <div className={classes.col}>
              <Card onClick={NextLevel} className={classes.card}>
-                <div className="m-2 justify-content-start">
+                <Card.Body className="m-2 justify-content-start">
                     <h4>{props.level}</h4>
                     <p>{props.comp}</p>
-                </div>
+                </Card.Body>
             </Card>
            </div>
     )

@@ -11,15 +11,14 @@ const Journal = () => {
     };
     return (
         <>
-           
-           
             <HeaderTop />
-            <Card className="p-5 m-5">
-                <Row className="mb-3">
-                    <Col md={4}>
+            <section>
+            <Card>
+                <Card.Header>
+                    <Card.Title >
                         <h2>Journal Entries</h2>
-                    </Col>
-                    <Col md={8}>
+                    </Card.Title>
+                    <div>
                         <Form className="d-flex justify-content-end ">
                             <InputGroup className="w-50 me-2" >
                                 <InputGroup.Text id="basic-addon1"><i class="fal fa-search"></i></InputGroup.Text>
@@ -31,53 +30,47 @@ const Journal = () => {
                             </InputGroup>
                             <button onClick={ButtonEnter} className='btn btn-gradient d-block w-40 me-2'>Add Entry</button>
                         </Form>
-                    </Col>
-                </Row>
-                <div className={classes.boxes_rounded}>
-                    <Row className="m-3">
-                        <Col md={6}>
+                    </div>
+                </Card.Header>
+                <div className={classes.boxes_rounded}> 
+                        <div >
                             <p>Blood Pressure</p>
                             <h4>Fight with my Ex</h4>
-                        </Col>
-                        <Col md={6} className=' d-flex justify-content-end '>
+                        </div>
+                        <div className=' d-flex justify-content-end '>
                             <p>February 21, 2022</p>
-                        </Col>
-                    </Row>
+                        </div>
+                  
                 </div>
                 <div className={classes.boxes_rounded}>
-                    <Row className="m-3">
-                        <Col md={6}>
+                        <div>
                             <p>Blood Pressure</p>
                             <h4>Journal Entry 001</h4>
-                        </Col>
-                        <Col md={6} className=' d-flex justify-content-end '>
+                        </div>
+                        <div className=' d-flex justify-content-end '>
                             <p>February 21, 2022</p>
-                        </Col>
-                    </Row>
+                        </div>
                 </div>
                 <div className={classes.boxes_rounded}>
-                    <Row className="m-3">
-                        <Col md={6}>
+                        <div>
                             <p>Blood Pressure</p>
                             <h4>Journal Entry 002</h4>
-                        </Col>
-                        <Col md={6} className=' d-flex justify-content-end '>
+                        </div>
+                        <div className=' d-flex justify-content-end '>
                             <p>February 21, 2022</p>
-                        </Col>
-                    </Row>
+                        </div> 
                 </div>
                 <div className={classes.boxes_rounded}>
-                    <Row className="m-3">
-                        <Col md={6}>
+                        <div>
                             <p>Blood Pressure</p>
                             <h4>Journal Entry 003</h4>
-                        </Col>
-                        <Col md={6} className=' d-flex justify-content-end '>
+                        </div>
+                        <div className=' d-flex justify-content-end '>
                             <p>February 21, 2022</p>
-                        </Col>
-                    </Row>
+                        </div>
                 </div>
-                </Card>
+            </Card>
+            </section>
         </>
     )
 }

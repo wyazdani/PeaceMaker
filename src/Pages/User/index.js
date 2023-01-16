@@ -15,6 +15,8 @@ import {
 import { Line } from 'react-chartjs-2';
 import faker from 'faker';
 import { Card, CardImg, Col, Tab, Tabs } from "react-bootstrap";
+import DateSet from "Components/DatePicker";
+import CSV from "Components/CSV";
 
 
 ChartJS.register(
@@ -134,14 +136,26 @@ const User = () => {
 
 
             <div className={classes.border_box}>
+            <div className={classes.date_cv}>
+            <DateSet/>
+              <CSV/>
+            </div>
                 <Line options={options} data={data} />
             </div>
 
             <div className={classes.border_box}>
+            <div className={classes.date_cv}>
+            <DateSet/>
+              <CSV/>
+            </div>
                 <Line options={options} data={data} />
             </div>
 
             <div className={classes.border_box}>
+            <div className={classes.date_cv}>
+            <DateSet/>
+              <CSV/>
+            </div>
                 <Line options={options} data={data} />
             </div>
 

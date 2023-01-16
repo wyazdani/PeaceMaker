@@ -10,7 +10,8 @@ const ClickSection = () => {
     return (
         <>
             <HeaderTop />
-            <Row className='p-5'>
+            <section>
+            <Row>
                 <Col lg={6} >
                         <div className={classes.Habit_background_2}>
                             <Col xl={6} lg={12} md={6}>
@@ -116,6 +117,7 @@ const ClickSection = () => {
                 show={modalShow}
                 onHide={() => setModalShow(false)}
             />
+            </section>
         </>
     )
 }

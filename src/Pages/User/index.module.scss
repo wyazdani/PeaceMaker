@@ -3,13 +3,25 @@
     display: flex;
     border-radius: 15px;
     padding: 30px;
-    margin: 20px;
     p{
         color: #000000;
+    }
+    .img_box{
+        img{
+            width: 70px;
+        }
+    }
+    .profile_info{
+        padding-left: 20px;
     }
 }
 .border_box{
     border: 1px solid #cacaca;
     padding: 10px;
     margin-bottom: 10px;
+    .date_cv{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }

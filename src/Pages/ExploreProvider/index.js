@@ -18,7 +18,8 @@ const ExploreProvider = () => {
     return (
         <>
             <SecondHeader />
-            <Card className={classes.main}>
+            <section>
+            <Card>
                 <Card.Body>
                     <Row className='text-center justify-content-center '>
                         <h2> Explore a Provider</h2>
@@ -126,6 +127,7 @@ const ExploreProvider = () => {
 
                 </Card.Body>
             </Card>
+            </section>
         </>
     )
 }

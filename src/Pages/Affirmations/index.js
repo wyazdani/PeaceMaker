@@ -13,8 +13,9 @@ const Affirmations = () => {
     return (
         <>
             <HeaderTop />
-            <Row className='p-4'>
-                <Col md={6} lg={6}>
+            <section>
+            <Row>
+                <Col lg={6}>
                     <div className={classes.profile_img}>
                         <img src={profile} alt="" />
                         <div className={classes.img_text}>
@@ -27,7 +28,7 @@ const Affirmations = () => {
                         </div>
                     </div>
                 </Col>
-                <Col md={6}>
+                <Col lg={6}>
                     <Row>
                         <Row>
                             <Col md={8}>
@@ -125,6 +126,7 @@ const Affirmations = () => {
                     </Row>
                 </Col>
             </Row>
+            </section>
         </>
     )
 }

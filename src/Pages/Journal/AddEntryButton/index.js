@@ -12,10 +12,10 @@ const AddEntryButton = () => {
     return (
         <>
             <HeaderTop />
-                <Row className='m-5'>
-                    <Col md={6} className='d-flex justify-content-start mb-3'>
+                <section>
+                    <div className='d-flex justify-content-start mb-3'>
                         <span onClick={TurnBack} className={classes.arrow_style}><i class="far fa-arrow-left"></i></span> <h3>Add Journal</h3>
-                    </Col>
+                    </div>
                     <Row className="d-flex justify-content-center">
                         <Col md={10}>
                             <Form className="mb-3">
@@ -66,7 +66,7 @@ const AddEntryButton = () => {
                             <Button className='btn btn-gradient w-50'>Save</Button>
                         </div>
                     </Row>
-                </Row>
+                </section>
             </>
         )
     }

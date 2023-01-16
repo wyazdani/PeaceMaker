@@ -22,7 +22,7 @@ function LeftTabsExample(props) {
         <>
             <SecondHeader />
             <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-                <div  className={classes.main_tabs}>
+                <section  className={classes.main_tabs}>
                     <Row>
                         <Col sm={4} className={classes.border_line} >
 
@@ -83,7 +83,7 @@ function LeftTabsExample(props) {
                         </Col>
 
                     </Row>
-                </div>
+                </section>
             </Tab.Container>
             <MessagePopUp
             show={modalShow}

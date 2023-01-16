@@ -5,7 +5,7 @@ import classes from "../../HabitTracker/index.module.scss"
 
 const AddHabitNext = () => {
     return (
-        <div className='p-5'>
+        <section>
                 <HeaderTop />
                 <div className={classes.top_row}>
                     <h2>Habit Tracker</h2>
@@ -32,7 +32,7 @@ const AddHabitNext = () => {
                         </Col>
                         <Col md={6}>
                             <div className={classes.record_2}>
-                                <Row className=''>
+                                <Row>
                                     <Col md={3}>
                                         <div className={classes.smile_icon}>
                                             <span ><i class="far fa-smile"></i></span>
@@ -62,7 +62,7 @@ const AddHabitNext = () => {
                     </div>
                 </div>
            
-        </div>
+        </section>
     )
 }
 

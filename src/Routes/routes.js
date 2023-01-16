@@ -36,6 +36,10 @@ import Messages from "Pages/Messages";
 import { PieChart } from "Pages/PieChart";
 import { BarChart } from "Components/Chart/BarChart";
 import UserProfile from "Pages/User/UserProfile";
+import DatePicker from "Components/DatePicker";
+import Date from "Components/DatePicker";
+import DateSet from "Components/DatePicker";
+import CSV from "Components/CSV";
 
 const routes = [
   //{ path: "/", component: LandingPage },
@@ -94,6 +98,16 @@ const routes = [
     path: "/map-show",
     layout: MainLayout,
     component: MapShow
+  },
+  {
+    path: "/date",
+    layout: MainLayout,
+    component: DateSet
+  },
+  {
+    path: "/csv",
+    layout: MainLayout,
+    component: CSV
   },
   
   {

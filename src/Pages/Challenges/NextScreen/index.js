@@ -10,8 +10,8 @@ const NextScreen = () => {
     return (
         <>
             <HeaderTop />
-            
-            <Row className='m-4'>
+            <section>
+            <Row>
                 <Col md={4}>
                     <Card className='p-0'>
                         <Card.Body>
@@ -24,8 +24,9 @@ const NextScreen = () => {
                     </Card>
                 </Col>
             </Row>
+            </section>
             <Counter />
-
+       
 
         </>
     )
