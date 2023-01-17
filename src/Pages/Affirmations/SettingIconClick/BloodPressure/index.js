@@ -5,7 +5,8 @@ import { Col, Form, Row } from 'react-bootstrap'
 const BloodPressure = () => {
     return (
         <>
-            <Row className='m-5'>
+        <section>
+            <Row>
                 <Col className={classes.border_bottom}>
                     <h2>Enter your blood pressure to determine when will the affirmation occur.</h2>
                 </Col>
@@ -24,6 +25,7 @@ const BloodPressure = () => {
                 </div>
 
             </Row>
+            </section>
         </>
     )
 }

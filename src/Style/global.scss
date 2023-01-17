@@ -11,15 +11,29 @@ body {
 
 section {
   padding: 15px;
+  margin: 20px;
 }
 
 .card {
   border-radius: 15px;
-  box-shadow: 0 0 15px -7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px -7px rgba(0, 0, 0, 0.3);
   border-color: rgba(0, 0, 0, 0.1);
   padding: 15px;
   margin: 0 0 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
 
+  &.bg-bottom-right{
+    background-position: 100% 100%;
+    background-size: 168px;
+  }
+  &.bg-bottom-right_2{
+    background-position: 101% 121%;
+    background-size: 245px;
+    background-color: #324C51;
+    border-radius: 30px;
+
+  }
   .card-header {
     background: none;
     border-color: rgba(0, 0, 0, 0.1);
@@ -34,71 +48,70 @@ section {
   }
 }
 
-.formDivider {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
+// .formDivider {
+//   width: 100%;
+//   position: relative;
+//   overflow: hidden;
+//   display: flex;
+//   justify-content: center;
 
-  span {
-    display: inline-block;
-    vertical-align: top;
-    padding: 0 10px;
-    position: relative;
+//   span {
+//     display: inline-block;
+//     vertical-align: top;
+//     padding: 0 10px;
+//     position: relative;
 
-    &:before,
-    &:after {
-      position: absolute;
-      content: "";
-      height: 1px;
-      width: 9999px;
-      background: rgba(0, 0, 0, 0.05);
-      top: 50%;
-      transform: translateY(-50%);
-      display: block;
-    }
+//     &:before,
+//     &:after {
+//       position: absolute;
+//       content: "";
+//       height: 1px;
+//       width: 9999px;
+//       background: rgba(0, 0, 0, 0.05);
+//       top: 50%;
+//       transform: translateY(-50%);
+//       display: block;
+//     }
 
-    &:before {
-      left: 100%;
-    }
+//     &:before {
+//       left: 100%;
+//     }
 
-    &:after {
-      right: 100%;
-    }
-  }
-}
+//     &:after {
+//       right: 100%;
+//     }
+//   }
+// }
 
-.ReactInputVerificationCode__container {
-  #one-time-code {
-    position: absolute;
-    opacity: 0;
-  }
+// .ReactInputVerificationCode__container {
+//   #one-time-code {
+//     position: absolute;
+//     opacity: 0;
+//   }
 
-  .ReactInputVerificationCode__item {
-    width: 50px !important;
-    height: 50px !important;
-    line-height: 48px !important;
-    border-radius: 10px !important;
-    border-color: rgba(0, 0, 0, 0.05) !important;
-    background: rgba(0, 0, 0, 0.02) !important;
-  }
-}
+//   .ReactInputVerificationCode__item {
+//     width: 50px !important;
+//     height: 50px !important;
+//     line-height: 48px !important;
+//     border-radius: 10px !important;
+//     border-color: rgba(0, 0, 0, 0.05) !important;
+//     background: rgba(0, 0, 0, 0.02) !important;
+//   }
+// }
 
-.status {
-  width: 10px;
-  height: 10px;
-  background: #f00;
-  display: block;
-}
+// .status {
+//   width: 10px;
+//   height: 10px;
+//   background: #f00;
+//   display: block;
+// }
 
 
-.main_top {
-  border-radius: 15px;
-  border: 1px solid #E5E5E5;
-  margin: 30px;
-
-}
+// .main_top {
+//   border-radius: 15px;
+//   border: 1px solid #E5E5E5;
+//   margin: 30px;
+// }
 
 nav {
   .dropdown {
@@ -181,19 +194,19 @@ nav {
   }
 }
 
-.boxes_rounded {
-  border: transparent;
-  border-radius: 15px;
-  background-color: #FBFBFB;
-  margin-bottom: 20px;
-  height: 700px;
+// .boxes_rounded {
+//   border: transparent;
+//   border-radius: 15px;
+//   background-color: #FBFBFB;
+//   margin-bottom: 20px;
+//   height: 700px;
 
-  .form-check-input[type=checkbox] {
-    border-radius: 10.25em;
-    width: 30px;
-    height: 30px;
-  }
-}
+//   .form-check-input[type=checkbox] {
+//     border-radius: 10.25em;
+//     width: 30px;
+//     height: 30px;
+//   }
+// }
 
 .inner_styling {
   i {
@@ -414,12 +427,64 @@ nav {
     margin: auto;
     
   }
+  .main-charts{
+    display: flex;
+    justify-content: space-between;
+    .dropdown{
+      padding-top: 14px;
+      .btn{
+        width: 200px;
+        padding-right: 80px;
+        &::after{
+          position: absolute;
+          content: "";
+          width: 8px;
+          height: 8px;
+          display: block;
+          border: none;
+          border-left: 1px solid white;
+          border-bottom: 1px solid white;
+          transform: rotate(-45deg);
+          top: 26px;
+          right: 9px;
+          transition: all linear 0.3s;
+        }
+      }
+    }
+  }
+.react-datepicker{
+  border-radius: 20px !important;
+  border: 0.5px solid #cacaca;
+.react-datepicker__month-container{
+.react-datepicker__header {
+  border-top-right-radius: 20px !important;
+  border-top-left-radius: 20px !important;
+  .react-datepicker__day-names{
+    .react-datepicker__day-name{
+
+      color:rgba(142, 178, 111, 1) !important;
+      // font-weight: 700;
+      font-weight: bolder;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+}
+.react-datepicker__month{
+  .react-datepicker__week{
+    .react-datepicker__day--selected{
+      background-color:rgba(142, 178, 111, 1) !important;
+      border-radius: 20px !important;
+    }
+  }
+}
+}
+}
 
   .date-set{
     width: 200px;
     display: flex;
     padding: 13px;
-    margin: 10px;
   
     .picker-bg{
       background-color: #EAF4F0 !important;
@@ -433,11 +498,13 @@ nav {
     display: flex;
     border: 1px solid #cacaca;
     width: 175px;
-    padding: 13px;
+    padding: 10px 17px;
     margin: 10px;
     border-radius: 15px;
+    align-items: center;
     h4{
       padding-left: 10px;
+      margin: 0;
     }
     .csv-img{
       img{
@@ -445,4 +512,9 @@ nav {
       }
     }
   }
+//  .modal-content{
+//   border-radius: 30px !important;
+//   width: 390px !important;
+  
+//  }
  

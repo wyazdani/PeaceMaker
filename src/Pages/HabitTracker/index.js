@@ -13,7 +13,7 @@ const HabitTracker = () => {
     };
     return (
         
-            <section>
+            <section className='m-3'>
                 <HeaderTop />
                 <Row onClick={MapSec} className={classes.Habit_background}>
                     <Col md={6} >
