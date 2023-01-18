@@ -15,12 +15,12 @@ const Journal = () => {
             <section>
             <Card>
                 <Card.Header>
-                    <Card.Title >
+                    <Card.Title>
                         <h2>Journal Entries</h2>
                     </Card.Title>
                     <div>
                         <Form className="d-flex justify-content-end ">
-                            <InputGroup className="w-50 me-2" >
+                            <InputGroup className="w-85 me-2" >
                                 <InputGroup.Text id="basic-addon1"><i class="fal fa-search"></i></InputGroup.Text>
                                 <Form.Control
                                     placeholder="Search.."
@@ -28,7 +28,7 @@ const Journal = () => {
                                     aria-describedby="basic-addon1"
                                 />
                             </InputGroup>
-                            <button onClick={ButtonEnter} className='btn btn-gradient d-block w-40 me-2'>Add Entry</button>
+                            <button onClick={ButtonEnter} className='btn btn-gradient d-block w-50 me-2'>Add Entry</button>
                         </Form>
                     </div>
                 </Card.Header>

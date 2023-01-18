@@ -5,7 +5,8 @@ import { Col, Form, Row } from 'react-bootstrap'
 const BodyTemperature = () => {
     return (
         <>
-            <Row className='m-5'>
+        <section>
+            <Row>
                 <Col className={classes.border_bottom}>
                     <h2>Enter your body temperature to determine when will the affirmation occur.</h2>
                 </Col>
@@ -20,6 +21,7 @@ const BodyTemperature = () => {
                     <button className='btn btn-gradient d-block w-50'>Save</button>
                 </div>
             </Row>
+            </section>
         </>
     )
 }

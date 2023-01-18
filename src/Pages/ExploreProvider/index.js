@@ -17,8 +17,9 @@ const ExploreProvider = () => {
     };
     return (
         <>
+          
+            <section className='m-3'>
             <SecondHeader />
-            <section>
             <Card>
                 <Card.Body>
                     <Row className='text-center justify-content-center '>
@@ -38,7 +39,7 @@ const ExploreProvider = () => {
                         </Col>
                     </Row>
                     <div className={classes.providerRow}>
-                        <Card className={`${classes.inner_body}`} md={6}>
+                        <Card className={`${classes.inner_body}`}>
                             <div className={classes.profile_img}  onClick={MapSec}>
                                 <img src={unsplash3} alt="" />
                             </div>
@@ -46,81 +47,81 @@ const ExploreProvider = () => {
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}  onClick={MapSec}>
+                            <div className={classes.profile_img}>
                                 <img src={unsplash} alt="" />
                             </div>
-                            <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Thomas Edison</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}  onClick={MapSec}>
+                            <div className={classes.profile_img}>
                                 <img src={unsplash2} alt="" />
                                
                             </div>
-                            <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
+                            <h5 className={'m-0'} >Thomas Edison</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}  onClick={MapSec}>
+                            <div className={classes.profile_img}>
                                 <img src={unsplash3} alt="" />
                             </div>
-                            <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Thomas Edison</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}  onClick={MapSec}>
+                            <div className={classes.profile_img}>
                                 <img src={unsplash4} alt="" />
                             </div>
-                            <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Thomas Edison</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}  onClick={MapSec}>
+                            <div className={classes.profile_img}>
                                 <img src={unsplash5} alt="" />
                             </div>
-                            <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Thomas Edison</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}  onClick={MapSec}>
+                            <div className={classes.profile_img}>
                                 <img src={unsplash6} alt="" />
                             </div>
-                            <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Thomas Edison</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}  onClick={MapSec}>
+                            <div className={classes.profile_img}>
                                 <img src={unsplash} alt="" />
                             </div>
-                            <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Thomas Edison</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}  onClick={MapSec}>
+                            <div className={classes.profile_img}>
                                 <img src={unsplash3} alt="" />
                             </div>
-                            <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Thomas Edison</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}  onClick={MapSec}>
+                            <div className={classes.profile_img}>
                                 <img src={unsplash4} alt="" />
                             </div>
-                            <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Thomas Edison</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}  onClick={MapSec}>
+                            <div className={classes.profile_img}>
                                 <img src={unsplash5} alt="" />
                             </div>
-                            <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Thomas Edison</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}  onClick={MapSec}>
+                            <div className={classes.profile_img}>
                                 <img src={unsplash3} alt="" />
                             </div>
-                            <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Thomas Edison</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                     </div>

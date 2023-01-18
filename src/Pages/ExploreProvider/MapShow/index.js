@@ -8,15 +8,14 @@ const MapShow = (props) => {
   const [modalShow, setModalShow] = React.useState(false);
   return (
     <>
-          <SecondHeader />
-          <Row>
-            <Col><img onClick={() => setModalShow(true)}  src={map} alt="" /></Col>
-          </Row>
-          <MapPopUp
-            show={modalShow}
-            onHide={() => setModalShow(false)}
-        />
-    
+      <SecondHeader />
+      <div>
+        <img onClick={() => setModalShow(true)} src={map} alt="" />
+      </div>
+      <MapPopUp
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
     </>
   )
 }

@@ -13,6 +13,7 @@ const UserProfile = (props) => {
         <>
             <HeaderTop />
             <section>
+            <Card>
             <Row className={classes.user_sec}>
                 <Col md={4}>
                     <div className="d-flex align-items-center" >
@@ -35,7 +36,8 @@ const UserProfile = (props) => {
                     <p>Los Angeles, Canada</p>
                 </Col>
             </Row>
-            <Card className='chart_card'>
+            </Card>
+            <Card className=''>
                 <Card.Header>
                     <Card.Title>User’s Record</Card.Title>
                     <div className='d-flex justify-content-end'>
