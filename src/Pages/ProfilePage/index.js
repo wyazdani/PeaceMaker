@@ -207,7 +207,6 @@ const ProfilePage = () => {
                         </Card>
                     </Col>
                     <Col md={8}>
-
                         <Card className={classes.right_card}>
                             <Row  >
                                 <Col md={6}>

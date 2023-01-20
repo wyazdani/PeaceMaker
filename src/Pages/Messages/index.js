@@ -68,17 +68,7 @@ function LeftTabsExample(props) {
                         </Col>
 
                         <Col  onClick={() => setModalShow(true)}  sm={8} className='position-relative'>
-                            <Tab.Content>
-                                <Tab.Pane eventKey="first">
-                                    <Time />
-                                </Tab.Pane>
-                                <Tab.Pane eventKey="second">
-                                    <BloodPressure />
-                                </Tab.Pane>
-                                <Tab.Pane eventKey="third">
-                                    <BodyTemperature />
-                                </Tab.Pane>
-                            </Tab.Content>
+                         
 
                         </Col>
 
