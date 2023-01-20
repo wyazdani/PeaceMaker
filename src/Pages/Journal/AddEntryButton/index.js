@@ -63,7 +63,7 @@ const AddEntryButton = () => {
                             </div>
                         </Col>
                         <div className=' d-flex justify-content-center mb-5 pt-5'>
-                            <Button className='btn btn-gradient w-50'>Save</Button>
+                            <Button className='btn btn-gradient w-25'>Save</Button>
                         </div>
                     </Row>
                 </section>

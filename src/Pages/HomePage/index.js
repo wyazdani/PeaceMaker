@@ -101,43 +101,43 @@ const HomePage = (props) => {
                   <li>
                     <Link to={"#"} className={'box'}>
                       <i className={'fas fa-plus'}></i>
-                      Habit Tracker
+                      Screen Time
                     </Link>
                   </li>
                   <li>
                     <Link to={"#"} className={'box'}>
                       <i className={'fas fa-plus'}></i>
-                      Habit Tracker
+                      Profanity Tracking
                     </Link>
                   </li>
                   <li>
                     <Link to={"#"} className={'box'}>
                       <i className={'fas fa-plus'}></i>
-                      Habit Tracker
+                      Apps View
                     </Link>
                   </li>
                   <li>
                     <Link to={"#"} className={'box'}>
                       <i className={'fas fa-plus'}></i>
-                      Habit Tracker
+                      Food Intake
                     </Link>
                   </li>
                   <li>
                     <Link to={"#"} className={'box'}>
                       <i className={'fas fa-plus'}></i>
-                      Habit Tracker
+                      Apps View
                     </Link>
                   </li>
                   <li>
                     <Link to={"#"} className={'box'}>
                       <i className={'fas fa-plus'}></i>
-                      Habit Tracker
+                      Alcohol Intake
                     </Link>
                   </li>
                   <li>
                     <Link to={"#"} className={'box'}>
                       <i className={'fas fa-plus'}></i>
-                      Habit Tracker
+                      Accountability Network
                     </Link>
                   </li>
                 </ul>

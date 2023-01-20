@@ -7,6 +7,7 @@ import User from '..';
 import { BarChart } from 'Components/Chart/BarChart';
 import CSV from 'Components/CSV';
 import DateSet from 'Components/DatePicker';
+import { PieChart } from 'Pages/PieChart';
 
 const UserProfile = (props) => {
     return (
@@ -57,7 +58,7 @@ const UserProfile = (props) => {
                         <BarChart />
                     </Tab>
                     <Tab eventKey="Digital Footprint" title="Digital Footprint">
-
+                    <PieChart/>
                     </Tab>
                 </Tabs>
             </Card>

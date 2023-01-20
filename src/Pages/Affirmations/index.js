@@ -30,22 +30,22 @@ const Affirmations = () => {
                 </Col>
                 <Col lg={6}>
                     <Row>
-                        <Row>
-                            <Col md={8}>
+                        <div className={classes.Affirmations_header}>
+                            <div>
                                 <strong><h2>Daily Affirmation</h2></strong>
                                 <p>How do you want us to give you a nice 5 minutes cool down?</p>
-                            </Col>
-                            <Col md={4}>
+                            </div>
+                            <div>
                                 <div className={classes.setting_icon}>
                                     <a onClick={IconClick} href="#"><i class="far fa-cog"></i></a>
                                 </div>
-                            </Col>
-                        </Row>
+                            </div>
+                        </div>
                         <Card.Body>
                             <ul className={'activity_list col1'}>
                                 <li>
                                     <Accordion className={'box_accordian'}>
-                                        <Accordion.Header><i className={'fas fa-plus'}></i> Habit Tracker</Accordion.Header>
+                                        <Accordion.Header><i className={'fas fa-plus'}></i>Identity</Accordion.Header>
                                         <Accordion.Body>
                                             <ListGroup variant="flush">
                                                 <ListGroup.Item>Cras justo odio</ListGroup.Item>
@@ -58,7 +58,7 @@ const Affirmations = () => {
                                 </li>
                                 <li>
                                     <Accordion className={'box_accordian'}>
-                                        <Accordion.Header><i className={'fas fa-plus'}></i> Habit Tracker</Accordion.Header>
+                                        <Accordion.Header><i className={'fas fa-plus'}></i>Attributes</Accordion.Header>
                                         <Accordion.Body>
                                             <ListGroup variant="flush">
                                                 <ListGroup.Item>Cras justo odio</ListGroup.Item>
@@ -71,7 +71,7 @@ const Affirmations = () => {
                                 </li>
                                 <li>
                                     <Accordion className={'box_accordian'}>
-                                        <Accordion.Header><i className={'fas fa-plus'}></i> Habit Tracker</Accordion.Header>
+                                        <Accordion.Header><i className={'fas fa-plus'}></i>Purpose</Accordion.Header>
                                         <Accordion.Body>
                                             <ListGroup variant="flush">
                                                 <ListGroup.Item>Cras justo odio</ListGroup.Item>
@@ -84,7 +84,7 @@ const Affirmations = () => {
                                 </li>
                                 <li>
                                     <Accordion className={'box_accordian'}>
-                                        <Accordion.Header><i className={'fas fa-plus'}></i> Habit Tracker</Accordion.Header>
+                                        <Accordion.Header><i className={'fas fa-plus'}></i>Relationship</Accordion.Header>
                                         <Accordion.Body>
                                             <ListGroup variant="flush">
                                                 <ListGroup.Item>Cras justo odio</ListGroup.Item>
@@ -97,7 +97,7 @@ const Affirmations = () => {
                                 </li>
                                 <li>
                                     <Accordion className={'box_accordian'}>
-                                        <Accordion.Header><i className={'fas fa-plus'}></i> Habit Tracker</Accordion.Header>
+                                        <Accordion.Header><i className={'fas fa-plus'}></i>Blessings</Accordion.Header>
                                         <Accordion.Body>
                                             <ListGroup variant="flush">
                                                 <ListGroup.Item>Cras justo odio</ListGroup.Item>
@@ -110,7 +110,7 @@ const Affirmations = () => {
                                 </li>
                                 <li>
                                     <Accordion className={'box_accordian'}>
-                                        <Accordion.Header><i className={'fas fa-plus'}></i> Habit Tracker</Accordion.Header>
+                                        <Accordion.Header><i className={'fas fa-plus'}></i>Promises</Accordion.Header>
                                         <Accordion.Body>
                                             <ListGroup variant="flush">
                                                 <ListGroup.Item>Cras justo odio</ListGroup.Item>

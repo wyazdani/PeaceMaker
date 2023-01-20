@@ -48,9 +48,7 @@
     }
   
 }
-.setting_icon{
-    font-size: 30px;
-}
+
 .card_background {
     background-color: #F4F4F4 !important;
     border-radius: 15px !important;
@@ -69,4 +67,15 @@
     strong {
         padding-top: 4px !important;
     }
+}
+.Affirmations_header{
+    display: flex;
+    justify-content: space-between;
+    .setting_icon{
+        font-size: 30px;
+        a:hover{
+            color:#8EB26F ;
+        }
+    }
+   
 }
