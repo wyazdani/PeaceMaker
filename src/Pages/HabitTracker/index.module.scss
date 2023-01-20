@@ -2,15 +2,16 @@
     width: 100%;
     background-color:#324C51;
     border-radius: 30px;
-     margin: 10px;
-     cursor: pointer;
+    cursor: pointer;
+    margin: 0 0 15px !important;
+
     .position{
         width: 100%;
         padding: 55px 39px;
         h1{
             color: white;
             font-size: 45px !important;
-          
+
         }
     }
     img{
@@ -29,8 +30,7 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 30px;
     padding: 100px;
-    margin: 20px;
-   
+
 
     .btn_cancel {
         color: #335A63 !important;
@@ -54,7 +54,7 @@
         background-color: #EFEFEF;
         border-radius: 15px;
         display: flex;
-       
+
     }
 
     .empty_box {
@@ -66,25 +66,25 @@
         width: 100%;
         text-align: center;
         padding: 30px;
-     
+
     }
 
 }
 
 .smile_icon {
- width: 100%;
+    width: 100%;
 
     span {
 
         font-size: 60px;
         color: #8EB26F;
         margin: 20px;
-       
+
     }
 }
 
 // =====================Click Section=========================//
-   .text_color_set{
+.text_color_set{
     h1,h2{
         color: white;
     }
@@ -92,22 +92,22 @@
         font-style: italic;
         color: rgba(255, 255, 255, 0.5);
     }
-   
-   }
+
+}
 .checkbox_background{
-  
-        width: 100% !important;
-     
+
+    width: 100% !important;
+
 }
 .profile_img {
-  padding-top: 50px;
- 
-   
+    padding-top: 50px;
+
+
     img{
         width: 235px;
         display: block;
         border-radius: 30px;
-    }     
+    }
 }
 .record {
     border-radius: 15px;
@@ -115,12 +115,12 @@
     background: #FBFBFB;
     padding: 30px;
     height: 780px;
-   
-.habit_tracker_records{
-    border-bottom: 1px solid #cccc;
-    display: flex;
-    padding: 10px;
-}
+
+    .habit_tracker_records{
+        border-bottom: 1px solid #cccc;
+        display: flex;
+        padding: 10px;
+    }
     .edit{
         color: #58A0FD;
         padding: 5px;
@@ -136,37 +136,37 @@
     .mid_box {
         border: transparent;
         border-radius: 5px;
-         padding: 10px 0px;
+        padding: 10px 0px;
         text-align: center;
         background: #F4F4F4;
         // margin: 5px;
         color: #9B9B9B;
-       
+
         h3{
             color: #9B9B9B;
-        }     
+        }
     }
     .mid_box:hover{
         background: #8EB26F;
         color: white;
         h3{
             color: white;
-        }   
-    }   
+        }
+    }
 }
 .checkbox{
     border: none ;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 15px;
     padding: 40px;
-   
-   
+
+
 }
 @media (max-width: 992px) {
     .position{
         text-align: center;
     }
- }
+}
 
 //  ======================PopUP========================//
 .habit_border_bottom{
@@ -175,34 +175,34 @@
     padding: 10px
 }
 .boxes {
- 
+
     width: 100%;
     justify-content: space-between;
     margin-left: 0px !important;
 
-.mid_box {
-    border: transparent;
-    border-radius: 5px;
-    padding: 15px 0px;
-    text-align: center;
-    background: #F4F4F4;
-    margin: 5px;
-    color: #9B9B9B;
-   
-    h3{
+    .mid_box {
+        border: transparent;
+        border-radius: 5px;
+        padding: 15px 0px;
+        text-align: center;
+        background: #F4F4F4;
+        margin: 5px;
         color: #9B9B9B;
+
+        h3{
+            color: #9B9B9B;
+        }
+
+
     }
-    
-   
-}
-.mid_box:hover{
-    background: #8EB26F;
-    color: white;
-    h3{
+    .mid_box:hover{
+        background: #8EB26F;
         color: white;
+        h3{
+            color: white;
+        }
+
     }
-    
-}
 
 }
 .btn_cancel{
