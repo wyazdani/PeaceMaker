@@ -40,6 +40,7 @@ import DatePicker from "Components/DatePicker";
 import Date from "Components/DatePicker";
 import DateSet from "Components/DatePicker";
 import CSV from "Components/CSV";
+import Support from "Pages/Support";
 
 const routes = [
   //{ path: "/", component: LandingPage },
@@ -108,6 +109,11 @@ const routes = [
     path: "/csv",
     layout: MainLayout,
     component: CSV
+  },
+  {
+    path: "/support",
+    layout: MainLayout,
+    component:Support
   },
   
   {

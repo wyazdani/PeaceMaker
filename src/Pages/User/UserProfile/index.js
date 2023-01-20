@@ -37,7 +37,7 @@ const UserProfile = (props) => {
                 </Col>
             </Row>
             </Card>
-            <Card className=''>
+            <Card>
                 <Card.Header>
                     <Card.Title>User’s Record</Card.Title>
                     <div className='d-flex justify-content-end'>

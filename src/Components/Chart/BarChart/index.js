@@ -13,6 +13,7 @@ import faker from 'faker';
 import { Dropdown } from 'react-bootstrap';
 import DateSet from 'Components/DatePicker';
 import CSV from 'Components/CSV';
+import { PieChart } from 'Pages/PieChart';
 
 ChartJS.register(
   CategoryScale,
@@ -28,6 +29,7 @@ export const options = {
     title: {
       display: true,
       text: 'Chart.js Bar Chart - Stacked',
+      position: 'bottom',
     },
   },
   responsive: true,
@@ -41,7 +43,7 @@ export const options = {
   },
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
 
 export const data = {
   labels,
@@ -83,9 +85,15 @@ export function BarChart() {
         </div>
         <CSV />
       </div>
-      <div className='bar-chart'>
-        <Bar options={options} data={data} />;
+      <div className='bar-chart my-2'>
+      <h1>Glucose Intake</h1>
+        <Bar options={options} data={data} />
       </div>
+      <div className='bar-chart my-2'>
+     <h1> Caloric Intake</h1>
+        <Bar options={options} data={data} />
+      </div>
+      <PieChart/>
     </>
   )
 

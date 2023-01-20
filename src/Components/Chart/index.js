@@ -12,7 +12,7 @@ export const data = {
 };
 function ChartBar() {
   
-    return <Bar options={options} data={data} />;
+    return <Bar options={options} data={data} />
   
 }
 
