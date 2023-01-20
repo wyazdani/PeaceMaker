@@ -36,11 +36,9 @@ import Messages from "Pages/Messages";
 import { PieChart } from "Pages/PieChart";
 import { BarChart } from "Components/Chart/BarChart";
 import UserProfile from "Pages/User/UserProfile";
-import DatePicker from "Components/DatePicker";
-import Date from "Components/DatePicker";
+
 import DateSet from "Components/DatePicker";
 import CSV from "Components/CSV";
-import Support from "Pages/Support";
 import VerifyAccount from "../Pages/Auth/verifyAccount";
 import SendOTPPhone from "../Pages/Auth/otpphone";
 

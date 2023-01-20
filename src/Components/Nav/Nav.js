@@ -28,7 +28,8 @@ const Nav = () => {
                                 <i class="icon-Chart "></i> Habit Tracker
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
-                                <Link to={"/habit-tracker"}> Habit Tracker</Link>
+                                <Link to={"/habit-tracker"}>Habits I want to develop</Link>
+                                <Link to={"#"}>Habits I want to get rid of</Link>
                             </Dropdown.Menu>
                         </Dropdown>
                     </li>

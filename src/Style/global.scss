@@ -9,7 +9,7 @@ body {
 }
 
 section {
-  margin: 25px;
+  padding: 25px;
 }
 
 .card {
@@ -190,7 +190,13 @@ nav {
       width: 100%;
       transform: none !important;
       border: none;
-      margin: 0 !important;
+      margin: 0 0 8px!important;
+
+      a{
+        font-size: 14px;
+        font-weight: normal;
+        padding: 8px 25px 8px 40px;
+      }
     }
   }
 }

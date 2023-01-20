@@ -12,9 +12,9 @@ const HabitTracker = () => {
         navigate('/click-section');
     };
     return (
-        
-            <section className='m-3'>
-                <HeaderTop />
+        <>
+            <HeaderTop />
+            <section>
                 <Row onClick={MapSec} className={classes.Habit_background}>
                     <Col md={6} >
                         <div className={classes.position}>
@@ -25,20 +25,19 @@ const HabitTracker = () => {
                         <img src={profile} alt="" />
                     </Col>
                 </Row>
-                
-                    <Row className={classes.Habit_background}>
-                        <Col md={6} >
-                            <div className={classes.position}>
-                                <h1>Habits I Want to Get Rid Of</h1>
-                            </div>
-                        </Col>
-                        <Col md={6} className='m-0 p-0'>
-                            <img src={habitimg2} alt="" />
-                        </Col>
-                    </Row>
-               
+                <Row className={classes.Habit_background}>
+                    <Col md={6} >
+                        <div className={classes.position}>
+                            <h1>Habits I Want to Get Rid Of</h1>
+                        </div>
+                    </Col>
+                    <Col md={6} className='m-0 p-0'>
+                        <img src={habitimg2} alt="" />
+                    </Col>
+                </Row>
+
             </section>
-        
+        </>
     )
 }
 
