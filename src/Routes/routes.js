@@ -41,12 +41,14 @@ import Date from "Components/DatePicker";
 import DateSet from "Components/DatePicker";
 import CSV from "Components/CSV";
 import Support from "Pages/Support";
+import VerifyAccount from "../Pages/Auth/verifyAccount";
+import SendOTPPhone from "../Pages/Auth/otpphone";
 
 const routes = [
   //{ path: "/", component: LandingPage },
   //{ path: "/home", component: Home, layout: MainLayout },
   {
-    path: "/",
+    path: "/login",
     layout: AuthLayout,
     component: login
   },
@@ -81,9 +83,19 @@ const routes = [
     ],
   },
   {
+    path: "/otp-phone",
+    layout: AuthLayout,
+    component: SendOTPPhone,
+  },
+  {
     path: "/home",
     layout: MainLayout,
     component: HomePage
+  },
+  {
+    path: "/verify-account",
+    layout: AuthLayout,
+    component: VerifyAccount,
   },
   {
     path: "/user-profile",

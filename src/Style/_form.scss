@@ -94,6 +94,7 @@ textarea{
   padding: 0 20px;
   border-color: transparent;
   font-size: 14px;
+  margin: 0 5px;
 
 
   &.btn-primary{
@@ -281,6 +282,17 @@ textarea{
   &.sm-square{
     padding: 0;
     width: 50px;
+  }
+
+  &.btn-csv{
+    padding-left: 40px;
+    background-image: url("../Images/csv.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px;
+    background-color: transparent;
+    border-color: rgba(0,0,0,0.1);
+    font-weight: 500;
   }
 }
 

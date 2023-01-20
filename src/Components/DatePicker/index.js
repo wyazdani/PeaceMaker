@@ -8,15 +8,15 @@ import DatePicker from "react-datepicker";
 const DateSet = () => {
   const [startDate, setStartDate] = useState(new Date());
   return (
-    <div className="date-set">
-    <DatePicker className="picker-bg"
-    selected={startDate}
-    onChange={date => setStartDate(date)}
-    selectsStart // tells this DatePicker that it is part of a range*
-    startDate={startDate}
-    
-  />
-  </div>
+      <div className="date-set">
+        <DatePicker
+            selected={startDate}
+            onChange={date => setStartDate(date)}
+            selectsStart // tells this DatePicker that it is part of a range*
+            startDate={startDate}
+
+        />
+      </div>
   );
 };
 

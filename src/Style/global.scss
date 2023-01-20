@@ -10,16 +10,15 @@ body {
 }
 
 section {
-  padding: 15px;
-  margin: 20px;
+  margin: 25px;
 }
 
 .card {
   border-radius: 15px;
   box-shadow: 0 0 10px -7px rgba(0, 0, 0, 0.3);
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0);
   padding: 15px;
-  margin: 0 0 15px;
+  margin: 0 0 20px;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -40,11 +39,13 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 15px 0;
   }
 
   .card-title {
     font-size: 24px;
     line-height: 30px;
+    margin: 10px 0;
   }
 }
 
@@ -309,14 +310,14 @@ nav {
   }
   .boxes_rounded{
     a{
-       text-decoration: none;
+      text-decoration: none;
     }
     .form-check-input[type=checkbox] {
-        border-radius: 10.25em;
-        width: 30px;
-        height: 30px;
+      border-radius: 10.25em;
+      width: 30px;
+      height: 30px;
+    }
   }
-}
   i {
     display: flex;
     align-items: center;
@@ -332,21 +333,25 @@ nav {
   }
 }
 
-.vertical-tabs {
+.nav-tabs {
+
   &.message_tabs{
     .nav-item{
-     a{
-      border-radius: 0 !important;
-     }
-     p {
-      &.active{
-        color: white !important;
+      a{
+        border-radius: 0 !important;
       }
-     
-     }
+      p {
+        &.active{
+          color: white !important;
+        }
+
+      }
     }
   }
+
   .nav-item {
+
+
 
     i {
       font-size: 16px;
@@ -354,18 +359,20 @@ nav {
     }
 
     .nav-link {
-      background-color: #F5F5F5;
+      background-color: #fff;
       color: black;
       padding: 15px;
+      border: none;
+      border-bottom: 3px solid transparent;
 
-     p{
-      color: black;
-     }
+      p{
+        color: black;
+      }
 
       &.active {
-        background-color: #8EB26F;
-        color: white;
-        padding: 15px;
+
+        border-color:#8EB26F;
+        color: #8EB26F;
 
         i {
           font-size: 16px;
@@ -373,9 +380,9 @@ nav {
 
         }
         p{
-          
-            color: white !important;
-          
+
+          color: white !important;
+
         }
       }
     }
@@ -385,137 +392,176 @@ nav {
 .piechart{
   border: 1px solid #cacaca;
   position: relative;
-    width: 100%;
-    height: 600px;
-    display: block;
-    margin: 50px;
-    padding: 50px;
-    .inner-pie{
-    
-      margin: auto;
-    }
+  width: 100%;
+  height: 600px;
+  display: block;
+  margin: 50px;
+  padding: 50px;
+  .inner-pie{
+
+    margin: auto;
+  }
 }
 .chart_card{
   margin: 20px;
 }
-  .second-tab {
-    margin: 20px;
-    li{
-      button{
-      //  border: none !important;
-       border-bottom: 3px solid transparent !important;
-       border-top: none !important;
-       border-right: none !important;
-       border-left: none !important;
-       color: black !important;
-       font-weight: 500;
-       font-size: 16px;
-        &.active , &:hover{
-         border-bottom: 3px solid #8EB26F !important;
-         color: #8EB26F !important;
-        }
+
+.tab-content{
+  margin: 20px;
+
+}
+.bar-chart{
+  border: 1px solid #cacaca;
+  width: 800px;
+  margin: auto;
+  padding: 20px;
+
+}
+.main-charts{
+  display: flex;
+  justify-content: space-between;
+  .dropdown{
+    padding-top: 14px;
+    .btn{
+      width: 200px;
+      padding-right: 80px;
+      &::after{
+        position: absolute;
+        content: "";
+        width: 8px;
+        height: 8px;
+        display: block;
+        border: none;
+        border-left: 1px solid white;
+        border-bottom: 1px solid white;
+        transform: rotate(-45deg);
+        top: 26px;
+        right: 9px;
+        transition: all linear 0.3s;
       }
     }
   }
-  .tab-content{
-    margin: 20px;
-  
-  }
-  .bar-chart{
-    border: 1px solid #cacaca;
-    width: 800px;
-    margin: auto;
-    padding: 20px;
-    
-  }
-  .main-charts{
-    display: flex;
-    justify-content: space-between;
-    .dropdown{
-      padding-top: 14px;
-      .btn{
-        width: 200px;
-        padding-right: 80px;
-        &::after{
-          position: absolute;
-          content: "";
-          width: 8px;
-          height: 8px;
-          display: block;
-          border: none;
-          border-left: 1px solid white;
-          border-bottom: 1px solid white;
-          transform: rotate(-45deg);
-          top: 26px;
-          right: 9px;
-          transition: all linear 0.3s;
-        }
-      }
+}
+.react-datepicker-wrapper{
+
+
+  input{
+    padding-left: 45px;
+    background: url(../Images/IconCalender.svg) no-repeat;
+    background-position: 10px center;
+    background-size: 25px;
+    background-color: rgba(48, 150, 103, 0.1);
+    border-color: rgba(48, 150, 103, 0.1);
+
+    &:focus{
+      background-color: rgba(48, 150, 103, 0.15);
     }
   }
+
+}
+
+
 .react-datepicker{
-  border-radius: 20px !important;
-  border: 0.5px solid #cacaca;
-.react-datepicker__month-container{
-.react-datepicker__header {
-  border-top-right-radius: 20px !important;
-  border-top-left-radius: 20px !important;
-  .react-datepicker__day-names{
-    .react-datepicker__day-name{
+  background: #fff;
+  border-radius: 15px;
+  border-color: rgba(0,0,0,0.05);
+  overflow: hidden;
+  padding: 10px;
 
-      color:rgba(142, 178, 111, 1) !important;
-      // font-weight: 700;
-      font-weight: bolder;
-      font-size: 12px;
-      text-transform: uppercase;
-    }
-  }
-}
-.react-datepicker__month{
-  .react-datepicker__week{
-    .react-datepicker__day--selected{
-      background-color:rgba(142, 178, 111, 1) !important;
-      border-radius: 20px !important;
-    }
-  }
-}
-}
-}
 
-  .date-set{
-    width: 200px;
+
+
+  .react-datepicker__triangle{
+    display: none;
+  }
+
+  .react-datepicker__header{
+    background: #fff;
+    border: none;
+  }
+
+  .react-datepicker__day-name,
+  .react-datepicker__day,
+  .react-datepicker__time-name{
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    border-radius: 50%;
+  }
+
+  .react-datepicker__day-name{
+    color: #8EB26F;
+    text-transform: uppercase;
+  }
+
+  .react-datepicker__day--keyboard-selected,
+  .react-datepicker__day--selected{
+    background: #8EB26F;
+  }
+
+  .react-datepicker__current-month{
+    padding: 10px 80px 10px 10px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .react-datepicker__navigation{
+    top: 13px;
+    background: rgba(19, 15, 38, 0.0);
     display: flex;
-    padding: 13px;
-  
-    .picker-bg{
-      background-color: #EAF4F0 !important;
-      border: transparent;
-      font-size: 16px;
-      font-weight: 500;
-    }
-  }
-
-  .csv{
-    display: flex;
-    border: 1px solid #cacaca;
-    width: 175px;
-    padding: 10px 17px;
-    margin: 10px;
-    border-radius: 15px;
     align-items: center;
-    h4{
-      padding-left: 10px;
-      margin: 0;
-    }
-    .csv-img{
-      img{
-        width: 100%;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 10px;
+    position: absolute;
+
+    span{
+      &:before{
+        width: 12px;
+        height: 12px;
+        border-width: 1px 1px 0 0;
+        border-color: #000;
       }
     }
+
+    &.react-datepicker__navigation--previous{
+      left: auto;
+      right: 40px !important;
+
+    }
+
+    &.react-datepicker__navigation-icon--next {
+      left: auto;
+      right: 10px !important;
+    }
   }
+
+
+}
+
 //  .modal-content{
 //   border-radius: 30px !important;
 //   width: 390px !important;
-  
+
 //  }
- 
+
+
+.ReactInputVerificationCode__container {
+  width: auto !important;
+
+  #one-time-code {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .ReactInputVerificationCode__item {
+    width: 50px !important;
+    height: 50px !important;
+    line-height: 48px !important;
+    border-radius: 10px !important;
+    border-color: rgba(0, 0, 0, 0.05) !important;
+    background: rgba(0, 0, 0, 0.02) !important;
+  }
+}
