@@ -21,7 +21,7 @@ const MapPopUp = (props) => {
                         <strong>Psychologist</strong>
                         <p className="text-muted mb-2">thomas_edison@gmail.com</p>
                         <div>
-                            <Button className='btn btn-gradient w-75 my-4'>Save</Button>
+                            <Button className='btn btn-gradient w-75 my-4'>Message Now</Button>
                         </div>
                     </div>
                 </Modal.Body>

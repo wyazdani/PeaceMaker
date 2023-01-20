@@ -8,20 +8,25 @@ import Time from "./Time";
 import BloodPressure from "./BloodPressure";
 import BodyTemperature from "./BodyTemperature";
 import { Button, Card } from "react-bootstrap";
-
-// import Sonnet from '../../components/Sonnet';
+import { useNavigate } from "react-router-dom";
 
 function LeftTabsExample() {
+    const navigate = useNavigate();
+    const TurnBack = () => {
+        navigate('/affirmations');
+    };
     return (
         <>
             <HeaderTop />
+
             <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                <div className='d-flex justify-content-start'>
+                 
+                </div>
                 <div className={classes.main_tabs}>
-                    <Row className="m-3">
-
+                    <Row>
                         <Col sm={4} className={classes.border_line} >
-
-                            <h2>Settings</h2>
+                         <span onClick={TurnBack} className={classes.arrow_style}><i class="far fa-arrow-left"></i><h2>Settings</h2></span>
                             <Nav variant="pills" className="flex-column vertical-tabs">
                                 <Nav.Item>
                                     <Nav.Link className={classes.nav_styling} eventKey="first">

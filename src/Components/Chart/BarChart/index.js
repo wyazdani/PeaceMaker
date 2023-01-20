@@ -93,7 +93,7 @@ export function BarChart() {
      <h1> Caloric Intake</h1>
         <Bar options={options} data={data} />
       </div>
-      <PieChart/>
+     
     </>
   )
 

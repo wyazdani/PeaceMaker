@@ -87,7 +87,35 @@ export const data2 = {
     },
   };
   
- 
+  export const data3 = {
+    
+    labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+    datasets: [
+      {
+        label: ['Low Intake','Normal Intake','Moderate Intake','High Intake'],
+        data: [2000, 2500,1000,1000,2000,1500,2700],
+        backgroundColor: [
+          'rgba(135, 195, 83, 100%)',
+          'rgba(239, 50, 58, 100%)',
+          'rgba(225, 183, 81, 100%)',
+          'rgba(88, 160, 253, 100%)',
+          'rgba(239, 50, 58, 100%)',
+          'rgba(88, 160, 253, 100%)',
+          'rgba(239, 50, 58, 100%)',
+        ],
+        borderColor: [
+          'rgba(134, 192, 225, 1)',
+          'rgba(225, 124, 109, 1)',
+          'rgba(225, 124, 109, 1)',
+          'rgba(225, 124, 109, 1)',
+          'rgba(225, 124, 109, 1)',
+          'rgba(225, 124, 109, 1)',
+          'rgba(225, 124, 109, 1)',
+        ],
+        borderWidth: 1,
+      },
+    ],
+  };
   
 export function PieChart() {
   return(
@@ -113,7 +141,16 @@ export function PieChart() {
 }}/>
 </div>
 
-
+<div className='piechart'>
+<h2>Caloric Intake</h2>
+<Bar className='inner-pie' data={data3} options={{
+   plugins: {
+     legend: {
+       position: 'bottom',
+    },
+},
+}}/>
+</div>
 </>
   )
 

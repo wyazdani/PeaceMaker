@@ -38,7 +38,7 @@ const Challenges = () => {
                             </div>
                         </div> */}
 
-                        <Card className='bg-bottom-right_2' style={{ backgroundImage: `url(${profile})`, }}>
+                        <Card onClick={NextScreen} className='bg-bottom-right_2' style={{ backgroundImage: `url(${profile})`, }}>
                            
                             <Card.Body>
                                 <div>

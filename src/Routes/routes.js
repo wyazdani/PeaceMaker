@@ -122,11 +122,7 @@ const routes = [
     layout: MainLayout,
     component: CSV
   },
-  {
-    path: "/support",
-    layout: MainLayout,
-    component:Support
-  },
+
   
   {
     path: "/habit-tracker",

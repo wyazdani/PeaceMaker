@@ -14,7 +14,6 @@
       position: relative;
       height: calc(100vh - 200px);
       overflow: hidden;
-      overflow-y: auto;
       scrollbar-color: #6e31a2 transparent;
       scrollbar-width: 4px;
   
@@ -22,14 +21,37 @@
         position: relative;
         display: flex;
         align-items: center;
-        padding: 15px 15px 15px 70px;
         min-height: 55px;
         cursor: pointer;
         border-top: 1px solid rgba(0, 0, 0, 0.05);
+        color: #fff;
+     time{
+      margin-bottom: 16px;
+     }
+        
+     .icon_text {
+      display: flex;
+      margin: 14px 6px 0px;
+        img{
+          width: 40px;
+          height: 40px;
+          margin: 0 10px;
+        }
+      i {
+          padding: 0 10px;
+      }
+      p{
+        &.active{
+          color: white !important;
+        }
+       
+      }
+  }
   
-        &.active,
-        &:hover {
-          background: rgba(110, 49, 162, 0.1);
+        &.active
+        {
+          background: #8EB26F;
+          color: white;
         }
       }
   

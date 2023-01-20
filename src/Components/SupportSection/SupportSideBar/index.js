@@ -7,37 +7,40 @@ import classes from "./index.module.scss";
 const SupportSideBar = () => {
   return (
     <div className={classes.messageListSidebar}>
-        <h1>Messages</h1>
-    <ul>
-      <li  className={classes.active}>
-        <div className={classes.userImg}>
-          <img src={user1} alt="username" />
-        </div>
-        <div className={classes.description}>
-          <h6>Marcus Curtis</h6>
-         </div>
-      </li>
-      
-      <li>
-        <div className={classes.userImg}>
-          <img src={user2} alt="username" />
-        </div>
-        <div className={classes.description}>
-          <h6>Marcus Curtis</h6>
-          
-       
-        </div>
-      </li>
-      <li>
-        <div className={classes.userImg}>
-          <img src={user3} alt="username" />
-        </div>
-        <div className={classes.description}>
-          <h6>Marcus Curtis</h6>
-        </div>
-      </li>
-    </ul>
-  </div>
+      <h1>Messages</h1>
+      <ul>
+        <li className={classes.active}>
+          <div className="d-flex justify-content-between align-items-center">
+            <div className={classes.icon_text}>
+              <img src={user1} alt="" />
+              <p><strong>Thomas Edison</strong> <br /> Thanks! I’ll get back to you...</p>
+            </div>
+            <time> 1:23 PM </time>
+          </div>
+        </li>
+  
+        <li>
+          <div className="d-flex justify-content-between align-items-center">
+            <div className={classes.icon_text}>
+              <img src={user1} alt="" />
+              <p><strong>Thomas Edison</strong> <br /> Thanks! I’ll get back to you...</p>
+            </div>
+            <time> 1:23 PM </time>
+          </div>
+        </li>
+
+        <li>
+          <div className="d-flex justify-content-between align-items-center">
+            <div className={classes.icon_text}>
+              <img src={user1} alt="" />
+              <p><strong>Thomas Edison</strong> <br /> Thanks! I’ll get back to you...</p>
+            </div>
+            <time> 1:23 PM </time>
+          </div>
+        </li>
+
+      </ul>
+    </div>
   )
 }
 

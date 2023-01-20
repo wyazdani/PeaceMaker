@@ -50,7 +50,7 @@ const ExploreProvider = () => {
                             <div className={classes.profile_img}>
                                 <img src={unsplash} alt="" />
                             </div>
-                            <h5 className={'m-0'}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Steven Youngster</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
@@ -58,14 +58,14 @@ const ExploreProvider = () => {
                                 <img src={unsplash2} alt="" />
                                
                             </div>
-                            <h5 className={'m-0'} >Thomas Edison</h5>
+                            <h5 className={'m-0'} >John Arkin</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
                             <div className={classes.profile_img}>
                                 <img src={unsplash3} alt="" />
                             </div>
-                            <h5 className={'m-0'}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Fred Alfred</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
@@ -79,49 +79,49 @@ const ExploreProvider = () => {
                             <div className={classes.profile_img}>
                                 <img src={unsplash5} alt="" />
                             </div>
-                            <h5 className={'m-0'}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Jayson Smithens</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
                             <div className={classes.profile_img}>
                                 <img src={unsplash6} alt="" />
                             </div>
-                            <h5 className={'m-0'}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Jayson Smithens</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
                             <div className={classes.profile_img}>
                                 <img src={unsplash} alt="" />
                             </div>
-                            <h5 className={'m-0'}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Kierth Samsoneth</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
                             <div className={classes.profile_img}>
                                 <img src={unsplash3} alt="" />
                             </div>
-                            <h5 className={'m-0'}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Kierth Samsoneth</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
                             <div className={classes.profile_img}>
                                 <img src={unsplash4} alt="" />
                             </div>
-                            <h5 className={'m-0'}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Steven Youngster</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
                             <div className={classes.profile_img}>
                                 <img src={unsplash5} alt="" />
                             </div>
-                            <h5 className={'m-0'}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Steven Youngster</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                         <Card className={`${classes.inner_body}`}>
                             <div className={classes.profile_img}>
                                 <img src={unsplash3} alt="" />
                             </div>
-                            <h5 className={'m-0'}>Thomas Edison</h5>
+                            <h5 className={'m-0'}>Peter Parker</h5>
                             <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
                         </Card>
                     </div>
