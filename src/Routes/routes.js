@@ -29,7 +29,7 @@ import LevelOne from "Pages/Challenges/levelOne";
 import YellowButton from "Pages/Challenges/YellowButton";
 import Notification from "Pages/Notification";
 import Review from "Pages/Review";
-import ProfilePage from "Pages/ProfilePage";
+import ProviderUserProfile from "Pages/ProviderUserProfile";
 import List from "Components/AccordianList";
 import SecondHeader from "Components/Header/SecondHeader";
 import Messages from "Pages/Messages";
@@ -41,6 +41,8 @@ import DateSet from "Components/DatePicker";
 import CSV from "Components/CSV";
 import VerifyAccount from "../Pages/Auth/verifyAccount";
 import SendOTPPhone from "../Pages/Auth/otpphone";
+import Patient from "../Pages/Patient";
+import ProviderEndUserProfile from "../Pages/ProviderEndUserProfile";
 
 const routes = [
   //{ path: "/", component: LandingPage },
@@ -133,10 +135,27 @@ const routes = [
     component: ClickSection
   },
   {
-    path: "/profile",
+    path: "/",
     layout: MainLayout,
-    component: ProfilePage
+    component: Patient,
+    subRoutes: [
+      {
+        path: "/patient",
+        component: Patient,
+      },
+      {
+        path: "/patient/username",
+        component: ProviderEndUserProfile,
+      },
+    ],
+
   },
+  {
+    path: "/provider-userprofile",
+    layout: MainLayout,
+    component: ProviderUserProfile
+  },
+
   {
     path: "/list",
     layout: MainLayout,

@@ -167,66 +167,69 @@ const Review = () => {
 
     return (
 
-        <div className={classes.top_header}>
-            <div >
-                <Row className="px-5" >
-                    <Col md={6}>
-                        <h1>Reviews</h1>
-                    </Col>
-                    <Col md={6}>
-                        <div className="d-flex justify-content-end">
-                            <span><i class="far fa-bell"></i></span>
-                        </div>
-                    </Col>
+        <>
+            <section>
+                <div>
+                    <Row className="px-0">
+                        <Col md={6}>
+                            <h1>Reviews</h1>
+                        </Col>
+                        <Col md={6}>
+                            <div className="d-flex justify-content-end">
+                                <span><i className="far fa-bell"></i></span>
+                            </div>
+                        </Col>
 
-                </Row>
-            </div>
-            <Card className="m-3">
-                <Row className="m-3">
-                    <Col md={6}>
-                        <Row className="mb-3 align-items-center">
+                    </Row>
+                </div>
+                <Card>
+                    <Row className="m-3">
+                        <Col md={6}>
+                            <Row className="mb-3 align-items-center">
 
-                            <Col md={4}>
-                                <Dropdown>
-                                    <Dropdown.Toggle
-                                        id="filterDropDown"
-                                        variant="outline-light"
-                                        className="drop-btn w-100"
-                                    >
-                                        Filter <img src={filterImg} alt="img" />
-                                    </Dropdown.Toggle>
+                                <Col md={4}>
+                                    <Dropdown>
+                                        <Dropdown.Toggle
+                                            id="filterDropDown"
+                                            variant="outline-light"
+                                            className="drop-btn w-100"
+                                        >
+                                            Filter <img src={filterImg} alt="img"/>
+                                        </Dropdown.Toggle>
 
-                                    <Dropdown.Menu>
-                                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                                    </Dropdown.Menu>
-                                </Dropdown>
-                            </Col>
-                            <Col md={8}>
-                                <Form>
-                                    <InputGroup className="">
-                                        <InputGroup.Text id="basic-addon1"><i class="fal fa-search"></i></InputGroup.Text>
-                                        <Form.Control
-                                            placeholder="Search.."
-                                            aria-label="Username"
-                                            aria-describedby="basic-addon1"
-                                        />
-                                    </InputGroup>
+                                        <Dropdown.Menu>
+                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                                </Col>
+                                <Col md={8}>
+                                    <Form>
+                                        <InputGroup className="">
+                                            <InputGroup.Text id="basic-addon1"><i
+                                                className="fal fa-search"></i></InputGroup.Text>
+                                            <Form.Control
+                                                placeholder="Search.."
+                                                aria-label="Username"
+                                                aria-describedby="basic-addon1"
+                                            />
+                                        </InputGroup>
 
-                                </Form>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Row>
-                <DataTable
-                    columns={columns}
-                    data={data}
-                    striped
-                />
-            </Card>
+                                    </Form>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                    <DataTable
+                        columns={columns}
+                        data={data}
+                        striped
+                    />
+                </Card>
+            </section>
 
-        </div>
+        </>
 
     )
 }
