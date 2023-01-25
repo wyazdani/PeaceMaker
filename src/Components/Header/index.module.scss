@@ -4,11 +4,15 @@
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
+    padding: 25px 25px 0;
 
     .icon {
         display: flex;
         justify-content: end;
+    }
+
+    h2{
+        margin: 0;
     }
 
     .headerIcons {

@@ -1,9 +1,9 @@
-import {React, useState} from "react";
+import React, { useState} from "react";
 import {Form, InputGroup, Button} from "react-bootstrap";
 import {Link, useNavigate} from "react-router-dom";
 
 const Login = () => {
-    const [validated, setValidated] = useState(false);
+    /*const [validated, setValidated] = useState(false);
 
     const handleSubmit = (event) => {
         const form = event.currentTarget;
@@ -12,41 +12,41 @@ const Login = () => {
             event.stopPropagation();
         }
         setValidated(true);
-    };
+    };*/
 
     const navigate = useNavigate();
     const goToDashboard = () => {
-        navigate('/dashboard');
+        navigate('/home');
     };
 
     return(
         <>
             <>
-                <h1 className={"mb-5"}>Sign In</h1>
-                <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                <h1 className={"mb-3"}>Sign In</h1>
+                <Form>
                     <Form.Group className={"form-group"} controlId="loginEmail">
                         <Form.Control
                             type={"text"}
                             placeholder="Username"
-                            required
+                            //required
                         />
                     </Form.Group>
                     <Form.Group className={"form-group"} controlId="loginpassword">
                         <Form.Control
                             type={"password"}
                             placeholder="Password"
-                            required
+                            //required
                         />
 
                     </Form.Group>
                     <Form.Group className={"form-group mb-5"}>
-                        <Link to={"/forgot-password?"}>Forgot Password?</Link>
+                        <Link to={"/otp-phone"}>Forgot Password?</Link>
                     </Form.Group>
                     <Form.Group className={"form-group mb-5"}>
-                        <Button type={"submit"} variant={"gradient d-block w-100"} onSubmit={goToDashboard}>Login</Button>
+                        <Button type={"submit"} variant={"gradient d-block w-100"} onClick={goToDashboard}>Login</Button>
                     </Form.Group>
                     <Form.Group className={"form-group text-center"}>
-                        Don’t have an account? <Link to={"/SignUp"} className={"text-green"}>Create Account</Link>
+                        <Link to={"/SignUp"} className={"text-decoration-underline"}>Create Account</Link>
                     </Form.Group>
                 </Form>
             </>

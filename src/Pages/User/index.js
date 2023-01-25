@@ -136,26 +136,26 @@ const User = () => {
 
 
             <div className={classes.border_box}>
-            <div className={classes.date_cv}>
-            <DateSet/>
-              <CSV/>
-            </div>
+                <div className={classes.date_cv}>
+                    <DateSet />
+                    <CSV/>
+                </div>
                 <Line options={options} data={data} />
             </div>
 
             <div className={classes.border_box}>
-            <div className={classes.date_cv}>
-            <DateSet/>
-              <CSV/>
-            </div>
+                <div className={classes.date_cv}>
+                    <DateSet/>
+                    <CSV/>
+                </div>
                 <Line options={options} data={data} />
             </div>
 
             <div className={classes.border_box}>
-            <div className={classes.date_cv}>
-            <DateSet/>
-              <CSV/>
-            </div>
+                <div className={classes.date_cv}>
+                    <DateSet/>
+                    <CSV/>
+                </div>
                 <Line options={options} data={data} />
             </div>
 

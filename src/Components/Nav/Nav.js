@@ -24,11 +24,12 @@ const Nav = () => {
 
                     <li>
                         <Dropdown>
-                            <Dropdown.Toggle  variant="success" id="dropdown-basic">
+                            <Dropdown.Toggle>
                                 <i class="icon-Chart "></i> Habit Tracker
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
-                                <Link to={"/habit-tracker"}> Habit Tracker</Link>
+                                <Link to={"/habit-tracker"}>Habits I want to develop</Link>
+                                <Link to={"#"}>Habits I want to get rid of</Link>
                             </Dropdown.Menu>
                         </Dropdown>
                     </li>
@@ -48,6 +49,21 @@ const Nav = () => {
 
                     <li>
                         <Link to={"/log-out"}> <i class="icon-Login"></i> Log out</Link>
+                    </li>
+
+                    <li>
+                        <Dropdown>
+                            <Dropdown.Toggle>
+                                Provider
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                <Link to={"/provider-userprofile"}>Users Profile</Link>
+                                <Link to={"/review"}>Reviews</Link>
+                                <Link to={"/notification"}>Notification</Link>
+                                <Link to={"/patient"}>Users</Link>
+                                <Link to={"#"}></Link>
+                            </Dropdown.Menu>
+                        </Dropdown>
                     </li>
 
 

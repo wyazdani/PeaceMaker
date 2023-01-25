@@ -1,11 +1,12 @@
 import React from 'react'
 import Cv from '../../Images/csv.png'
+import {Button} from "react-bootstrap";
 
 const CSV = (props) => {
   return (
-    <div className='csv'>
-    <div className='csv-img' ><img src={Cv} alt="" /> </div><h4>All Reports</h4>
-    </div>
+      <Button variant='csv'>
+          All Reports
+      </Button>
   )
 }
 

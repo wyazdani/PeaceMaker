@@ -94,6 +94,7 @@ textarea{
   padding: 0 20px;
   border-color: transparent;
   font-size: 14px;
+  margin: 0 5px;
 
 
   &.btn-primary{
@@ -110,27 +111,6 @@ textarea{
     color: #fff;
   }
 
-  &.btn-filter{
-    border: 1px solid rgba(255, 120, 81, 0.2);
-    background: #fff;
-    color: #25213B;
-    padding: 0 20px;
-
-    &:hover{
-      color: #fff;
-      background: #FF7851;
-      border-color: #FF7851;
-
-      i{
-        color: #fff;
-      }
-    }
-
-    i{
-      color: #FF7851;
-      margin: 0 10px 0 0;
-    }
-  }
 
   &.btn-close{
     width: 25px;
@@ -233,9 +213,33 @@ textarea{
     background: transparent;
   }
 
+  &.btn-filter{
+    background-color: #F1F3F6;
+    border-color: #F1F3F6;
+    color: #000;
+    padding: 0 20px 0 40px;
+    background-image: url("../Images/Filter-icon.png");
+    background-repeat: no-repeat;
+    background-size: 23px;
+    background-position: 9px center;
+    height: 44px;
+    line-height: 42px;
+    width: 110px;
+    border-radius: 10px;
+
+    &:hover{
+      background-color: rgba(0,0,0,0.03);
+      color: #000;
+    }
+
+    &:after{
+      display: none;
+    }
+  }
+
   &.btn-dropdownToggle{
     background: none;
-    color: #1d9940;
+    color: #ccc;
     font-size: 26px;
     padding: 0;
     border: none;
@@ -281,6 +285,19 @@ textarea{
   &.sm-square{
     padding: 0;
     width: 50px;
+  }
+
+  &.btn-csv{
+    padding-left: 40px;
+    background-image: url("../Images/csv.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px;
+    background-color: transparent;
+    border-color: rgba(0,0,0,0.1);
+    font-weight: 500;
+    height: 44px;
+    line-height: 42px;
   }
 }
 

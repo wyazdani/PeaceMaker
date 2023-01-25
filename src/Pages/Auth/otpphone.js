@@ -2,24 +2,18 @@ import {React} from "react";
 import {Form, Button, Row, Col} from "react-bootstrap";
 import {useNavigate} from "react-router-dom";
 
-const SendOTP = () => {
+const SendOTPPhone = () => {
     const navigate = useNavigate();
     const verifyAccount = () => {
-        navigate('/signup/verify-account');
+        navigate('/verify-account');
     };
     return(
         <>
             <>
-                <h1 className={"mb-5"}>Send OTP</h1>
-                <p className={"text-muted mb-5"}>Verify your account by using email address or mobile number</p>
+                <h1 className={"mb-3"}>Continue With Phone</h1>
+                <p className={"text-muted mb-5"}>You will receive 4 digit code to verify account</p>
                 <Form>
                     <Row>
-                        <Col md={12}>
-                            <Form.Group col className={"form-group mb-3"} controlId="signupuemail">
-                                <Form.Label>Email</Form.Label>
-                                <Form.Control type={"text"}  placeholder="Enter Email" />
-                            </Form.Group>
-                        </Col>
                         <Col md={12}>
                             <Form.Group col className={"form-group mb-5"} controlId="signupphonenumber">
                                 <Form.Label>Mobile Phone</Form.Label>
@@ -38,4 +32,4 @@ const SendOTP = () => {
     )
 }
 
-export default SendOTP;
+export default SendOTPPhone;

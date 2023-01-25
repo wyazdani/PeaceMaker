@@ -11,7 +11,7 @@ const SignUp = () => {
     return(
         <>
             <>
-                <h1 className={"mb-5"}>Create Account</h1>
+                <h1 className={"mb-3"}>Create Account</h1>
                 <Form>
                     <Form.Group col className={"form-group"} controlId="signupfirstname">
                         <Form.Label>Name</Form.Label>
