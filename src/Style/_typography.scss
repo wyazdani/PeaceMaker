@@ -49,3 +49,127 @@ a {
     text-decoration: none;
   }
 }
+
+[role="table"]{
+  div[class*="TableHeadRow"] {
+    background: #fff !important;
+    font-size: 13px !important;
+    padding: 20px 0 !important;
+  }
+
+  div[class*="TableRow"] {
+    background: #fff !important;
+    padding: 20px 0 !important;
+  }
+
+  .dropdown{
+    .dropdown-toggle{
+      width: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:after{
+        display: none;
+      }
+    }
+
+    .dropdown-menu{
+      border-radius: 15px;
+      overflow: hidden;
+      border: none;
+      box-shadow: 0 0 10px -5px rgba(0,0,0,0.4);
+      padding: 0;
+      font-size: 13px;
+
+      a{
+        display: block;
+        padding: 10px 15px;
+
+        &:hover{
+          background: #D6EBC4;
+        }
+      }
+    }
+  }
+
+  .userBlock{
+    position: relative;
+    padding: 0 0 0 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  .userImg{
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+
+    img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+}
+
+nav[class*="_Pagination"] {
+  border: none;
+  position: relative;
+  padding: 10px 0;
+  background: #8EB26F;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+  color: #fff;
+
+  span{
+    margin: 0;
+    display: block;
+  }
+
+  div{
+    margin: 0 10px;
+  }
+
+
+
+  #pagination-previous-page{
+    left: 0;
+  }
+  #pagination-next-page{
+    right: 0;
+  }
+
+  select{
+    line-height: 24px;
+
+    + svg{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  button{
+    margin: 0 15px;
+
+    svg{
+      color: #fff;
+      fill: #fff;
+    }
+  }
+
+
+
+  #pagination-first-page,
+  #pagination-last-page{
+    display: none;
+  }
+}

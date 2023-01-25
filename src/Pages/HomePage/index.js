@@ -14,18 +14,20 @@ const HomePage = (props) => {
     <>
       <HeaderTop />
       <section>
-        <Row className='mb-3'>
+        <Row>
           <Col lg={4}>
-            <div className={classes.profile_img} style={{ backgroundImage: `url(${profile})`,}}>
-              <div className={classes.img_text}>
+            <Card className={classes.BannerImg} style={{ backgroundImage: `url(${profile})`,}}>
+              <Card.Body className={classes.textBox}>
                 Daily Affirmation
                 <h3>“I am God’s workmanship, created in Christ.”</h3>
-                <a className='d-flex justify-content-end' href="#"><i class="fas fa-play"></i></a>
-              </div>
-            </div>
+                <div className={'d-flex justify-content-end'}>
+                  <Link to="#"><i class="fas fa-play"></i></Link>
+                </div>
+              </Card.Body>
+            </Card>
           </Col>
           <Col lg={8}>
-            <Row>
+            <Row className={'h-100'}>
               <Col md={6} lg={4} xl={4} xxl={4}>
                 <Card className={classes.card_inner}>
                   <Card.Body>
@@ -33,7 +35,7 @@ const HomePage = (props) => {
                       <img src={flag} alt="" />
                     </a>
                     <h1>20</h1>
-                    <h4>challenges <br /> point</h4>
+                    <h4 className={'text-capitalize'}>challenges <br /> point</h4>
                   </Card.Body>
                 </Card>
               </Col>
@@ -42,7 +44,7 @@ const HomePage = (props) => {
                   <Card.Body>
                     <a href='#' className={classes.icon_box}> <i class="far fa-smile"></i></a>
                     <h1>60%</h1>
-                    <h4>average <br /> Happiness</h4>
+                    <h4 className={'text-capitalize'}>average <br /> Happiness</h4>
                   </Card.Body>
                 </Card>
               </Col>
@@ -51,7 +53,7 @@ const HomePage = (props) => {
                   <Card.Body>
                     <a href='#' className={classes.icon_box}> <i class="icon-target-black"></i></a>
                     <h1>30%</h1>
-                    <h4>average <br /> Target</h4>
+                    <h4 className={'text-capitalize'}>average <br /> Target</h4>
                   </Card.Body>
                 </Card>
               </Col>
@@ -62,7 +64,7 @@ const HomePage = (props) => {
           <Col lg={4} >
             <Card>
               <Card.Header >
-                <Card.Title>User Activity</Card.Title>
+                <Card.Title>Daily State</Card.Title>
                 <Link to={"#"} className='text-decoration-none'><span class="icon-alert1"></span></Link>
               </Card.Header>
               <Card.Body>
