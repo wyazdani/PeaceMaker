@@ -60,7 +60,7 @@ const Nav = () => {
                                 <Link to={"/provider-userprofile"}>Users Profile</Link>
                                 <Link to={"/review"}>Reviews</Link>
                                 <Link to={"/notification"}>Notification</Link>
-                                <Link to={"#"}></Link>
+                                <Link to={"/patient"}>Users</Link>
                                 <Link to={"#"}></Link>
                             </Dropdown.Menu>
                         </Dropdown>
