@@ -19,7 +19,7 @@ jobs:
       run : cd /var/www/actions-runner/_work/PeaceMaker/PeaceMaker/ && sudo su && rm -rf build
       
     - name: Installing Packages
-      run: cd /var/www/actions-runner/_work/PeaceMaker/PeaceMaker/ && sudo su && npm ci
+      run: cd /var/www/actions-runner/_work/PeaceMaker/PeaceMaker/ && sudo su && npm install
       
     - name: Creating Build
       run: cd /var/www/actions-runner/_work/PeaceMaker/PeaceMaker/ && sudo su && npm run build
