@@ -94,6 +94,7 @@ a {
     }
   }
 
+
   .userBlock{
     position: relative;
     padding: 0 0 0 60px;
@@ -165,11 +166,24 @@ nav[class*="_Pagination"] {
       fill: #fff;
     }
   }
-
-
-
   #pagination-first-page,
   #pagination-last-page{
     display: none;
+  }
+}
+.accordion{
+  --bs-accordion-border-color: none;
+  .accordion-header{
+    .accordion-button{
+      background-color: transparent;
+      color: #000;
+      &:focus{
+        border-color: none;
+        box-shadow: none;
+        &::after{
+          color: #000;
+        }
+      }
+    }
   }
 }

@@ -22,7 +22,7 @@ const SupportSideBar = () => {
         <li>
           <div className="d-flex justify-content-between align-items-center">
             <div className={classes.icon_text}>
-              <img src={user1} alt="" />
+              <img src={user2} alt="" />
               <p><strong>Thomas Edison</strong> <br /> Thanks! I’ll get back to you...</p>
             </div>
             <time> 1:23 PM </time>
@@ -32,7 +32,7 @@ const SupportSideBar = () => {
         <li>
           <div className="d-flex justify-content-between align-items-center">
             <div className={classes.icon_text}>
-              <img src={user1} alt="" />
+              <img src={user3} alt="" />
               <p><strong>Thomas Edison</strong> <br /> Thanks! I’ll get back to you...</p>
             </div>
             <time> 1:23 PM </time>
