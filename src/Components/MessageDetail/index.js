@@ -54,6 +54,7 @@ const MessageDetail = () => {
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>
+                <hr className={'my-5'} />
                 <Form>
                     <div className='d-flex justify-content-between mx-4'>
                         <div className={classes.text}>Are you satisfied with your provider?</div>
@@ -63,6 +64,7 @@ const MessageDetail = () => {
                         />
                     </div>
                 </Form>
+                <hr className={'my-5'} />
                 <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>  Privacy & Support</Accordion.Header>
