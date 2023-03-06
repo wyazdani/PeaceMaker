@@ -4,6 +4,9 @@ import classes from "./index.module.scss";
 import {Link} from "react-router-dom";
 
 const HeaderTop = (props) => {
+  // console.log(props.user.name)
+  const data = JSON.parse(localStorage.getItem('user'))
+
   return (
     <>
       <header id={classes.header}>
@@ -15,7 +18,7 @@ const HeaderTop = (props) => {
             </ul>
           </div>
           <div className={classes.headerRight}>
-            <div className={classes.title}>Hello Jacob ,</div>
+            <div className={classes.title}>Hello {data.name},</div>
             <h2>Welcome Back!</h2>
           </div>
       </header>

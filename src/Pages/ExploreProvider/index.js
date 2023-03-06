@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Button, Card, Col, Container, Form, InputGroup, Row } from 'react-bootstrap'
 import classes from "./index.module.scss";
 import unsplash from "../../Images/unsplash.png"
@@ -9,12 +9,28 @@ import unsplash6 from "../../Images/unsplash5.png"
 import unsplash2 from "../../Images/unsplash6.png"
 import { Link, useNavigate } from 'react-router-dom';
 import SecondHeader from 'Components/Header/SecondHeader';
+import exploreProviderApi from 'api/ExploreProvider/exploreProviderApi';
+
 
 const ExploreProvider = () => {
     const navigate = useNavigate();
     const MapSec = () => {
         navigate('/map-show');
     };
+    const [providers, setProviders] = useState('');
+    // console.log(providers);
+    // console.log(providers);
+    const fetchData = async () => {
+        const res = await exploreProviderApi()
+        if(res)
+        {
+            console.log(res);
+            setProviders(res);
+        }
+    }
+    useEffect(() => {
+        fetchData()
+    }, [])
     return (
         <>
           
