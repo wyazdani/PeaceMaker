@@ -9,7 +9,9 @@ import unsplash6 from "../../Images/unsplash5.png"
 import unsplash2 from "../../Images/unsplash6.png"
 import { Link, useNavigate } from 'react-router-dom';
 import SecondHeader from 'Components/Header/SecondHeader';
+import Spinner from 'react-bootstrap/Spinner';
 import exploreProviderApi from 'api/ExploreProvider/exploreProviderApi';
+
 
 
 const ExploreProvider = () => {
@@ -17,20 +19,26 @@ const ExploreProvider = () => {
     const MapSec = () => {
         navigate('/map-show');
     };
-    const [providers, setProviders] = useState('');
+    const [providers, setProviders] = useState([]);
+    const [loader, setLoader] = useState(true)
+    const IMG_URL = "https://dev.api.peacemakerapp.com/storage/user_profile/";
     // console.log(providers);
     // console.log(providers);
     const fetchData = async () => {
         const res = await exploreProviderApi()
         if(res)
         {
-            console.log(res);
-            setProviders(res);
+            console.log(res.data.data);
+            setProviders(res.data.data);
+            setLoader(false)
         }
     }
     useEffect(() => {
         fetchData()
     }, [])
+
+
+    if(loader != true)
     return (
         <>
           
@@ -55,97 +63,26 @@ const ExploreProvider = () => {
                         </Col>
                     </Row>
                     <div className={classes.providerRow}>
-                        <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}  onClick={MapSec}>
-                                <img src={unsplash3} alt="" />
-                            </div>
-                            <h5 className={'m-0'}  onClick={MapSec}>Thomas Edison</h5>
-                            <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
-                        </Card>
-                        <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}>
-                                <img src={unsplash} alt="" />
-                            </div>
-                            <h5 className={'m-0'}>Steven Youngster</h5>
-                            <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
-                        </Card>
-                        <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}>
-                                <img src={unsplash2} alt="" />
-                               
-                            </div>
-                            <h5 className={'m-0'} >John Arkin</h5>
-                            <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
-                        </Card>
-                        <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}>
-                                <img src={unsplash3} alt="" />
-                            </div>
-                            <h5 className={'m-0'}>Fred Alfred</h5>
-                            <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
-                        </Card>
-                        <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}>
-                                <img src={unsplash4} alt="" />
-                            </div>
-                            <h5 className={'m-0'}>Thomas Edison</h5>
-                            <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
-                        </Card>
-                        <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}>
-                                <img src={unsplash5} alt="" />
-                            </div>
-                            <h5 className={'m-0'}>Jayson Smithens</h5>
-                            <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
-                        </Card>
-                        <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}>
-                                <img src={unsplash6} alt="" />
-                            </div>
-                            <h5 className={'m-0'}>Jayson Smithens</h5>
-                            <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
-                        </Card>
-                        <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}>
-                                <img src={unsplash} alt="" />
-                            </div>
-                            <h5 className={'m-0'}>Kierth Samsoneth</h5>
-                            <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
-                        </Card>
-                        <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}>
-                                <img src={unsplash3} alt="" />
-                            </div>
-                            <h5 className={'m-0'}>Kierth Samsoneth</h5>
-                            <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
-                        </Card>
-                        <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}>
-                                <img src={unsplash4} alt="" />
-                            </div>
-                            <h5 className={'m-0'}>Steven Youngster</h5>
-                            <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
-                        </Card>
-                        <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}>
-                                <img src={unsplash5} alt="" />
-                            </div>
-                            <h5 className={'m-0'}>Steven Youngster</h5>
-                            <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
-                        </Card>
-                        <Card className={`${classes.inner_body}`}>
-                            <div className={classes.profile_img}>
-                                <img src={unsplash3} alt="" />
-                            </div>
-                            <h5 className={'m-0'}>Peter Parker</h5>
-                            <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
-                        </Card>
+                        {providers.map((provider) => (
+                            <Card className={`${classes.inner_body}`} key={provider.user_id}>
+                                <div className={classes.profile_img}  onClick={MapSec}>
+                                    <img src={`${IMG_URL}${provider.profile_picture}`} alt="" />
+                                </div>
+                                <h5 className={'m-0'}  onClick={MapSec}>{provider.name}</h5>
+                                <Button className={classes.chatBtn} to ={"/" }><i class="fal fa-comment-alt-lines"></i></Button>
+                            </Card>
+                        ))}
                     </div>
 
                 </Card.Body>
             </Card>
             </section>
         </>
+    )
+    else return(
+    <div>
+        <Spinner animation="grow" />
+    </div>
     )
 }
 
