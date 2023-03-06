@@ -1,6 +1,7 @@
 import {React, useState, useEffect} from "react";
 import {Form, Button, Row, Col} from "react-bootstrap";
 import {Link, useNavigate} from "react-router-dom";
+import signUpApi from "api/Auth/signUpApi";
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -13,29 +14,33 @@ const SignUp = () => {
     const [password, setPassword] = useState("");
     const [password_confirmation, setPasswordConfirmation] = useState("");
     const [phone, setPhone] = useState("");
-    const [country_code, setCountryCode] = useState("=1");
+    const [country_code, setCountryCode] = useState("+1");
     const [role_id, setRoleId] = useState(2);
 
-    
-    const handleSubmit = event => {
+
+    useEffect(() => {
+        if(localStorage.getItem("token") != null)
+        {
+            navigate('/home');
+        }
+    })
+
+    const handleSubmit =  async (event) => {
+        
         event.preventDefault();
-    
         const data = {name, email, password, password_confirmation, phone, country_code, role_id};
-        fetch("https://dev.api.peacemakerapp.com/api/register", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data)
-          
-        })
-          .then(response => response.json())
-          .then(data => console.log(data))
-          .catch(error => console.log(error));
-      };
-
-
-
-    // console.log(name, email);
-
+        const response = await signUpApi(data);
+        if(response.status == 200)
+        {
+            localStorage.setItem('token', response.data.data.token)
+            localStorage.setItem('user', response.data.data);
+            navigate('/home');
+        }
+        else
+        {
+            console.log(response.response.data)
+        }
+    }
 
     return(
         <>
