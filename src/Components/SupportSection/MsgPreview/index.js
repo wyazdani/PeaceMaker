@@ -2,8 +2,9 @@ import React from 'react'
 import user1 from "Images/unsplash.png";
 import userlogo from "Images/ImageTable.png";
 import profile from "Images/ImageTable.png";
-import { Form } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import classes from "./index.module.scss";
+import MessageDetail from 'Components/MessageDetail';
 const MsgPreview = () => {
   return (
     <div className={classes.msgPreview}>
@@ -20,7 +21,9 @@ const MsgPreview = () => {
           </div>
         </div>
         <div className={classes.description}>
-          <i className='icon-alert'></i>
+        
+       
+          <MessageDetail/>
 
         </div>
       </div>

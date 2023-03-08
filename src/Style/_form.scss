@@ -13,7 +13,7 @@ textarea.form-control,
 textarea {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   height: 40px;
   line-height: 38px;
   padding: 0 20px;
@@ -26,32 +26,32 @@ textarea {
   box-sizing: border-box;
 
 
- /*  &:hover {
+  /*  &:hover {
      border-color: #fff;
    }*/
 
   &:active,
   &:focus-visible,
   &:focus {
-    border-color: rgba(0,0,0,0.1);
+    border-color: rgba(0, 0, 0, 0.1);
     box-shadow: none !important;
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0, 0, 0, 0.05);
     outline: none;
 
   }
 
-  &.bottom-border{
+  &.bottom-border {
     border-radius: 0 !important;
     border: none;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 }
 
 
-.form-group{
+.form-group {
   margin: 0 0 15px;
 
-  > label{
+  >label {
     margin: 0 0 3px;
     font-size: 13px;
     letter-spacing: 2px;
@@ -59,7 +59,7 @@ textarea {
 }
 
 textarea.form-control,
-textarea{
+textarea {
   resize: none;
   height: 150px;
   line-height: 20px;
@@ -67,9 +67,9 @@ textarea{
 }
 
 
-.input-group{
+.input-group {
 
-  .input-group-text{
+  .input-group-text {
     background: none;
     position: absolute;
     top: 0;
@@ -80,13 +80,13 @@ textarea{
     border-radius: 15px 0 0 15px;
   }
 
-  .form-control{
+  .form-control {
     padding-left: 50px;
   }
 
 }
 
-.btn{
+.btn {
   height: 40px;
   border-radius: 10px;
   background-size: cover;
@@ -97,22 +97,22 @@ textarea{
   margin: 0 5px;
 
 
-  &.btn-primary{
+  &.btn-primary {
     background-color: $theme-color;
 
-    &:hover{
+    &:hover {
       background-color: $hover-color;
       border-color: $hover-color;
     }
   }
 
-  &.btn-gradient{
+  &.btn-gradient {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 96.09%), #8EB26F;
     color: #fff;
   }
 
 
-  &.btn-close{
+  &.btn-close {
     width: 25px;
     height: 25px;
     background: none;
@@ -129,91 +129,107 @@ textarea{
     padding: 0;
   }
 
-  &.btn-outline-secondary{
+  &.btn-alert {
+    background-color: transparent;
+
+    &:hover {
+      border: none;
+      background-color: transparent !important;
+    }
+
+    &:active {
+      background-color: none;
+      color: none;
+    }
+  }
+
+  &.btn-outline-secondary {
     background: transparent;
     border-color: #B7B7B7;
     color: #B7B7B7;
-    &:hover{
+
+    &:hover {
       background-color: #B7B7B7;
       color: #fff;
     }
   }
 
-  &.btn-secondary{
+  &.btn-secondary {
     background: #B7B7B7;
     border-color: #B7B7B7;
     color: #fff;
   }
 
-  &.btn-google{
+  &.btn-google {
     background: #b53c2d;
     border-color: #b53c2d;
     color: #fff;
 
-    &:hover{
+    &:hover {
       background: #9b2e1f;
       border-color: #9b2e1f;
       color: #fff;
     }
   }
 
-  &.btn-facebook{
+  &.btn-facebook {
     background: #3b5998;
     border-color: #3b5998;
     color: #fff;
 
-    &:hover{
+    &:hover {
       background: #304d8a;
       border-color: #304d8a;
       color: #fff;
     }
   }
 
-  &.btn-apple{
+  &.btn-apple {
     background: #000;
     border-color: #000;
     color: #fff;
 
-    &:hover{
+    &:hover {
       background: #111111;
       border-color: #111;
       color: #fff;
     }
   }
 
-  &.btn-danger{
+  &.btn-danger {
     background: #F87878;
     color: #fff;
   }
 
-  &.btn-success{
+  &.btn-success {
     background: #1d9940;
     color: #fff;
   }
-  &.btn-outline-success{
+
+  &.btn-outline-success {
     border-color: #1d9940;
     background: #fff;
     color: #1d9940;
   }
 
-  &.btn-gary{
+  &.btn-gary {
     background: #BCB8B8;
     color: #fff;
   }
 
-  &.btn-dark{
+  &.btn-dark {
     background: #000;
     color: #fff;
   }
 
-  &.btn-actionBtn{
+  &.btn-actionBtn {
     width: 25px;
     height: 25px;
     padding: 0;
     background: transparent;
   }
 
-  &.btn-filter{
+  &.btn-filter {
     background-color: #F1F3F6;
     border-color: #F1F3F6;
     color: #000;
@@ -227,33 +243,35 @@ textarea{
     width: 110px;
     border-radius: 10px;
 
-    &:hover{
-      background-color: rgba(0,0,0,0.03);
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.03);
       color: #000;
     }
 
-    &:after{
+    &:after {
       display: none;
     }
   }
 
-  &.btn-dropdownToggle{
+  &.btn-dropdownToggle {
     background: none;
     color: #ccc;
     font-size: 26px;
     padding: 0;
     border: none;
 
-    &:after{
+    &:after {
       display: none;
     }
 
-    &:focus{
+    &:focus {
       border: none;
     }
   }
 
-  &.btn-back{
+
+
+  &.btn-back {
     position: relative;
     padding-left: 40px;
     background: none;
@@ -261,7 +279,7 @@ textarea{
     border: none;
     color: #000;
 
-    &:before{
+    &:before {
       position: absolute;
       top: 10px;
       left: 0;
@@ -278,23 +296,23 @@ textarea{
     }
   }
 
-  &.btn-outline-light{
-    border-color: rgba(0,0,0,0.05);
+  &.btn-outline-light {
+    border-color: rgba(0, 0, 0, 0.05);
   }
 
-  &.sm-square{
+  &.sm-square {
     padding: 0;
     width: 50px;
   }
 
-  &.btn-csv{
+  &.btn-csv {
     padding-left: 40px;
     background-image: url("../Images/csv.png");
     background-repeat: no-repeat;
     background-position: 10px center;
     background-size: 20px;
     background-color: transparent;
-    border-color: rgba(0,0,0,0.1);
+    border-color: rgba(0, 0, 0, 0.1);
     font-weight: 500;
     height: 44px;
     line-height: 42px;
@@ -302,12 +320,13 @@ textarea{
 }
 
 
-.form-check{
-  padding: 0 0 0 30px;
+
+.form-check {
+  padding: 0;
 }
 
 input[type="checkbox"],
-.form-check-input{
+.form-check-input {
   width: 18px;
   height: 18px;
   border: 1px solid $theme-color;
@@ -315,18 +334,18 @@ input[type="checkbox"],
   border-radius: 3px;
   margin-left: -25px !important;
 
-  &:checked{
+  &:checked {
     background-color: $theme-color !important;
     border-color: $theme-color;
     background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 20%27%3e%3cpath fill=%27none%27 stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%273%27 d=%27m6 10 3 3 6-6%27/%3e%3c/svg%3e");
   }
 
-  &:focus{
+  &:focus {
     box-shadow: 0 0 0 0.25rem rgba(255, 120, 81, 0.25);
   }
 }
 
-input[type='search']{
+input[type='search'] {
   background: url("../Images/searchIcon.svg");
   background-repeat: no-repeat;
   padding-right: 50px;
