@@ -1,47 +1,136 @@
-import React from 'react'
+import TimerPicker from "Components/TimePicker";
+import React, { useState } from "react";
 import { Modal, Row, Col, Form, Button, Card } from "react-bootstrap";
-import { useNavigate } from 'react-router-dom';
-import classes from '../../HabitTracker/index.module.scss'
+import { useNavigate } from "react-router-dom";
+import classes from "../../HabitTracker/index.module.scss";
 const PopUp = (props) => {
-    const navigate = useNavigate();
-    const AddHabit = () => {
-        navigate('/add-habit-next');
-    };
-    return (
-        <>
+  const navigate = useNavigate();
+  const AddHabit = () => {
+    const data = { habit_name, days, set_time };
+    navigate("/add-habit-next", { state: { data: data } });
+  };
+  const [habit_name, sethabit_name] = useState("");
+  const [days, setDays] = useState([]);
+  const [set_time, setTime] = useState("");
+  const handleCheckboxChange = (event) => {
+    const value = event.target.value;
+    const isChecked = event.target.checked;
+    // Add or remove the value from the checkedValues array
+    if (isChecked) {
+      setDays([...days, value]);
+    } else {
+      setDays(days.filter((v) => v !== value));
+    }
+    console.log(days);
+  };
 
-            <Modal
-                show={props.show}
-                size='md'
-                centered
-            >
-                <Modal.Body>
-                    <h3 className={classes.habit_border_bottom} > Add Habit</h3>
-                    <Form className='mb-4'>
-                        <Form.Group controlId="formBasicPassword">
-                            <Form.Label> <strong>Habit Name</strong> </Form.Label>
-                            <Form.Control type="text" placeholder="Habit Name" />
-                        </Form.Group>
-                    </Form>
-                    <Row className={classes.boxes}>
-                    <h5>Repeat</h5>
-                        <Col className={classes.mid_box}><span> M </span>  </Col>
-                        <Col className={classes.mid_box}><span> T</span> </Col>
-                        <Col className={classes.mid_box}><span> W </span>  </Col>
-                        <Col className={classes.mid_box}><span> T </span> </Col>
-                        <Col className={classes.mid_box}><span> F </span> </Col>
-                        <Col className={classes.mid_box}><span> S </span>  </Col>
-                        <Col className={classes.mid_box}><span> S</span>  </Col>
-                    </Row>
-                    <h5>Set Time</h5>
-                   <div className='text-center'>
-                    <Button onClick={AddHabit} className='btn btn-gradient'>Save</Button>
-                    <Button className={classes.btn_cancel} onClick={props.onHide}> <strong>Cancel</strong> </Button>
-                    </div>
-                </Modal.Body>
-            </Modal>
-        </>
-    )
-}
+  const handleDataFromChild = (data) => {
+    setTime(data);
+  };
+  return (
+    <>
+      <Modal show={props.show} size="md" centered>
+        <Modal.Body>
+          <h3 className={classes.habit_border_bottom}> Add Habit</h3>
+          <Form className="mb-4">
+            <Form.Group controlId="formBasicPassword">
+              <Form.Label>
+                {" "}
+                <strong>Habit Name</strong>{" "}
+              </Form.Label>
+              <Form.Control type="text" placeholder="Habit Name" onChange={(e) => sethabit_name(e.target.value)} />
+            </Form.Group>
+          </Form>
+          <h5>Repeat</h5>
+          <div className={classes.boxes}>
+            <div className={classes.mid_box}>
+              <Form.Check
+                id={"monday"}
+                type="checkbox"
+                label="M"
+                value="Monday"
+                checked={days.includes("Monday")}
+                onChange={handleCheckboxChange}
+              />
+            </div>
+            <div className={classes.mid_box}>
+              <Form.Check
+                id={"tuesday"}
+                type="checkbox"
+                label="T"
+                value="Tuesday"
+                checked={days.includes("Tuesday")}
+                onChange={handleCheckboxChange}
+              />
+            </div>
+            <div className={classes.mid_box}>
+              <Form.Check
+                id={"wednesday"}
+                type="checkbox"
+                label="W"
+                value="Wednesday"
+                checked={days.includes("Wednesday")}
+                onChange={handleCheckboxChange}
+              />
+            </div>
+            <div className={classes.mid_box}>
+              <Form.Check
+                id={"thursday"}
+                type="checkbox"
+                label="T"
+                value="Thursday"
+                checked={days.includes("Thursday")}
+                onChange={handleCheckboxChange}
+              />
+            </div>
+            <div className={classes.mid_box}>
+              <Form.Check
+                id={"friday"}
+                type="checkbox"
+                label="F"
+                value="Friday"
+                checked={days.includes("Friday")}
+                onChange={handleCheckboxChange}
+              />
+            </div>
+            <div className={classes.mid_box}>
+              <Form.Check
+                id={"saturday"}
+                type="checkbox"
+                label="S"
+                value="Saturday"
+                checked={days.includes("Saturday")}
+                onChange={handleCheckboxChange}
+              />
+            </div>
+            <div className={classes.mid_box}>
+              <Form.Check
+                id={"sunday"}
+                type="checkbox"
+                label="S"
+                value="Sunday"
+                checked={days.includes("Sunday")}
+                onChange={handleCheckboxChange}
+              />
+            </div>
+          </div>
+          <h5>Set Time</h5>
+          <TimerPicker onData={handleDataFromChild} />
+        </Modal.Body>
+        <div className="text-center mb-2">
+          <Button onClick={AddHabit} className="btn btn-gradient w-25">
+            Save
+          </Button>
+        </div>
+        <div className="text-center mb-2">
+          <Button className={classes.btn_cancel}>
+            {" "}
+            <strong>Cancel</strong>{" "}
+          </Button>
+        </div>
+      </Modal>
+    </>
+  );
+};
 
-export default PopUp
+export default PopUp;
