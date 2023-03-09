@@ -1,12 +1,31 @@
 import TimerPicker from "Components/TimePicker";
-import React from "react";
+import React, { useState } from "react";
 import { Modal, Row, Col, Form, Button, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import classes from "../../HabitTracker/index.module.scss";
 const PopUp = (props) => {
   const navigate = useNavigate();
   const AddHabit = () => {
-    navigate("/add-habit-next");
+    const data = { habit_name, days, set_time };
+    navigate("/add-habit-next", { state: { data: data } });
+  };
+  const [habit_name, sethabit_name] = useState("");
+  const [days, setDays] = useState([]);
+  const [set_time, setTime] = useState("");
+  const handleCheckboxChange = (event) => {
+    const value = event.target.value;
+    const isChecked = event.target.checked;
+    // Add or remove the value from the checkedValues array
+    if (isChecked) {
+      setDays([...days, value]);
+    } else {
+      setDays(days.filter((v) => v !== value));
+    }
+    console.log(days);
+  };
+
+  const handleDataFromChild = (data) => {
+    setTime(data);
   };
   return (
     <>
@@ -19,35 +38,84 @@ const PopUp = (props) => {
                 {" "}
                 <strong>Habit Name</strong>{" "}
               </Form.Label>
-              <Form.Control type="text" placeholder="Habit Name" />
+              <Form.Control type="text" placeholder="Habit Name" onChange={(e) => sethabit_name(e.target.value)} />
             </Form.Group>
           </Form>
           <h5>Repeat</h5>
           <div className={classes.boxes}>
             <div className={classes.mid_box}>
-              <Form.Check id={"monday"} type="checkbox" label="M" />
+              <Form.Check
+                id={"monday"}
+                type="checkbox"
+                label="M"
+                value="Monday"
+                checked={days.includes("Monday")}
+                onChange={handleCheckboxChange}
+              />
             </div>
             <div className={classes.mid_box}>
-              <Form.Check id={"tuesday"} type="checkbox" label="T" />
+              <Form.Check
+                id={"tuesday"}
+                type="checkbox"
+                label="T"
+                value="Tuesday"
+                checked={days.includes("Tuesday")}
+                onChange={handleCheckboxChange}
+              />
             </div>
             <div className={classes.mid_box}>
-              <Form.Check id={"wednesday"} type="checkbox" label="W" />
+              <Form.Check
+                id={"wednesday"}
+                type="checkbox"
+                label="W"
+                value="Wednesday"
+                checked={days.includes("Wednesday")}
+                onChange={handleCheckboxChange}
+              />
             </div>
             <div className={classes.mid_box}>
-              <Form.Check id={"thursday"} type="checkbox" label="T" />
+              <Form.Check
+                id={"thursday"}
+                type="checkbox"
+                label="T"
+                value="Thursday"
+                checked={days.includes("Thursday")}
+                onChange={handleCheckboxChange}
+              />
             </div>
             <div className={classes.mid_box}>
-              <Form.Check id={"friday"} type="checkbox" label="F" />
+              <Form.Check
+                id={"friday"}
+                type="checkbox"
+                label="F"
+                value="Friday"
+                checked={days.includes("Friday")}
+                onChange={handleCheckboxChange}
+              />
             </div>
             <div className={classes.mid_box}>
-              <Form.Check id={"saturday"} type="checkbox" label="S" />
+              <Form.Check
+                id={"saturday"}
+                type="checkbox"
+                label="S"
+                value="Saturday"
+                checked={days.includes("Saturday")}
+                onChange={handleCheckboxChange}
+              />
             </div>
             <div className={classes.mid_box}>
-              <Form.Check id={"sunday"} type="checkbox" label="S" />
+              <Form.Check
+                id={"sunday"}
+                type="checkbox"
+                label="S"
+                value="Sunday"
+                checked={days.includes("Sunday")}
+                onChange={handleCheckboxChange}
+              />
             </div>
           </div>
           <h5>Set Time</h5>
-          <TimerPicker />
+          <TimerPicker onData={handleDataFromChild} />
         </Modal.Body>
         <div className="text-center mb-2">
           <Button onClick={AddHabit} className="btn btn-gradient w-25">
@@ -55,7 +123,7 @@ const PopUp = (props) => {
           </Button>
         </div>
         <div className="text-center mb-2">
-          <Button className={classes.btn_cancel} onClick={props.onHide}>
+          <Button className={classes.btn_cancel}>
             {" "}
             <strong>Cancel</strong>{" "}
           </Button>

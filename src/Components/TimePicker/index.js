@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { TimePicker } from "react-ios-time-picker";
 
-const TimerPicker = () => {
+const TimerPicker = (props) => {
   const [value, setValue] = useState("10:00 AM");
 
   const onChange = (timeValue) => {
     setValue(timeValue);
+    props.onData(timeValue);
   };
   return (
     <div className="mb-3">
