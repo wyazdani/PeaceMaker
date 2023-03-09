@@ -36,6 +36,7 @@ import Messages from "Pages/Messages";
 import { PieChart } from "Pages/PieChart";
 import { BarChart } from "Components/Chart/BarChart";
 import UserProfile from "Pages/User/UserProfile";
+import logout from "Pages/Auth/logout";
 
 import DateSet from "Components/DatePicker";
 import CSV from "Components/CSV";
@@ -50,7 +51,11 @@ const routes = [
   {
     path: "/login",
     layout: AuthLayout,
-    component: login
+    component: login,
+  },
+  {
+    path: "/log-out",
+    component: logout,
   },
   {
     path: "/",
@@ -90,7 +95,7 @@ const routes = [
   {
     path: "/home",
     layout: MainLayout,
-    component: HomePage
+    component: HomePage,
   },
   {
     path: "/verify-account",
@@ -105,34 +110,33 @@ const routes = [
   {
     path: "/explore-provider",
     layout: MainLayout,
-    component: ExploreProvider
+    component: ExploreProvider,
   },
   {
     path: "/map-show",
     layout: MainLayout,
-    component: MapShow
+    component: MapShow,
   },
   {
     path: "/date",
     layout: MainLayout,
-    component: DateSet
+    component: DateSet,
   },
   {
     path: "/csv",
     layout: MainLayout,
-    component: CSV
+    component: CSV,
   },
 
-  
   {
     path: "/habit-tracker",
     layout: MainLayout,
-    component: HabitTracker
+    component: HabitTracker,
   },
   {
     path: "/click-section",
     layout: MainLayout,
-    component: ClickSection
+    component: ClickSection,
   },
   {
     path: "/",
@@ -148,108 +152,107 @@ const routes = [
         component: ProviderEndUserProfile,
       },
     ],
-
   },
   {
     path: "/provider-userprofile",
     layout: MainLayout,
-    component: ProviderUserProfile
+    component: ProviderUserProfile,
   },
 
   {
     path: "/list",
     layout: MainLayout,
-    component: List
+    component: List,
   },
   {
     path: "/second-header",
     layout: MainLayout,
-    component: SecondHeader
+    component: SecondHeader,
   },
   {
     path: "/messages",
     layout: MainLayout,
-    component: Messages
+    component: Messages,
   },
   {
     path: "/piechart",
     layout: MainLayout,
-    component: PieChart
+    component: PieChart,
   },
   {
     path: "/barchart",
     layout: MainLayout,
-    component: BarChart
+    component: BarChart,
   },
   {
     path: "/popup",
     layout: MainLayout,
-    component: PopUp
+    component: PopUp,
   },
   {
     path: "/add-habit-next",
     layout: MainLayout,
-    component: AddHabitNext
+    component: AddHabitNext,
   },
   {
     path: "/affirmations",
     layout: MainLayout,
-    component: Affirmations
+    component: Affirmations,
   },
   {
     path: "/challenges",
     layout: MainLayout,
-    component: Challenges
+    component: Challenges,
   },
   {
     path: "/level-one",
     layout: MainLayout,
-    component: LevelOne
+    component: LevelOne,
   },
   {
     path: "/yellow-button",
     layout: MainLayout,
-    component: YellowButton
+    component: YellowButton,
   },
   {
     path: "/notification",
     layout: MainLayout,
-    component: Notification
+    component: Notification,
   },
   {
     path: "/review",
     layout: MainLayout,
-    component: Review
+    component: Review,
   },
   {
     path: "/level-one-challenge",
     layout: MainLayout,
-    component: LevelOneChallenge
+    component: LevelOneChallenge,
   },
   {
     path: "/next-screen",
     layout: MainLayout,
-    component: NextScreen
+    component: NextScreen,
   },
   {
     path: "/counter",
     layout: MainLayout,
-    component: Counter
+    component: Counter,
   },
   {
     path: "/setting-icon-click",
     layout: MainLayout,
-    component: SettingIconClick
+    component: SettingIconClick,
   },
   {
     path: "/journal",
     layout: MainLayout,
-    component: Journal
+    component: Journal,
   },
   {
     path: "/add-entry-button",
     layout: MainLayout,
-    component: AddEntryButton
+    component: AddEntryButton,
   },
   {
     path: "/user",
@@ -263,7 +266,6 @@ const routes = [
         path: "/profile",
         component: Profile,
       },
-     
     ],
   },
   { path: "*", component: NotFound, layout: MainLayout },

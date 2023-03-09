@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
 const HomePage = (props) => {
   return (
     <>
-      <HeaderTop />
+      <HeaderTop/>
       <section>
         <Row>
           <Col lg={4}>

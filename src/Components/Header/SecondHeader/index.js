@@ -5,6 +5,8 @@ import bellicon from '../../../Images/bellicon.png'
 import { Link } from "react-router-dom";
 
 const SecondHeader = (props) => {
+  const data = JSON.parse(localStorage.getItem('user'))
+
   return (
     <>
       <div id={classes.header}>
@@ -16,7 +18,7 @@ const SecondHeader = (props) => {
             </ul>
           </div>
           <div className={classes.headerRight}>
-            <div className={classes.title}>Hello Jacob ,</div>
+            <div className={classes.title}>Hello {data.name} ,</div>
             <h2>Welcome Back!</h2>
           </div>
       </div>

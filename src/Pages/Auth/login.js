@@ -1,8 +1,10 @@
-import React, { useState} from "react";
+import React, { useEffect, useState} from "react";
 import {Form, InputGroup, Button} from "react-bootstrap";
 import {Link, useNavigate} from "react-router-dom";
+import loginApi from "../../api/Auth/loginApi";
 
 const Login = () => {
+    const navigate = useNavigate();
     /*const [validated, setValidated] = useState(false);
 
     const handleSubmit = (event) => {
@@ -14,20 +16,47 @@ const Login = () => {
         setValidated(true);
     };*/
 
-    const navigate = useNavigate();
-    const goToDashboard = () => {
-        navigate('/home');
-    };
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [role_id, setRoleId] = useState("")
+
+    useEffect(() => {
+        setRoleId(2);
+        if(localStorage.getItem("token") != null)
+        {
+            navigate('/home');
+        }
+    })
+
+    const handelSubmit = async (event) => {
+        event.preventDefault();
+        const data = {email, password, role_id}
+        const response = await loginApi(data);
+        if(response.status == 200)
+        {
+        console.log(response.data.data.user);
+            localStorage.setItem('token', response.data.data.user.token)
+            localStorage.setItem('user', JSON.stringify(response.data.data.user));
+            navigate('/home');
+        }
+        else
+        {
+            console.log(response);
+        }
+
+    }
 
     return(
         <>
             <>
                 <h1 className={"mb-3"}>Sign In</h1>
-                <Form>
+                <Form onSubmit={handelSubmit}>
                     <Form.Group className={"form-group"} controlId="loginEmail">
                         <Form.Control
                             type={"text"}
-                            placeholder="Username"
+                            placeholder="Email"
+                            value={email}
+                            onChange={event => setEmail(event.target.value)}
                             //required
                         />
                     </Form.Group>
@@ -35,6 +64,8 @@ const Login = () => {
                         <Form.Control
                             type={"password"}
                             placeholder="Password"
+                            value={password}
+                            onChange={event => setPassword(event.target.value)}
                             //required
                         />
 
@@ -43,7 +74,7 @@ const Login = () => {
                         <Link to={"/otp-phone"}>Forgot Password?</Link>
                     </Form.Group>
                     <Form.Group className={"form-group mb-5"}>
-                        <Button type={"submit"} variant={"gradient d-block w-100"} onClick={goToDashboard}>Login</Button>
+                        <Button type={"submit"} variant={"gradient d-block w-100"}>Login</Button>
                     </Form.Group>
                     <Form.Group className={"form-group text-center"}>
                         <Link to={"/SignUp"} className={"text-decoration-underline"}>Create Account</Link>
