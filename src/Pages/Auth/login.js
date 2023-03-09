@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from "react";
 import {Form, InputGroup, Button} from "react-bootstrap";
 import {Link, useNavigate} from "react-router-dom";
-import loginApi from "api/Auth/loginApi";
+import loginApi from "../../api/Auth/loginApi";
 
 const Login = () => {
     const navigate = useNavigate();
