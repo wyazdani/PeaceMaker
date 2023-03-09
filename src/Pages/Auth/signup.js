@@ -43,7 +43,7 @@ const SignUp = () => {
     }
 
     return(
-        <>
+       
             <>
                 <h1 className={"mb-3"}>Create Account</h1>
                 <Form onSubmit={handleSubmit}>
@@ -99,7 +99,6 @@ const SignUp = () => {
                     </Form.Group>
                 </Form>
             </>
-        </>
     )
 }
 
