@@ -82,11 +82,11 @@ const Login = () => {
               Login
             </Button>
           </Form.Group>
-          <Form.Group className={"form-group text-center"}>
+          {/* <Form.Group className={"form-group text-center"}>
             <Link to={"/SignUp"} className={"text-decoration-underline"}>
               Create Account
             </Link>
-          </Form.Group>
+          </Form.Group> */}
         </Form>
         <ToastContainer />
       </>
