@@ -11,6 +11,15 @@ const getHabits = () => {
   }
 };
 
+const createHabit = (data) => {
+  try {
+    return API.postMethod(ENDPOINT.habitTracker.create, true, data);
+  } catch (e) {
+    return e;
+  }
+};
+
 export default {
   getHabits,
+  createHabit,
 };

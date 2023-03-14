@@ -31,7 +31,7 @@ const postMethod = async (endpoint, authentication = true, data = null, printCon
   console.log(data);
   if (authentication) {
     var bearer_token = localStorage.getItem("token");
-    headers["Authorization"] = `Bearer ${JSON.parse(bearer_token)}`;
+    headers["Authorization"] = `Bearer ${bearer_token}`;
   }
   if (multipart) {
     console.log("asdasdasdasdasdasdasdasdasd");
