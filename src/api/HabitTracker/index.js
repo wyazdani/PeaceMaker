@@ -19,7 +19,27 @@ const createHabit = (data) => {
   }
 };
 
+const showHabit = (id) => {
+  try {
+    const res = API.getMethod(ENDPOINT.habitTracker.show + id, true);
+    return res;
+  } catch (err) {
+    return err;
+  }
+};
+
+const deleteHabit = (id) => {
+  try {
+    const res = API.deleteMethod(ENDPOINT.habitTracker.delete + id, true);
+    return res;
+  } catch (err) {
+    return err;
+  }
+};
+
 export default {
   getHabits,
   createHabit,
+  showHabit,
+  deleteHabit,
 };
