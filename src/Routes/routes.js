@@ -44,6 +44,7 @@ import VerifyAccount from "../Pages/Auth/verifyAccount";
 import SendOTPPhone from "../Pages/Auth/otpphone";
 import Patient from "../Pages/Patient";
 import ProviderEndUserProfile from "../Pages/ProviderEndUserProfile";
+import HabitTrackerNext from "Pages/HabitTracker/AddHabitNextPage";
 
 const routes = [
   //{ path: "/", component: LandingPage },
@@ -111,6 +112,11 @@ const routes = [
     path: "/explore-provider",
     layout: MainLayout,
     component: ExploreProvider,
+  },
+  {
+    path: "/habit-tracker-next",
+    layout: MainLayout,
+    component: HabitTrackerNext,
   },
   {
     path: "/map-show",

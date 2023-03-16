@@ -4,7 +4,7 @@ import { Button, Col, Row } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import classes from "../../HabitTracker/index.module.scss";
 
-const AddHabitNext = () => {
+const AddHabitNext = (props) => {
   const location = useLocation();
   const data = location.state.data;
   //   const []

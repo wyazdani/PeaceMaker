@@ -3,15 +3,31 @@ import React, { useState } from "react";
 import { Modal, Row, Col, Form, Button, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import classes from "../../HabitTracker/index.module.scss";
+import HabitTracker from "api/HabitTracker";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const PopUp = (props) => {
   const navigate = useNavigate();
-  const AddHabit = () => {
-    const data = { habit_name, days, set_time };
-    navigate("/add-habit-next", { state: { data: data } });
+  const AddHabit = async () => {
+    const data = { habit_name, days, set_times, habit_type };
+    try {
+      const res = await HabitTracker.createHabit(data);
+      if (res.status == 200) {
+        props.popUpData();
+        props.onHide();
+      }
+    } catch (err) {
+      console.log(err.data.message);
+      err.data.message.map((e) => {
+        toast.error(e.message);
+      });
+    }
   };
   const [habit_name, sethabit_name] = useState("");
   const [days, setDays] = useState([]);
-  const [set_time, setTime] = useState("");
+  const [set_times, setTime] = useState([]);
+  const [habit_type, setHabitType] = useState("1");
   const handleCheckboxChange = (event) => {
     const value = event.target.value;
     const isChecked = event.target.checked;
@@ -25,7 +41,7 @@ const PopUp = (props) => {
   };
 
   const handleDataFromChild = (data) => {
-    setTime(data);
+    setTime([data]);
   };
   return (
     <>
@@ -123,12 +139,13 @@ const PopUp = (props) => {
           </Button>
         </div>
         <div className="text-center mb-2">
-          <Button className={classes.btn_cancel}>
+          <Button onClick={props.onHide} className={classes.btn_cancel}>
             {" "}
             <strong>Cancel</strong>{" "}
           </Button>
         </div>
       </Modal>
+      <ToastContainer />
     </>
   );
 };

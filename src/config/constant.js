@@ -1,4 +1,4 @@
-export const API_URL = "https://staging.api.peacemakerapp.com/api";
+export const API_URL = "https://dev.api.peacemakerapp.com/api";
 export const KEY = "YW1Gb1lXNTZZV2xpTG1GemJHRnRMbTFsYUdGeVFHZHRZV2xzTG1OdmJUb3lZV2RoYVc0PQ==";
 
 export const ENDPOINT = {
@@ -13,6 +13,9 @@ export const ENDPOINT = {
   },
   habitTracker: {
     getAll: `${API_URL}/habits`,
+    create: `${API_URL}/habits`,
+    show: `${API_URL}/habits/`,
+    delete: `${API_URL}/habits/`,
   },
   journal: {
     get: `${API_URL}/journal`,

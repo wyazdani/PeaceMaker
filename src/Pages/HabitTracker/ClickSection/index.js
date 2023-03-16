@@ -9,23 +9,20 @@ import loginImg from "Images/loginImg.svg";
 import HabitTracker from "api/HabitTracker";
 import Spinner from "react-bootstrap/Spinner";
 
-const ClickSection = () => {
+const ClickSection = (props) => {
   const [modalShow, setModalShow] = React.useState(false);
   const [userHabit, setUserHabit] = useState([]);
   const [loader, setLoader] = useState(true);
-
   const dateOptions = {
     year: "numeric",
     month: "long",
     day: "numeric",
   };
-
   const timeOptions = {
     hour12: true,
     hour: "numeric",
     minute: "numeric",
   };
-
   const getHabits = async () => {
     const res = await HabitTracker.getHabits();
     if (res) {
@@ -34,6 +31,24 @@ const ClickSection = () => {
       console.log(userHabit);
       setLoader(false);
     }
+  };
+
+  const handleEdit = async (id) => {
+    const res = await HabitTracker.showHabit(id);
+    console.log(res);
+  };
+
+  const handleDelete = async (id) => {
+    setLoader(true);
+    const res = await HabitTracker.deleteHabit(id);
+    getHabits();
+  };
+
+  const handleDataFromPopUp = async () => {
+    console.log("handle prop");
+    setLoader(true);
+    await getHabits();
+    setLoader(false);
   };
 
   useEffect(() => {
@@ -73,14 +88,6 @@ const ClickSection = () => {
                 </div>
               </Card.Body>
             </Card>
-
-            {/* <Row className={classes.boxes}>
-                            <Col className={classes.mid_box}><span> THU <br /></span> <h3>05</h3> </Col>
-                            <Col className={classes.mid_box}><span> FRI <br /></span> <h3>06</h3> </Col>
-                            <Col className={classes.mid_box}><span> SAT <br /></span> <h3>07</h3> </Col>
-                            <Col className={classes.mid_box}><span> THU <br /></span> <h3>08</h3> </Col>
-                            <Col className={classes.mid_box}><span> SAT <br /></span> <h3>09</h3> </Col>
-                        </Row> */}
             <div className={classes.boxes}>
               <div className={classes.mid_box}>
                 <Form.Check id={"mon"} type="checkbox" label="THU" />
@@ -133,7 +140,6 @@ const ClickSection = () => {
                     <small className="text-muted"> Everyday of 7:00 AM, 1PM, 9PM</small>
                   </Form.Check>
                 </div>
-
                 <div className="d-flex justify-content-center my-5">
                   <Button onClick={() => setModalShow(true)} variant="gradient d-block w-75">
                     Add Habit
@@ -169,10 +175,10 @@ const ClickSection = () => {
                           </Col>
                           <Col md={6}>
                             <div className="d-flex justify-content-end">
-                              <a className={classes.edit} href="#">
+                              <a onClick={() => handleEdit(habit.habit_id)} className={classes.edit} href="#">
                                 <i class="far fa-pen"></i>
                               </a>
-                              <a className={classes.delete} href="#">
+                              <a onClick={() => handleDelete(habit.habit_id)} className={classes.delete} href="#">
                                 {" "}
                                 <i class="far fa-trash-alt"></i>{" "}
                               </a>
@@ -189,7 +195,7 @@ const ClickSection = () => {
             </div>
           </Col>
         </Row>
-        <PopUp show={modalShow} onHide={() => setModalShow(false)} />
+        <PopUp show={modalShow} onHide={() => setModalShow(false)} popUpData={() => handleDataFromPopUp()} />
       </section>
     </>
   );
