@@ -44,6 +44,13 @@ const ClickSection = (props) => {
     getHabits();
   };
 
+  const handleDataFromPopUp = async () => {
+    console.log("handle prop");
+    setLoader(true);
+    await getHabits();
+    setLoader(false);
+  };
+
   useEffect(() => {
     getHabits();
   }, []);
@@ -188,7 +195,7 @@ const ClickSection = (props) => {
             </div>
           </Col>
         </Row>
-        <PopUp show={modalShow} onHide={() => setModalShow(false)} />
+        <PopUp show={modalShow} onHide={() => setModalShow(false)} popUpData={() => handleDataFromPopUp()} />
       </section>
     </>
   );
