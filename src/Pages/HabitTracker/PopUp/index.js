@@ -4,13 +4,24 @@ import { Modal, Row, Col, Form, Button, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import classes from "../../HabitTracker/index.module.scss";
 import HabitTracker from "api/HabitTracker";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const PopUp = (props) => {
   const navigate = useNavigate();
   const AddHabit = async () => {
     const data = { habit_name, days, set_times, habit_type };
-    const res = await HabitTracker.createHabit(data);
-    if (res) {
-      props.onHide();
+    try {
+      const res = await HabitTracker.createHabit(data);
+      if (res.status == 200) {
+        props.popUpData();
+        props.onHide();
+      }
+    } catch (err) {
+      console.log(err.data.message);
+      err.data.message.map((e) => {
+        toast.error(e.message);
+      });
     }
   };
   const [habit_name, sethabit_name] = useState("");
@@ -134,6 +145,7 @@ const PopUp = (props) => {
           </Button>
         </div>
       </Modal>
+      <ToastContainer />
     </>
   );
 };
