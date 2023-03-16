@@ -10,7 +10,7 @@ const PopUp = (props) => {
     const data = { habit_name, days, set_times, habit_type };
     const res = await HabitTracker.createHabit(data);
     if (res) {
-      console.log(res);
+      props.onHide();
     }
   };
   const [habit_name, sethabit_name] = useState("");
@@ -128,7 +128,7 @@ const PopUp = (props) => {
           </Button>
         </div>
         <div className="text-center mb-2">
-          <Button className={classes.btn_cancel}>
+          <Button onClick={props.onHide} className={classes.btn_cancel}>
             {" "}
             <strong>Cancel</strong>{" "}
           </Button>

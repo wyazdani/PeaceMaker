@@ -14,6 +14,8 @@ export const ENDPOINT = {
   habitTracker: {
     getAll: `${API_URL}/habits`,
     create: `${API_URL}/habits`,
+    show: `${API_URL}/habits/`,
+    delete: `${API_URL}/habits/`,
   },
   journal: {
     get: `${API_URL}/journal`,

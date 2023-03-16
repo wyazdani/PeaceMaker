@@ -19,10 +19,8 @@ const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role_id, setRoleId] = useState("");
 
   useEffect(() => {
-    setRoleId(2);
     if (localStorage.getItem("token") != null) {
       navigate("/home");
     }
@@ -30,12 +28,13 @@ const Login = () => {
 
   const handelSubmit = async (event) => {
     event.preventDefault();
-    const data = { email, password, role_id };
+    const data = { email, password };
     const response = await loginApi(data);
     if (response.status == 200) {
       console.log(response.data.data.user);
       localStorage.setItem("token", response.data.data.user.token);
       localStorage.setItem("user", JSON.stringify(response.data.data.user));
+      localStorage.setItem("role_id", JSON.stringify(response.data.data.user.role_id));
       navigate("/home");
     } else {
       const error = response.response.data.message;
