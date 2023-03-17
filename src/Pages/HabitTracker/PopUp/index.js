@@ -25,10 +25,12 @@ const PopUp = (props) => {
         props.onHide();
       }
     } catch (err) {
-      console.log(err.data.message);
-      err.data.message.map((e) => {
-        toast.error(e.message);
-      });
+      console.log("hello");
+      const errorMessage = err.data.message;
+      // console.log(errorMessage);
+      for (let i = 0; i < errorMessage.length; i++) {
+        toast.error(errorMessage[i]["message"]);
+      }
     }
   };
   const [habit_name, sethabit_name] = useState("");
@@ -173,7 +175,7 @@ const PopUp = (props) => {
           </Button>
         </div>
       </Modal>
-      <ToastContainer />
+      {/* <ToastContainer />git */}
     </>
   );
 };
