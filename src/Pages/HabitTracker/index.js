@@ -9,7 +9,8 @@ import HeaderTop from "Components/Header";
 const HabitTracker = () => {
   const navigate = useNavigate();
   const MapSec = () => {
-    navigate("/click-section");
+    const habit_type = "1";
+    navigate("/click-section", { state: { habit_type: habit_type } });
   };
   return (
     <>

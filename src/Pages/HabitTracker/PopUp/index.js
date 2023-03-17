@@ -1,5 +1,5 @@
 import TimerPicker from "Components/TimePicker";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Modal, Row, Col, Form, Button, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import classes from "../../HabitTracker/index.module.scss";
@@ -8,13 +8,20 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const PopUp = (props) => {
+  console.log(props.habit_type);
   const navigate = useNavigate();
   const AddHabit = async () => {
-    const data = { habit_name, days, set_times, habit_type };
+    const data = { habit_name, days, set_times, habit_type, habit_replacement };
     try {
       const res = await HabitTracker.createHabit(data);
       if (res.status == 200) {
+        sethabit_name("");
+        setDays("");
+        setTime("");
+        setHabitReplacement("");
+        setHabitType("");
         props.popUpData();
+        toast.success("Habit Created Successfully");
         props.onHide();
       }
     } catch (err) {
@@ -27,7 +34,8 @@ const PopUp = (props) => {
   const [habit_name, sethabit_name] = useState("");
   const [days, setDays] = useState([]);
   const [set_times, setTime] = useState([]);
-  const [habit_type, setHabitType] = useState("1");
+  const [habit_type, setHabitType] = useState("");
+  const [habit_replacement, setHabitReplacement] = useState("");
   const handleCheckboxChange = (event) => {
     const value = event.target.value;
     const isChecked = event.target.checked;
@@ -43,19 +51,39 @@ const PopUp = (props) => {
   const handleDataFromChild = (data) => {
     setTime([data]);
   };
+
+  useEffect(() => {
+    setHabitType(props.habit_type);
+  });
   return (
     <>
       <Modal show={props.show} size="md" centered>
         <Modal.Body>
           <h3 className={classes.habit_border_bottom}> Add Habit</h3>
           <Form className="mb-4">
-            <Form.Group controlId="formBasicPassword">
+            <Form.Group className="mb-2">
               <Form.Label>
                 {" "}
                 <strong>Habit Name</strong>{" "}
               </Form.Label>
               <Form.Control type="text" placeholder="Habit Name" onChange={(e) => sethabit_name(e.target.value)} />
             </Form.Group>
+            {habit_type == 2 ? (
+              <Form.Group className="mb-2">
+                <Form.Label>
+                  {" "}
+                  <strong>Habit Replacement</strong>{" "}
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Habit Replacement"
+                  onChange={(e) => setHabitReplacement(e.target.value)}
+                  required
+                />
+              </Form.Group>
+            ) : (
+              <></>
+            )}
           </Form>
           <h5>Repeat</h5>
           <div className={classes.boxes}>

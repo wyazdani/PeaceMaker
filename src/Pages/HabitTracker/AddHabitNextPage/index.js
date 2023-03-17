@@ -9,13 +9,14 @@ import HeaderTop from "Components/Header";
 const HabitTrackerNext = () => {
   const navigate = useNavigate();
   const MapSec = () => {
-    navigate("/click-section");
+    const habit_type = "2";
+    navigate("/click-section", { state: { habit_type: habit_type } });
   };
   return (
     <>
       <HeaderTop />
       <section>
-        <Row className={classes.Habit_background}>
+        <Row onClick={MapSec} className={classes.Habit_background}>
           <Col md={6}>
             <div className={classes.position}>
               <h1>Habits I Want to Get Rid Of</h1>
