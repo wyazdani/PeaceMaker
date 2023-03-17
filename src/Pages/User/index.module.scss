@@ -1,15 +1,23 @@
 .user_sec{
+    padding: 15px 0;
    
     p{
         color: #000000;
     }
     .img_box{
-        img{
-            width: 70px;
-        }
+       width: 50px;
+       height: 50px;
+       position: absolute;
+       border-radius: 50%;
+       overflow: hidden;
+       img{
+        width: 100%;
+        height: auto;
+        display: block;
+       }
     }
     .profile_info{
-        padding-left: 20px;
+        padding: 5px 0px 0 55px;
     }
 }
 .border_box{

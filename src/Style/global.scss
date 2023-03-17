@@ -641,3 +641,15 @@ nav {
     background: rgba(0, 0, 0, 0.02) !important;
   }
 }
+.img_box{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  img{
+   width: 100%;
+   height: auto;
+   display: block;
+  }
+}
