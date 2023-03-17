@@ -8,10 +8,15 @@ import challenges from "Images/challangeImg.svg";
 import loginImg from "Images/loginImg.svg";
 import HabitTracker from "api/HabitTracker";
 import Spinner from "react-bootstrap/Spinner";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useLocation } from "react-router-dom";
 
 const ClickSection = (props) => {
+  const location = useLocation();
   const [modalShow, setModalShow] = React.useState(false);
   const [userHabit, setUserHabit] = useState([]);
+  const [pageType, setPageType] = useState([]);
   const [loader, setLoader] = useState(true);
   const dateOptions = {
     year: "numeric",
@@ -41,6 +46,7 @@ const ClickSection = (props) => {
   const handleDelete = async (id) => {
     setLoader(true);
     const res = await HabitTracker.deleteHabit(id);
+    toast.success("Habit Deleted Successfully");
     getHabits();
   };
 
@@ -53,10 +59,13 @@ const ClickSection = (props) => {
 
   useEffect(() => {
     getHabits();
+    const data = location.state;
+    setPageType(data.habit_type);
   }, []);
 
   return (
     <>
+      <ToastContainer />
       <HeaderTop />
       <section>
         <Row>
@@ -162,7 +171,7 @@ const ClickSection = (props) => {
                   let formattedTime = date.toLocaleTimeString("en-US", timeOptions);
                   return (
                     <>
-                      {habit.habit_type == 1 ? (
+                      {habit.habit_type == pageType ? (
                         <div className={classes.habit_tracker_records}>
                           <Col md={6}>
                             <strong>
@@ -195,7 +204,12 @@ const ClickSection = (props) => {
             </div>
           </Col>
         </Row>
-        <PopUp show={modalShow} onHide={() => setModalShow(false)} popUpData={() => handleDataFromPopUp()} />
+        <PopUp
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+          popUpData={() => handleDataFromPopUp()}
+          habit_type={pageType}
+        />
       </section>
     </>
   );
