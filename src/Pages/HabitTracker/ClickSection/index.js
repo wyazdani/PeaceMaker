@@ -10,9 +10,14 @@ import HabitTracker from "api/HabitTracker";
 import Spinner from "react-bootstrap/Spinner";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ClickSection = (props) => {
+  const navigate = useNavigate();
+  const next = (data) => {
+    console.log(data);
+    navigate("/add-habit-next", { state: { id: data } });
+  };
   const location = useLocation();
   const [modalShow, setModalShow] = React.useState(false);
   const [userHabit, setUserHabit] = useState([]);
@@ -184,7 +189,7 @@ const ClickSection = (props) => {
                           </Col>
                           <Col md={6}>
                             <div className="d-flex justify-content-end">
-                              <a onClick={() => handleEdit(habit.habit_id)} className={classes.edit} href="#">
+                              <a onClick={() => next(habit.habit_id)} className={classes.edit}>
                                 <i class="far fa-pen"></i>
                               </a>
                               <a onClick={() => handleDelete(habit.habit_id)} className={classes.delete} href="#">

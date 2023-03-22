@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://staging.api.peacemakerapp.com/",
+  baseURL: "https://dev.api.peacemakerapp.com/",
 });

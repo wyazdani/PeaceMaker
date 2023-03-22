@@ -37,9 +37,19 @@ const deleteHabit = (id) => {
   }
 };
 
+const habitRemarks = (data, id) => {
+  try {
+    const res = API.postMethod(ENDPOINT.habitTracker.storeRemarks + id, true, data);
+    return res;
+  } catch (err) {
+    return err;
+  }
+};
+
 export default {
   getHabits,
   createHabit,
   showHabit,
   deleteHabit,
+  habitRemarks,
 };

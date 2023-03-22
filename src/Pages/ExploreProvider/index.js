@@ -15,7 +15,7 @@ import exploreProviderApi from "api/ExploreProvider";
 const ExploreProvider = () => {
   const navigate = useNavigate();
   const MapSec = () => {
-    navigate("/map-show");
+    navigate("/map-show", { state: { providers: providers } });
   };
   const [providers, setProviders] = useState([]);
   const [loader, setLoader] = useState(true);
