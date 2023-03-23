@@ -20,5 +20,7 @@ export const ENDPOINT = {
   },
   journal: {
     get: `${API_URL}/journal`,
+    getList: `${API_URL}/journal/get-journal-list/`,
+    createList: `${API_URL}/journal/store-journal-list/`,
   },
 };
