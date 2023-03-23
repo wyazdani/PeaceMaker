@@ -19,7 +19,7 @@ const ExploreProvider = () => {
   };
   const [providers, setProviders] = useState([]);
   const [loader, setLoader] = useState(true);
-  const IMG_URL = "https://dev.api.peacemakerapp.com/storage/user_profile/";
+  const IMG_URL = "https://staging.api.peacemakerapp.com/storage/user_profile/";
   // console.log(providers);
   // console.log(providers);
   const fetchData = async () => {

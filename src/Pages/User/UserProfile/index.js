@@ -9,7 +9,7 @@ import CSV from "Components/CSV";
 import DateSet from "Components/DatePicker";
 
 const UserProfile = (props) => {
-  const baseImagePath = "https://dev.api.peacemakerapp.com/storage/user_profile/";
+  const baseImagePath = "https://staging.api.peacemakerapp.com/storage/user_profile/";
   const [user, setUser] = useState([]);
   const profile_image = user.profile_picture != "" ? baseImagePath + user.profile_picture : profile;
   useEffect(() => {
