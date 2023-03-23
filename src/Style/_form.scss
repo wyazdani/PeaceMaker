@@ -112,21 +112,10 @@ textarea {
   }
 
 
-  &.btn-close {
-    width: 25px;
-    height: 25px;
-    background: none;
-    color: #FF7851;
-    border: 2px solid #FF7851;
-    border-radius: 50%;
-    opacity: 1;
-    font-size: 18px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 20px;
-    z-index: 999;
-    padding: 0;
+  &.btn-cancel {
+    background-color: #F7F9FA;
+    color: #000000;
+    
   }
 
   &.btn-alert {

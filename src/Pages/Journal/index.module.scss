@@ -1,4 +1,4 @@
-.boxes_rounded{
+.boxes_rounded {
     border: transparent;
     border-radius: 15px;
     background-color: #FBFBFB;
@@ -7,4 +7,16 @@
     padding: 15px;
     display: flex;
     justify-content: space-between;
+}
+
+// Journal PopUp Scss//
+.heading_popup {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+
+    .btn_cancel {
+        background-color: #F7F9FA;
+        color: #000000;
+    }
 }

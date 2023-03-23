@@ -14,13 +14,14 @@ const MapPopUp = (props) => {
     setUserProfile(profile_image);
   });
   return (
-    <div>
-      <Modal show={props.show} size="medium" centered>
+    <div >
+      <Modal show={props.show} size="medium" centered className={classes.customModal}>
         <Modal.Body className={classes.main_popup}>
           <div className="main_div text-center  ">
             <div className={classes.profile_img2}>
               <img src={userProfile} alt="" />
             </div>
+            <div>
             <h1>{provider.name}</h1>
             <strong>{provider.profession}</strong>
             <p className="text-muted mb-2">{provider.email}</p>
@@ -33,6 +34,8 @@ const MapPopUp = (props) => {
                 <strong>Cancel</strong>{" "}
               </Button>
             </div>
+            </div>
+           
           </div>
         </Modal.Body>
       </Modal>

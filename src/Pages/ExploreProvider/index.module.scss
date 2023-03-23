@@ -4,13 +4,13 @@
     border-radius: 15px;
 }
 
-.providerRow{
+.providerRow {
     max-width: 700px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
 
-    .inner_body{
+    .inner_body {
         flex: 0 0 calc(50% - 10px);
         margin: 5px !important;
         padding: 20px 50px 20px 60px;
@@ -18,10 +18,10 @@
         box-shadow: none;
         background: rgba($color: #000000, $alpha: 0.02);
         cursor: pointer;
-        
+
     }
 
-    .chatBtn{
+    .chatBtn {
         font-size: 13px;
         color: white;
         border-radius: 50%;
@@ -59,19 +59,30 @@
 
 // ==================POPUP SCSS =================//
 
-.main_popup{
-   border-radius: 30px;
-   cursor: pointer;
 
-    .profile_img2 {
-   
-        img {
-           
-            border-radius: 100px;
+.customModal {
+
+    [class="modal-content"] {
+        margin-top: 100px;
+    }
+
+    .main_popup {
+        border-radius: 30px;
+        cursor: pointer;
+
+        .profile_img2 {
             width: 150px;
-            margin-top: -60px;
-            border: 10px solid white;
-        
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #fff;
+            margin: -90px auto 15px;
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
         }
     }
 }
