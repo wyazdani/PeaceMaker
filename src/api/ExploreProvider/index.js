@@ -4,13 +4,10 @@ import { ENDPOINT } from "config/constant";
 
 const getProviders = async () => {
   try {
-    const token = localStorage.getItem("token");
-    const response = await axios.get("api/get-providers", {
-      headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
-    });
-    return response;
+    const res = API.getMethod(ENDPOINT.explore_provider.getProviders, true);
+    return res;
   } catch (err) {
-    console.log(err);
+    return err;
   }
 };
 

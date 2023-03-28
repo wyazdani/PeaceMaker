@@ -35,16 +35,25 @@ const AddEntryButton = () => {
   };
   const handleSubmit = async () => {
     const data = { journal_list_id, journal_to, what_happened, improvement, respond, goal_achived };
-    try {
-      const res = await Journal.createJournal(data);
-      if (res.status == 200) {
-        toast.success("Journal added successfully");
-        setTimeout(() => {
-          TurnBack();
-        }, 2000);
+    if (!journal_list_id) {
+      toast.error("Please Selet one options");
+    } else {
+      try {
+        const res = await Journal.createJournal(data);
+        if (res.status == 200) {
+          toast.success("Journal added successfully");
+          setTimeout(() => {
+            TurnBack();
+          }, 2000);
+        }
+      } catch (err) {
+        console.log(err.data.message);
+        const error = err.data.message;
+        error.map((e) => {
+          console.log(e);
+          toast.error(e.message);
+        });
       }
-    } catch (err) {
-      console.log(err);
     }
   };
   useEffect(() => {

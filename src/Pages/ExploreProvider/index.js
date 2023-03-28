@@ -23,11 +23,19 @@ const ExploreProvider = () => {
   // console.log(providers);
   // console.log(providers);
   const fetchData = async () => {
-    const res = await exploreProviderApi.getProviders();
-    if (res) {
-      console.log(res.data.data);
-      setProviders(res.data.data);
-      setLoader(false);
+    try {
+      const res = await exploreProviderApi.getProviders();
+      if (res) {
+        console.log(res.data.data);
+        setProviders(res.data.data);
+        setLoader(false);
+      }
+    } catch (err) {
+      console.log(err.data.message);
+      if (err.data.message == "Unauthenticated.") {
+        localStorage.clear();
+        navigate("/login");
+      }
     }
   };
 
