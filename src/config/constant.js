@@ -23,4 +23,11 @@ export const ENDPOINT = {
     getList: `${API_URL}/journal/get-journal-list/`,
     createList: `${API_URL}/journal/store-journal-list/`,
   },
+  chat: {
+    showAll: `${API_URL}/chat`,
+    view: `${API_URL}/chat/`,
+    sendMessage: `${API_URL}/chat/message`,
+    craete: `${API_URL}/chat`,
+    delete: `${API_URL}/chat/`,
+  },
 };

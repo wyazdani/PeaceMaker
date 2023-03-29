@@ -13,7 +13,7 @@
     padding: 0;
     position: relative;
     height: calc(100vh - 200px);
-    overflow: hidden;
+    overflow-y: scroll;
     scrollbar-color: #6e31a2 transparent;
     scrollbar-width: 4px;
 
