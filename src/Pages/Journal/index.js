@@ -17,9 +17,12 @@ const Journal = () => {
 
   const fetchAll = async () => {
     const res = await JournalAPI.getJournals();
-    console.log(res.data);
+    console.log(res.data.message);
+    if (res.data.message == "Unauthenticated.") {
+      localStorage.clear();
+      navigate("/login");
+    }
     setUserJournal(res.data.data);
-    console.log(userJournal);
     setLoader(false);
   };
 
