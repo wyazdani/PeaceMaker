@@ -3,7 +3,7 @@ import { Col, Form, Row } from "react-bootstrap";
 import SupportSideBar from "Components/SupportSection/SupportSideBar";
 import MsgPreview from "Components/SupportSection/MsgPreview";
 import Spinner from "react-bootstrap/Spinner";
-import Chat from "api/Chat/index.js";
+import Chat from "api/Chat";
 
 const Tickets = (props) => {
   const [supportLoader, setSupportLoader] = useState(true);
@@ -30,6 +30,7 @@ const Tickets = (props) => {
       setMsgPreviewLoader(false);
     }
   };
+  const handleRefresh = async () => {};
   useEffect(() => {
     fetchAllChats();
   }, []);
@@ -40,7 +41,7 @@ const Tickets = (props) => {
           <Col md={12} className="m-0 p-0">
             <div class="support-block">
               <SupportSideBar chats={supportSiderBar} getChat={fetchChatById} />
-              <MsgPreview loader={msgPreviewLoader} chat={chat} />
+              <MsgPreview loader={msgPreviewLoader} chat={chat} handleChatFromChild={fetchChatById} />
             </div>
           </Col>
         </Row>

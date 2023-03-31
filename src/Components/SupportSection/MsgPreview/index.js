@@ -6,13 +6,40 @@ import { Button, Form } from "react-bootstrap";
 import classes from "./index.module.scss";
 import MessageDetail from "Components/MessageDetail";
 import Spinner from "react-bootstrap/Spinner";
+import Chat from "api/Chat";
+import Pusher from "pusher-js";
 
 const MsgPreview = (props) => {
+  const IMG_URL = "https://dev.api.peacemakerapp.com/storage/user_profile/";
   const user = JSON.parse(localStorage.getItem("user"));
   const [message, setMessage] = useState("");
-  const handleSendMessage = () => {
-    console.log(message);
+  const [pusherMsg, setPusherMsg] = useState([]);
+  console.log(pusherMsg);
+  const handleSendMessage = async () => {
+    const chat_id = props.chat.id;
+    const type = "text";
+    const data = { message, chat_id, type };
+    try {
+      const res = await Chat.sentMessage(data);
+      if (res) {
+        props.handleChatFromChild(props.chat.id);
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
+  useEffect(() => {
+    const pusher = new Pusher("d72e2b506c356a18e1b6", {
+      cluster: "ap2",
+      encrypted: true,
+    });
+    const channel = pusher.subscribe("peaceMaker-development");
+    channel.bind("message.sent", (data) => {
+      setPusherMsg([...pusherMsg, data]);
+    });
+    console.log(pusherMsg);
+  }, []);
+
   if (Object.keys(props.chat).length === 0) return <div></div>;
   else if (props.loader == false)
     return (
@@ -23,12 +50,19 @@ const MsgPreview = (props) => {
               <div className={classes.icon_img}>
                 <i className="icon-envelop"></i>
                 <div className={classes.img_box}>
-                  <img src={userlogo} alt="" />
+                  <img
+                    src={
+                      props.chat.other_participants[0].user.profile_picture
+                        ? IMG_URL + props.chat.other_participants[0].user.profile_picture
+                        : userlogo
+                    }
+                    alt=""
+                  />
                 </div>
               </div>
               <div className={classes.text1}>
-                <h6>Thomas Edison</h6>
-                <div className={classes.text}>Psychologist</div>
+                <h6>{props.chat.other_participants[0].user.name}</h6>
+                <div className={classes.text}>{props.chat.other_participants[0].user.profession}</div>
               </div>
             </div>
           </div>
@@ -43,7 +77,11 @@ const MsgPreview = (props) => {
                 return (
                   <div className={classes.outgoing}>
                     <div className={classes.userImg}>
-                      <img src={user1} alt="username" />
+                      <img
+                        src={user.profile_picture ? IMG_URL + user.profile_picture : userlogo}
+                        onerror={userlogo}
+                        alt="username"
+                      />
                     </div>
                     <div className={classes.description}>
                       <div className={classes.text}>
@@ -57,7 +95,14 @@ const MsgPreview = (props) => {
                 return (
                   <div className={classes.incoming}>
                     <div className={classes.userImg}>
-                      <img src={userlogo} alt="username" />
+                      <img
+                        src={
+                          props.chat.other_participants[0].user.profile_picture
+                            ? IMG_URL + props.chat.other_participants[0].user.profile_picture
+                            : userlogo
+                        }
+                        alt="username"
+                      />
                     </div>
                     <div className={classes.description}>
                       <div className={classes.text}>
