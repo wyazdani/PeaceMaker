@@ -10,7 +10,7 @@ import Chat from "api/Chat";
 import Pusher from "pusher-js";
 
 const MsgPreview = (props) => {
-  const IMG_URL = "https://dev.api.peacemakerapp.com/storage/user_profile/";
+  const IMG_URL = "https://staging.api.peacemakerapp.com/storage/user_profile/";
   const user = JSON.parse(localStorage.getItem("user"));
   const [message, setMessage] = useState("");
   const [pusherMsg, setPusherMsg] = useState([]);
