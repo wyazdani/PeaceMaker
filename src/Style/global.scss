@@ -12,33 +12,33 @@ section {
   padding: 25px;
 }
 
-hr{
-  border-color: rgba(0,0,0,0.05);
+hr {
+  border-color: rgba(0, 0, 0, 0.05);
   opacity: 1;
 }
 
-.chartBox{
+.chartBox {
   position: relative;
   overflow: hidden;
   margin: 0 -20px 20px;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   padding: 20px;
 }
 
-.chartHeader{
+.chartHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.tableHeader{
+.tableHeader {
   position: relative;
   padding: 5px 0 5px 130px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  .dropdown{
+  .dropdown {
     position: absolute;
     top: 5px;
     left: 0;
@@ -56,11 +56,12 @@ hr{
   background-repeat: no-repeat;
   background-size: cover;
 
-  &.bg-bottom-right{
+  &.bg-bottom-right {
     background-position: 100% 100%;
     background-size: 168px;
   }
-  &.bg-bottom-right_2{
+
+  &.bg-bottom-right_2 {
     background-position: 101% 121%;
     background-size: 245px;
     background-color: #324C51;
@@ -68,13 +69,14 @@ hr{
     padding: 40px;
 
   }
+
   .card-header {
     background: none;
     border-color: rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:  0 0 15px;
+    padding: 0 0 15px;
   }
 
   .card-title {
@@ -225,9 +227,9 @@ nav {
       width: 100%;
       transform: none !important;
       border: none;
-      margin: 0 0 8px!important;
+      margin: 0 0 8px !important;
 
-      a{
+      a {
         font-size: 14px;
         font-weight: normal;
         padding: 8px 25px 8px 40px;
@@ -349,16 +351,19 @@ nav {
       }
     }
   }
-  .boxes_rounded{
-    a{
+
+  .boxes_rounded {
+    a {
       text-decoration: none;
     }
+
     .form-check-input[type=checkbox] {
       border-radius: 10.25em;
       width: 30px;
       height: 30px;
     }
   }
+
   i {
     display: flex;
     align-items: center;
@@ -374,11 +379,11 @@ nav {
   }
 }
 
-.nav-pills{
-  &.vertical-tabs{
+.nav-pills {
+  &.vertical-tabs {
     display: block;
 
-    a{
+    a {
       display: block;
       padding: 15px 15px 15px 50px;
       color: #000;
@@ -387,12 +392,12 @@ nav {
       position: relative;
 
       &.active,
-      &:hover{
+      &:hover {
         background: #8EB26F;
         color: #fff;
       }
 
-      i{
+      i {
         width: 25px;
         height: 25px;
         position: absolute;
@@ -409,13 +414,14 @@ nav {
 
 .nav-tabs {
 
-  &.message_tabs{
-    .nav-item{
-      a{
+  &.message_tabs {
+    .nav-item {
+      a {
         border-radius: 0 !important;
       }
+
       p {
-        &.active{
+        &.active {
           color: white !important;
         }
 
@@ -423,11 +429,7 @@ nav {
     }
   }
 
-
-
   .nav-item {
-
-
 
     i {
       font-size: 16px;
@@ -441,13 +443,13 @@ nav {
       border: none;
       border-bottom: 3px solid transparent;
 
-      p{
+      p {
         color: black;
       }
 
       &.active {
 
-        border-color:#8EB26F;
+        border-color: #8EB26F;
         color: #8EB26F;
 
         i {
@@ -455,7 +457,8 @@ nav {
           color: white !important;
 
         }
-        p{
+
+        p {
 
           color: white !important;
 
@@ -465,7 +468,7 @@ nav {
   }
 }
 
-.piechart{
+.piechart {
   border: 1px solid #cacaca;
   position: relative;
   width: 100%;
@@ -473,35 +476,41 @@ nav {
   display: block;
   margin: 50px;
   padding: 50px;
-  .inner-pie{
+
+  .inner-pie {
 
     margin: auto;
   }
 }
-.chart_card{
+
+.chart_card {
   margin: 20px;
 }
 
-.tab-content{
+.tab-content {
   margin: 20px;
 
 }
-.bar-chart{
+
+.bar-chart {
   border: 1px solid #cacaca;
   width: 800px;
   margin: auto;
   padding: 20px;
 
 }
-.main-charts{
+
+.main-charts {
   display: flex;
   justify-content: space-between;
-  .dropdown{
 
-    .btn{
+  .dropdown {
+
+    .btn {
       width: 200px;
       padding-right: 80px;
-      &::after{
+
+      &::after {
         position: absolute;
         content: "";
         width: 8px;
@@ -518,10 +527,11 @@ nav {
     }
   }
 }
-.react-datepicker-wrapper{
+
+.react-datepicker-wrapper {
 
 
-  input{
+  input {
     padding-left: 45px;
     background: url(../Images/IconCalender.svg) no-repeat;
     background-position: 10px center;
@@ -529,7 +539,7 @@ nav {
     background-color: rgba(48, 150, 103, 0.1);
     border-color: rgba(48, 150, 103, 0.1);
 
-    &:focus{
+    &:focus {
       background-color: rgba(48, 150, 103, 0.15);
     }
   }
@@ -537,28 +547,28 @@ nav {
 }
 
 
-.react-datepicker{
+.react-datepicker {
   background: #fff;
   border-radius: 15px;
-  border-color: rgba(0,0,0,0.05);
+  border-color: rgba(0, 0, 0, 0.05);
   overflow: hidden;
   padding: 10px;
 
 
 
 
-  .react-datepicker__triangle{
+  .react-datepicker__triangle {
     display: none;
   }
 
-  .react-datepicker__header{
+  .react-datepicker__header {
     background: #fff;
     border: none;
   }
 
   .react-datepicker__day-name,
   .react-datepicker__day,
-  .react-datepicker__time-name{
+  .react-datepicker__time-name {
     width: 36px;
     height: 36px;
     text-align: center;
@@ -566,24 +576,24 @@ nav {
     border-radius: 50%;
   }
 
-  .react-datepicker__day-name{
+  .react-datepicker__day-name {
     color: #8EB26F;
     text-transform: uppercase;
   }
 
   .react-datepicker__day--keyboard-selected,
-  .react-datepicker__day--selected{
+  .react-datepicker__day--selected {
     background: #8EB26F;
   }
 
-  .react-datepicker__current-month{
+  .react-datepicker__current-month {
     padding: 10px 80px 10px 10px;
     text-align: left;
     font-size: 20px;
     font-weight: 400;
   }
 
-  .react-datepicker__navigation{
+  .react-datepicker__navigation {
     top: 13px;
     background: rgba(19, 15, 38, 0.0);
     display: flex;
@@ -593,8 +603,8 @@ nav {
     margin: 10px;
     position: absolute;
 
-    span{
-      &:before{
+    span {
+      &:before {
         width: 12px;
         height: 12px;
         border-width: 1px 1px 0 0;
@@ -602,7 +612,7 @@ nav {
       }
     }
 
-    &.react-datepicker__navigation--previous{
+    &.react-datepicker__navigation--previous {
       left: auto;
       right: 40px !important;
 
@@ -641,18 +651,37 @@ nav {
     background: rgba(0, 0, 0, 0.02) !important;
   }
 }
-.img_box{
+
+.img_box {
   width: 40px;
   height: 40px;
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
-  img{
-   width: 100%;
-   height: auto;
-   display: block;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 }
-.modal-dialog{
+
+.modal-dialog {
   margin: 100px auto;
+}
+
+::-webkit-scrollbar {
+  height: 12px;
+  width: 5px;
+  background: #e9ecef;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8EB26F;
+  -webkit-border-radius: 1ex;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+  background: #000;
 }

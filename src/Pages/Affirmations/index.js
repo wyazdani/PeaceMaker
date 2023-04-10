@@ -1,10 +1,11 @@
 import HeaderTop from "Components/Header";
 import React, { useEffect, useState } from "react";
-import { Accordion, Card, Col, ListGroup, Row } from "react-bootstrap";
+import { Accordion, Button, Card, Col, ListGroup, Row } from "react-bootstrap";
 import profile from "Images/background.jpg";
 import classes from "./index.module.scss";
 import { Link, useNavigate } from "react-router-dom";
 import AffirmationAPI from "api/Affirmation";
+import SavePopUp from "./SavePopUp";
 
 const Affirmations = () => {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ const Affirmations = () => {
 
   const [affirmation, setAffirmation] = useState([]);
   const [loader, setloader] = useState(true);
+  const [modalShow, setModalShow] = useState(false);
 
   const fetchAllAffirmation = async () => {
     const res = await AffirmationAPI.getAffirmations();
@@ -39,6 +41,7 @@ const Affirmations = () => {
                 <div className={classes.img_text}>
                   <div className="d-flex justify-content-between p-3">
                     <p> Daily Affirmation</p>
+                   
                     <Link to="#">
                       <i class="fas fa-play"></i>
                     </Link>
@@ -48,21 +51,22 @@ const Affirmations = () => {
               </div>
             </Col>
             <Col lg={6}>
-              <Row>
+              <div className={classes.scrollBox}>
                 <div className={classes.Affirmations_header}>
                   <div>
-                    <strong>
+                    
                       <h2>Daily Affirmation</h2>
-                    </strong>
+                    
                     <p>How do you want us to give you a nice 5 minutes cool down?</p>
                   </div>
-                  <div>
+                 
                     <div className={classes.setting_icon}>
-                      <a onClick={IconClick} href="#">
+                    <Button onClick={() => setModalShow(true)}  variant="gradient">Save</Button>
+                      <Link to={"/setting-icon-click"} onClick={IconClick} href="#">
                         <i class="far fa-cog"></i>
-                      </a>
+                      </Link>
                     </div>
-                  </div>
+                  
                 </div>
                 <Card.Body>
                   <ul className={"activity_list col1"}>
@@ -103,10 +107,106 @@ const Affirmations = () => {
                     </li> */}
                   </ul>
                 </Card.Body>
-              </Row>
+              </div>
+            </Col>
+            <Col lg={6} className="my-3">
+              <h1>Playlist</h1>
+              <div className={classes.playlist}>
+                <div className={classes.playlist_record}>
+                  <div>
+                    <h4>Affirmations for Nightmare</h4>
+                    <p>Created last Feb 2, 2022</p>
+                  </div>
+                  <div>
+                    <Link to={"#"} className={classes.edit}>
+                      <i class="far fa-pen"></i>
+                    </Link>
+                    <Link to={"#"} className={classes.delete} href="#">
+                      {" "}
+                      <i class="far fa-trash-alt"></i>{" "}
+                    </Link>
+                  </div>
+                </div>
+                <div className={classes.playlist_record}>
+                  <div>
+                    <h4>Affirmations for Nightmare</h4>
+                    <p>Created last Feb 2, 2022</p>
+                  </div>
+                  <div>
+                    <Link to={"#"} className={classes.edit}>
+                      <i class="far fa-pen"></i>
+                    </Link>
+                    <Link to={"#"} className={classes.delete} href="#">
+                      {" "}
+                      <i class="far fa-trash-alt"></i>{" "}
+                    </Link>
+                  </div>
+                </div>
+                <div className={classes.playlist_record}>
+                  <div>
+                    <h4>Affirmations for Nightmare</h4>
+                    <p>Created last Feb 2, 2022</p>
+                  </div>
+                  <div>
+                    <Link to={"#"} className={classes.edit}>
+                      <i class="far fa-pen"></i>
+                    </Link>
+                    <Link to={"#"} className={classes.delete} href="#">
+                      {" "}
+                      <i class="far fa-trash-alt"></i>{" "}
+                    </Link>
+                  </div>
+                </div>
+                <div className={classes.playlist_record}>
+                  <div>
+                    <h4>Affirmations for Nightmare</h4>
+                    <p>Created last Feb 2, 2022</p>
+                  </div>
+                  <div>
+                    <Link to={"#"} className={classes.edit}>
+                      <i class="far fa-pen"></i>
+                    </Link>
+                    <Link to={"#"} className={classes.delete} href="#">
+                      {" "}
+                      <i class="far fa-trash-alt"></i>{" "}
+                    </Link>
+                  </div>
+                </div>
+                <div className={classes.playlist_record}>
+                  <div>
+                    <h4>Affirmations for Nightmare</h4>
+                    <p>Created last Feb 2, 2022</p>
+                  </div>
+                  <div>
+                    <Link to={"#"} className={classes.edit}>
+                      <i class="far fa-pen"></i>
+                    </Link>
+                    <Link to={"#"} className={classes.delete} href="#">
+                      {" "}
+                      <i class="far fa-trash-alt"></i>{" "}
+                    </Link>
+                  </div>
+                </div>
+                <div className={classes.playlist_record}>
+                  <div>
+                    <h4>Affirmations for Nightmare</h4>
+                    <p>Created last Feb 2, 2022</p>
+                  </div>
+                  <div>
+                    <Link to={"#"} className={classes.edit}>
+                      <i class="far fa-pen"></i>
+                    </Link>
+                    <Link to={"#"} className={classes.delete} href="#">
+                      {" "}
+                      <i class="far fa-trash-alt"></i>{" "}
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </Col>
           </Row>
         </section>
+        <SavePopUp show={modalShow} onHide={() => setModalShow(false)} />
       </>
     );
   else return <div></div>;

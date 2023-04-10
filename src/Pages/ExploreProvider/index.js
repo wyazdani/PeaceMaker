@@ -58,9 +58,9 @@ const ExploreProvider = () => {
         <SecondHeader />
         <Card>
           <Card.Body>
-            <Row className="text-center justify-content-center ">
+            <div className="text-center justify-content-center ">
               <h2> Explore a Provider</h2>
-              <Col md={6} className="align-items-center">
+              <div className="d-flex justify-content-center">
                 <Form>
                   <InputGroup className="mb-3">
                     <InputGroup.Text id="basic-addon1">
@@ -74,8 +74,11 @@ const ExploreProvider = () => {
                     />
                   </InputGroup>
                 </Form>
-              </Col>
-            </Row>
+                <Button className={classes.chatBtn} to={"/"}>
+                <i class="fas fa-map-marker-alt"></i>
+                </Button>
+              </div>
+            </div>
             <div className={classes.providerRow}>
               {loader == false ? (
                 providers.map((provider) => (

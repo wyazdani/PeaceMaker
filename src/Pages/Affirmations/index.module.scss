@@ -1,7 +1,7 @@
 .profile_img {
     height: 500px;
     position: relative;
-    
+
 
     img {
         width: 100%;
@@ -10,6 +10,7 @@
         border-radius: 15px;
 
     }
+
     .img_text {
         position: absolute;
         top: 50px;
@@ -46,7 +47,7 @@
         }
 
     }
-  
+
 }
 
 .card_background {
@@ -54,6 +55,7 @@
     border-radius: 15px !important;
     border: transparent !important;
     margin: 10px 0;
+
     .plus_icon {
         width: 40px;
         display: flex;
@@ -62,20 +64,93 @@
             font-size: 30px;
         }
 
-       
+
     }
+
     strong {
         padding-top: 4px !important;
     }
 }
-.Affirmations_header{
+
+.Affirmations_header {
     display: flex;
     justify-content: space-between;
-    .setting_icon{
-        font-size: 30px;
-        a:hover{
-            color:#8EB26F ;
+
+    .setting_icon {
+        font-size: 20px;
+        display: flex;
+        margin-right: 10px;
+
+        i {
+            font-size: 20px;
+            padding-top: 11px;
+        }
+
+        a:hover {
+            color: #8EB26F;
         }
     }
-   
+
+}
+
+.scrollBox {
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.playlist {
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+
+    .playlist_record {
+        display: flex;
+        margin: 30px 0 0 0;
+        background: rgba(245, 245, 245, 1);
+        padding: 15px;
+        border-radius: 10px;
+        justify-content: space-between;
+
+
+
+        .edit {
+            color: #58A0FD;
+            padding: 5px;
+
+            i {
+                font-size: 20px;
+            }
+        }
+
+        .delete {
+            color: #FF7C6D;
+            padding: 5px;
+
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+// save popup//
+
+.text {
+    color: rgba(142, 178, 111, 1);
+    font-size: 30px;
+    text-align: center;
+    margin: 30px;
+}
+
+.imgBox {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 }

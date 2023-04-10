@@ -75,25 +75,9 @@ const ClickSection = (props) => {
       <section>
         <Row>
           <Col lg={6}>
-            {/* <div className={classes.Habit_background_2}>
-                            <Col xl={6} lg={12} md={6}>
-                                <div className={classes.position_2}>
-                                    <h1>50%</h1>
-                                    <h2>Accomplished</h2>
-                                    <p>Ain’t no mountain high enough to accomplish success</p>
-                                </div>
-                            </Col>
-                            <Col xl={6} lg={12} md={6} className='m-0 p-0'>
-                                <div className={classes.profile_img}>
-                                    <img src={profile} alt="" />
-                                </div>
-                            </Col>
-                        </div> */}
-
             <Card className="bg-bottom-right_2" style={{ backgroundImage: `url(${profile})` }}>
               <Card.Body>
                 <div className={classes.text_color_set}>
-                  {/* <img src={challenges} alt="" /> */}
                   <h1>50%</h1>
                   <h2>Accomplished</h2>
                   <p>
