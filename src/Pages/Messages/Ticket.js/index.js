@@ -27,6 +27,7 @@ const Tickets = (props) => {
     console.log(res);
     if (res) {
       setChat(res.data.data.chat);
+      console.log(chat);
       setMsgPreviewLoader(false);
     }
   };
@@ -41,7 +42,15 @@ const Tickets = (props) => {
           <Col md={12} className="m-0 p-0">
             <div class="support-block">
               <SupportSideBar chats={supportSiderBar} getChat={fetchChatById} />
-              <MsgPreview loader={msgPreviewLoader} chat={chat} handleChatFromChild={fetchChatById} />
+              {msgPreviewLoader == false ? (
+                <MsgPreview loader={msgPreviewLoader} chat={chat} handleChatFromChild={fetchChatById} />
+              ) : (
+                <>
+                  <div className="loader">
+                    <Spinner animation="grow" />
+                  </div>
+                </>
+              )}
             </div>
           </Col>
         </Row>

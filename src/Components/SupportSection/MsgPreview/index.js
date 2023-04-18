@@ -13,8 +13,8 @@ const MsgPreview = (props) => {
   const IMG_URL = "https://staging.api.peacemakerapp.com/storage/user_profile/";
   const user = JSON.parse(localStorage.getItem("user"));
   const [message, setMessage] = useState("");
-  const [pusherMsg, setPusherMsg] = useState([]);
-  console.log(pusherMsg);
+  const [messages, setMessages] = useState(props.chat.messages);
+  console.log(messages);
   const handleSendMessage = async () => {
     const chat_id = props.chat.id;
     const type = "text";
@@ -22,12 +22,17 @@ const MsgPreview = (props) => {
     try {
       const res = await Chat.sentMessage(data);
       if (res) {
-        props.handleChatFromChild(props.chat.id);
+        setMessage("");
       }
     } catch (err) {
       console.log(err);
     }
   };
+  useEffect(() => {
+    setMessages(props.chat.messages);
+    console.log(messages);
+  }, []);
+
   useEffect(() => {
     const pusher = new Pusher("d72e2b506c356a18e1b6", {
       cluster: "ap2",
@@ -35,14 +40,15 @@ const MsgPreview = (props) => {
     });
     const channel = pusher.subscribe("peaceMaker-development");
     channel.bind("message.sent", (data) => {
-      setPusherMsg([...pusherMsg, data]);
+      setMessages([...messages, data.message]);
     });
-    console.log(pusherMsg);
-  }, []);
+    console.log(messages);
+  }, [messages]);
 
   if (Object.keys(props.chat).length === 0) return <div></div>;
   else if (props.loader == false)
     return (
+      // <></>
       <div className={classes.msgPreview}>
         <div className={classes.chat_header}>
           <div className={classes.userInfo}>
@@ -72,7 +78,7 @@ const MsgPreview = (props) => {
         </div>
         <div className={classes.mesgs}>
           <div className={classes.msg_history}>
-            {props.chat.messages.map((data) => {
+            {messages.map((data) => {
               if (user.user_id == data.user_id)
                 return (
                   <div className={classes.outgoing}>
@@ -124,6 +130,7 @@ const MsgPreview = (props) => {
                 type="text"
                 className={classes.form_control}
                 placeholder="Type a message"
+                value={message}
               />
               <div>
                 <i class="icon-black-smile"></i>
