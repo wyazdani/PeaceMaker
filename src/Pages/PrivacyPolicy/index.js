@@ -1,12 +1,13 @@
 import React from "react";
 import classes from "./index.module.scss";
+import logoImg from "../../Images/logo.svg";
 
 const privacy_policy = () => {
   return (
     <>
       <div>
         <a>
-          <img className={classes.logo} src="/static/media/logo.66620c6be63bdea0c25cb9851586898b.svg" alt="dashbaord" />
+          <img className={classes.logo} src={logoImg} alt="dashbaord" />
         </a>
       </div>
       <div className={classes.content}>
