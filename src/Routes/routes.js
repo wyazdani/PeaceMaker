@@ -251,11 +251,11 @@ const routes = [
     layout: MainLayout,
     component: SettingIconClick,
   },
-  {
-    path: "/privacy_policy",
-    // layout: MainLayout,
-    component: PrivacyPolicy,
-  },
+  // {
+  //   path: "/privacy_policy",
+  //   // layout: MainLayout,
+  //   component: PrivacyPolicy,
+  // },
   {
     path: "/journal",
     layout: MainLayout,
