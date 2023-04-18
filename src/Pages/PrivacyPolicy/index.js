@@ -14,9 +14,9 @@ const privacy_policy = () => {
         <h1>Privacy Policy for Peacemaker</h1>
 
         <p>
-          At Peacemaker, accessible from https://dev.web.peacemakerapp.com/, one of our main priorities is the privacy
-          of our visitors. This Privacy Policy document contains types of information that is collected and recorded by
-          Peacemaker and how we use it.
+          At Peacemaker, accessible from https://staging.web.peacemakerapp.com/, one of our main priorities is the
+          privacy of our visitors. This Privacy Policy document contains types of information that is collected and
+          recorded by Peacemaker and how we use it.
         </p>
 
         <p>
