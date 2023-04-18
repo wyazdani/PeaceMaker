@@ -45,6 +45,7 @@ import SendOTPPhone from "../Pages/Auth/otpphone";
 import Patient from "../Pages/Patient";
 import ProviderEndUserProfile from "../Pages/ProviderEndUserProfile";
 import HabitTrackerNext from "Pages/HabitTracker/AddHabitNextPage";
+import PrivacyPolicy from "Pages/PrivacyPolicy";
 
 const routes = [
   //{ path: "/", component: LandingPage },
@@ -249,6 +250,11 @@ const routes = [
     path: "/setting-icon-click",
     layout: MainLayout,
     component: SettingIconClick,
+  },
+  {
+    path: "/privacy_policy",
+    // layout: MainLayout,
+    component: PrivacyPolicy,
   },
   {
     path: "/journal",
